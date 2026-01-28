@@ -1,0 +1,2001 @@
+project_id,date,material,quantity,unit,unit_price_estimated,total_cost_estimated,is_synthetic,source
+P.S. 206 - BROOKLYN,2024-03-30,lumber,13.62,board_feet,1.08,14.71,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-11-22,rebar,11.94,tons,750.81,8964.67,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-10,lumber,10.149,board_feet,1.13,11.47,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-03-23,aggregate,5.942,tons,17.63,104.76,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-08,cement,7.351,tons,134.1,985.77,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-14,cement,2.048,tons,140.88,288.52,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-03,lumber,7.078,board_feet,1.43,10.12,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-06-23,steel,7.91,tons,1010.65,7994.24,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-11-24,rebar,13.995,tons,754.7,10562.03,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-08-30,rebar,5.554,tons,693.59,3852.2,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-11-12,rebar,15.982,tons,717.89,11473.32,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-11-16,aggregate,9.42,tons,17.99,169.47,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-10-18,cement,13.515,tons,106.84,1443.94,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-09-12,steel,13.75,tons,783.53,10773.54,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-10-03,lumber,23.473,board_feet,1.16,27.23,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-08,aggregate,7.72,tons,16.97,131.01,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-02-04,steel,8.964,tons,972.13,8714.17,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-09-22,rebar,4.315,tons,735.01,3171.57,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-23,rebar,19.595,tons,626.04,12267.25,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-08-29,lumber,10.489,board_feet,1.33,13.95,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-17,lumber,0.991,board_feet,1.45,1.44,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-31,steel,8.271,tons,838.52,6935.4,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-06-17,cement,5.451,tons,147.5,804.02,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-11-08,cement,8.975,tons,118.6,1064.43,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-02-06,aggregate,6.332,tons,13.23,83.77,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-10-09,aggregate,3.063,tons,18.43,56.45,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-18,cement,14.4,tons,112.81,1624.46,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-06-28,aggregate,12.226,tons,15.62,190.97,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-26,cement,7.199,tons,139.53,1004.48,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-10,rebar,4.132,tons,765.28,3162.14,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-13,cement,2.004,tons,138.75,278.06,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-12-22,steel,4.04,tons,919.7,3715.59,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-08-06,rebar,12.058,tons,846.2,10203.48,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-07,lumber,13.275,board_feet,1.11,14.74,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-08-11,cement,5.426,tons,102.48,556.06,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-30,rebar,9.481,tons,754.05,7149.15,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-08,steel,6.631,tons,810.62,5375.22,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-02,lumber,1.412,board_feet,1.04,1.47,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-06-28,rebar,0.902,tons,676.88,610.55,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-11-06,aggregate,1.295,tons,15.62,20.23,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-14,rebar,4.075,tons,655.63,2671.69,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-15,lumber,2.987,board_feet,1.44,4.3,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-30,cement,8.879,tons,128.56,1141.48,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-12-13,lumber,19.961,board_feet,1.24,24.75,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-10-20,rebar,13.409,tons,810.32,10865.58,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-13,steel,15.976,tons,1122.34,17930.5,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-01,steel,2.33,tons,1091.78,2543.85,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-23,lumber,11.615,board_feet,1.28,14.87,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-06-21,rebar,8.983,tons,705.49,6337.42,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-11-11,lumber,4.573,board_feet,1.4,6.4,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-11-07,cement,16.306,tons,107.97,1760.56,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-10-18,lumber,15.079,board_feet,1.23,18.55,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-09,aggregate,11.733,tons,12.8,150.18,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-19,lumber,14.238,board_feet,1.12,15.95,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-30,rebar,7.492,tons,857.87,6427.16,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-21,rebar,18.572,tons,718.32,13340.64,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-12,lumber,2.963,board_feet,1.14,3.38,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-09-10,steel,5.976,tons,1078.65,6446.01,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-12-01,cement,11.231,tons,113.17,1271.01,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-12-01,cement,9.872,tons,123.13,1215.54,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-06-11,cement,15.988,tons,128.56,2055.42,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-04-26,cement,34.744,tons,148.81,5170.25,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-09,lumber,4.382,board_feet,1.28,5.61,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-01-23,rebar,5.562,tons,736.94,4098.86,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-02-27,rebar,9.886,tons,616.69,6096.6,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-04-14,lumber,12.091,board_feet,1.35,16.32,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-02-06,aggregate,3.143,tons,18.01,56.61,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-03-14,cement,3.25,tons,118.08,383.76,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-07-27,lumber,20.719,board_feet,1.25,25.9,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-05-30,rebar,14.502,tons,676.44,9809.73,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-03-17,rebar,6.964,tons,602.15,4193.37,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-11-07,steel,9.364,tons,1046.11,9795.77,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-09-17,rebar,6.272,tons,794.6,4983.73,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-04-20,aggregate,6.351,tons,17.11,108.67,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-07-14,cement,2.85,tons,147.85,421.37,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-04-24,rebar,8.169,tons,748.51,6114.58,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-08-02,rebar,4.813,tons,800.25,3851.6,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-09-27,cement,6.574,tons,126.98,834.77,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-06-11,lumber,4.245,board_feet,1.11,4.71,True,synthetic_generator_v1
+P.S. 329 - BROOKLYN,2024-10-21,lumber,12.67,board_feet,1.4,17.74,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-06-21,rebar,1.397,tons,797.21,1113.7,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-02-07,lumber,2.085,board_feet,1.48,3.09,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-07-28,aggregate,4.475,tons,17.3,77.42,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-12-24,steel,5.779,tons,1029.04,5946.82,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-28,rebar,23.479,tons,761.19,17871.98,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-07-08,aggregate,15.782,tons,15.03,237.2,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-08-12,steel,8.399,tons,1105.12,9281.9,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-02-19,steel,4.375,tons,872.05,3815.22,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-06-23,cement,14.726,tons,129.83,1911.88,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-08-06,lumber,3.466,board_feet,1.17,4.06,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-06-12,steel,7.903,tons,1105.22,8734.55,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-04-17,aggregate,4.257,tons,15.86,67.52,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-21,rebar,1.465,tons,641.37,939.61,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-05-27,lumber,13.593,board_feet,1.25,16.99,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-04-24,steel,0.451,tons,1120.97,505.56,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-02-24,steel,26.799,tons,1004.92,26930.85,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-03-13,cement,10.217,tons,138.23,1412.3,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-01-15,rebar,23.507,tons,847.71,19927.12,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-03,rebar,5.45,tons,828.1,4513.15,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-01-14,lumber,3.998,board_feet,1.12,4.48,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-19,aggregate,3.738,tons,17.74,66.31,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-05-31,cement,7.154,tons,136.38,975.66,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-03-02,aggregate,14.031,tons,13.27,186.19,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-03-11,lumber,2.595,board_feet,1.37,3.56,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-02-29,lumber,10.561,board_feet,1.13,11.93,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-02-08,lumber,10.685,board_feet,1.1,11.75,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-06-20,lumber,10.717,board_feet,1.34,14.36,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-02-07,lumber,9.801,board_feet,1.45,14.21,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-01-20,aggregate,17.718,tons,15.88,281.36,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-04-07,rebar,14.321,tons,780.12,11172.1,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-11-16,cement,18.439,tons,113.8,2098.36,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-27,aggregate,0.69,tons,17.98,12.41,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-04-22,steel,4.55,tons,1057.99,4813.85,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-09-11,lumber,10.804,board_feet,1.08,11.67,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-11-21,cement,23.894,tons,137.97,3296.66,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-01-02,aggregate,1.098,tons,13.15,14.44,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-12,rebar,6.713,tons,712.08,4780.19,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-05-14,rebar,11.152,tons,701.48,7822.9,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-10-25,steel,2.562,tons,1001.5,2565.84,True,synthetic_generator_v1
+P.S. 28 - QUEENS,2024-04-02,lumber,3.86,board_feet,1.42,5.48,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-10,cement,13.49,tons,133.44,1800.11,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-09-22,steel,0.793,tons,821.52,651.47,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-01,aggregate,10.169,tons,17.91,182.13,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-04-27,lumber,12.06,board_feet,1.18,14.23,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-04-20,rebar,15.947,tons,800.33,12762.86,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-01-07,cement,14.571,tons,127.27,1854.45,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-09-13,aggregate,8.946,tons,17.5,156.56,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-01-22,steel,4.643,tons,992.36,4607.53,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-12-18,steel,7.268,tons,777.16,5648.4,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-03-04,aggregate,2.127,tons,17.19,36.56,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-05-18,cement,0.708,tons,105.67,74.81,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-09-15,aggregate,21.444,tons,16.0,343.1,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-03-18,cement,7.181,tons,137.32,986.09,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-07-19,steel,14.801,tons,1047.52,15504.34,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-08-05,rebar,12.366,tons,803.18,9932.12,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-06-03,lumber,0.669,board_feet,1.49,1.0,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-22,aggregate,6.27,tons,15.01,94.11,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-08-07,cement,6.871,tons,115.37,792.71,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-05-25,rebar,15.157,tons,736.85,11168.44,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-07-14,cement,21.212,tons,147.67,3132.38,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-06,cement,4.407,tons,123.71,545.19,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-22,cement,0.908,tons,119.75,108.73,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-15,cement,9.469,tons,132.86,1258.05,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-06-19,steel,15.093,tons,799.34,12064.44,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-03-27,steel,20.488,tons,1076.34,22052.05,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-09-07,rebar,5.101,tons,767.62,3915.63,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-08-30,rebar,10.62,tons,797.45,8468.92,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-17,steel,15.972,tons,913.27,14586.75,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-06-21,steel,9.32,tons,778.14,7252.26,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-12-18,rebar,11.581,tons,670.08,7760.2,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-04-17,rebar,6.874,tons,817.51,5619.56,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-10-06,aggregate,0.704,tons,14.68,10.33,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-12-28,aggregate,18.506,tons,15.84,293.14,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-02-11,cement,1.513,tons,108.11,163.57,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-01-07,steel,6.908,tons,952.18,6577.66,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-03-03,steel,11.656,tons,805.92,9393.8,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-08-05,aggregate,24.197,tons,13.77,333.19,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-09-25,aggregate,18.093,tons,15.26,276.1,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-01-05,lumber,20.779,board_feet,1.08,22.44,True,synthetic_generator_v1
+P.S. 87 - MANHATTAN,2024-05-30,lumber,8.781,board_feet,1.2,10.54,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-11-05,lumber,21.093,board_feet,1.32,27.84,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-08-30,steel,1.7,tons,825.52,1403.38,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-04-28,steel,20.246,tons,817.74,16555.96,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-03-25,aggregate,14.891,tons,18.0,268.04,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-06-14,cement,7.699,tons,126.56,974.39,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-08-13,aggregate,3.109,tons,16.74,52.04,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-06-16,lumber,0.105,board_feet,1.29,0.14,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-07-12,aggregate,5.088,tons,16.99,86.45,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-06-30,lumber,9.716,board_feet,1.06,10.3,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-11-05,steel,2.512,tons,1108.93,2785.63,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-11-20,lumber,0.497,board_feet,1.29,0.64,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-09-07,lumber,13.679,board_feet,1.35,18.47,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-10-12,aggregate,1.487,tons,17.95,26.69,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-08-26,lumber,0.214,board_feet,1.37,0.29,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-04-19,rebar,27.767,tons,858.03,23824.92,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-07-14,lumber,7.985,board_feet,1.11,8.86,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-01-06,steel,6.519,tons,767.02,5000.2,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-06-07,lumber,9.449,board_feet,1.07,10.11,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-07-07,lumber,3.483,board_feet,1.15,4.01,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-11-27,lumber,5.072,board_feet,1.33,6.75,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-07-22,cement,20.704,tons,115.16,2384.27,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-01-30,rebar,4.682,tons,825.53,3865.13,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-08-29,rebar,2.928,tons,727.57,2130.32,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-11-27,rebar,3.674,tons,821.08,3016.65,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-01-20,lumber,25.951,board_feet,1.09,28.29,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-03-31,steel,8.92,tons,794.82,7089.79,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-03-02,cement,9.861,tons,117.08,1154.53,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-10-05,lumber,10.585,board_feet,1.49,15.77,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-04-09,rebar,4.392,tons,783.16,3439.64,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-06-11,steel,4.066,tons,1091.06,4436.25,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-10-27,lumber,18.734,board_feet,1.21,22.67,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-12-07,cement,2.665,tons,105.12,280.14,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-09-13,steel,4.548,tons,924.62,4205.17,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-05-21,rebar,0.948,tons,650.63,616.8,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-09-15,aggregate,12.813,tons,17.78,227.82,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-01-02,lumber,19.771,board_feet,1.15,22.74,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-06-28,cement,2.144,tons,135.42,290.34,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-10-16,aggregate,15.978,tons,13.28,212.19,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-02-16,steel,4.279,tons,977.81,4184.05,True,synthetic_generator_v1
+P.S. 2 - QUEENS,2024-01-11,steel,1.456,tons,1048.95,1527.27,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-01-18,lumber,0.107,board_feet,1.36,0.15,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-11-18,lumber,5.958,board_feet,1.22,7.27,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-06-20,lumber,4.178,board_feet,1.33,5.56,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-02-21,steel,12.41,tons,933.06,11579.27,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-04-05,cement,0.661,tons,123.07,81.35,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-11-11,aggregate,7.914,tons,17.14,135.65,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-30,steel,3.642,tons,855.93,3117.3,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-07-10,rebar,3.003,tons,679.05,2039.19,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-04-29,rebar,17.927,tons,625.2,11207.96,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-06,lumber,14.8,board_feet,1.03,15.24,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-09-19,steel,2.214,tons,1097.05,2428.87,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-11-01,rebar,13.627,tons,805.52,10976.82,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-03-07,lumber,30.506,board_feet,1.4,42.71,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-01-28,cement,1.3,tons,140.47,182.61,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-22,aggregate,20.971,tons,13.74,288.14,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-01-01,steel,6.984,tons,875.71,6115.96,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-04-04,steel,10.949,tons,1073.79,11756.93,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-11,cement,4.164,tons,128.66,535.74,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-07-10,cement,0.81,tons,124.91,101.18,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-06-25,cement,10.082,tons,135.54,1366.51,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-29,aggregate,7.88,tons,17.74,139.79,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-12-27,steel,5.468,tons,811.26,4435.97,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-03-09,aggregate,0.627,tons,17.39,10.9,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-05-24,aggregate,5.237,tons,14.83,77.66,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-12-08,rebar,2.171,tons,602.53,1308.09,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-11-07,steel,6.174,tons,887.35,5478.5,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-01-01,rebar,4.638,tons,762.77,3537.73,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-07-22,cement,1.774,tons,111.02,196.95,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-04-18,lumber,0.78,board_feet,1.23,0.96,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-06-22,aggregate,1.072,tons,14.46,15.5,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-07-17,aggregate,3.775,tons,12.96,48.92,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-03,steel,12.928,tons,1065.32,13772.46,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-26,cement,18.064,tons,118.62,2142.75,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-02-21,aggregate,5.618,tons,14.66,82.36,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-10-21,rebar,3.62,tons,702.52,2543.12,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-08-20,cement,20.369,tons,121.28,2470.35,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-01-28,lumber,7.306,board_feet,1.22,8.91,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-11-20,cement,9.424,tons,123.61,1164.9,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-07-09,aggregate,6.015,tons,17.02,102.38,True,synthetic_generator_v1
+P.S. 52 - STATEN ISLAND,2024-09-30,lumber,9.895,board_feet,1.22,12.07,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-11-22,lumber,3.219,board_feet,1.48,4.76,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-05-11,cement,6.095,tons,142.17,866.53,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-08-09,cement,8.623,tons,149.76,1291.38,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-11-11,rebar,7.622,tons,745.96,5685.71,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-05-04,cement,3.064,tons,138.51,424.39,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-08-11,lumber,13.141,board_feet,1.38,18.13,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-05,lumber,2.04,board_feet,1.21,2.47,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-02,lumber,5.07,board_feet,1.15,5.83,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-07-27,steel,15.373,tons,811.72,12478.57,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-05-16,aggregate,6.314,tons,16.34,103.17,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-11-21,lumber,10.948,board_feet,1.36,14.89,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-23,cement,9.191,tons,131.35,1207.24,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-12-30,rebar,11.292,tons,772.74,8725.78,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-06-17,rebar,6.888,tons,703.93,4848.67,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-10-12,cement,0.261,tons,141.49,36.93,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-03-18,aggregate,12.422,tons,17.88,222.11,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-09-12,steel,1.08,tons,905.42,977.85,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-07-25,cement,3.872,tons,133.71,517.73,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-10-19,cement,3.806,tons,118.57,451.28,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-16,rebar,4.534,tons,698.37,3166.41,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-05-29,lumber,5.807,board_feet,1.09,6.33,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-10-26,steel,8.468,tons,989.74,8381.12,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-10-16,aggregate,9.769,tons,17.26,168.61,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-05-25,rebar,13.726,tons,803.33,11026.51,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-30,aggregate,9.776,tons,16.39,160.23,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-03-04,cement,2.574,tons,121.0,311.45,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-18,cement,0.764,tons,109.64,83.76,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-07-24,rebar,2.402,tons,709.38,1703.93,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-04-21,aggregate,11.656,tons,17.37,202.46,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-11-18,cement,0.366,tons,133.88,49.0,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-12-17,lumber,7.431,board_feet,1.13,8.4,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-07-25,aggregate,4.921,tons,17.29,85.08,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-05-26,aggregate,16.318,tons,15.15,247.22,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-01-02,rebar,22.053,tons,827.36,18245.77,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-08-25,steel,3.25,tons,973.86,3165.05,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-08-02,aggregate,0.943,tons,15.21,14.34,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-11-21,cement,1.092,tons,131.76,143.88,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-02-11,rebar,1.389,tons,754.76,1048.36,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-07-28,cement,1.656,tons,129.33,214.17,True,synthetic_generator_v1
+QUEST TO LEARN - MANHATTAN,2024-08-29,cement,11.857,tons,147.69,1751.16,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-27,steel,11.296,tons,896.93,10131.72,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-12-02,lumber,9.786,board_feet,1.25,12.23,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-05-15,cement,10.908,tons,117.84,1285.4,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-12-21,cement,10.277,tons,138.12,1419.46,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-05-13,lumber,9.176,board_feet,1.16,10.64,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-08-15,lumber,8.708,board_feet,1.29,11.23,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-10-31,cement,10.183,tons,138.54,1410.75,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-03-16,rebar,3.41,tons,698.84,2383.04,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-07-04,lumber,11.963,board_feet,1.17,14.0,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-03-22,rebar,2.669,tons,718.16,1916.77,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-05-30,steel,3.567,tons,1032.74,3683.78,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-12-21,steel,10.134,tons,903.32,9154.24,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-11-22,steel,11.72,tons,775.08,9083.94,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-04-18,rebar,0.773,tons,667.64,516.09,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-09-17,rebar,17.622,tons,708.64,12487.65,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-11-12,steel,19.254,tons,976.37,18799.03,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-09-13,lumber,2.621,board_feet,1.27,3.33,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-07-12,aggregate,7.157,tons,15.64,111.94,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-09-04,aggregate,11.344,tons,12.84,145.66,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-03,lumber,6.171,board_feet,1.09,6.73,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-11-07,cement,11.815,tons,133.2,1573.76,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-07-01,aggregate,16.466,tons,18.19,299.52,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-09-25,steel,10.683,tons,1031.9,11023.79,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-07-05,cement,1.435,tons,117.82,169.07,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-04,lumber,7.817,board_feet,1.29,10.08,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-09-30,rebar,23.582,tons,610.67,14400.82,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-10-17,rebar,14.144,tons,664.43,9397.7,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-05-11,steel,0.466,tons,853.23,397.61,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-12-19,aggregate,8.577,tons,13.81,118.45,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-11-07,lumber,0.954,board_feet,1.11,1.06,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-02,steel,3.696,tons,953.12,3522.73,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-01,steel,6.963,tons,974.26,6783.77,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-08-25,cement,18.243,tons,127.77,2330.91,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-01-27,lumber,6.069,board_feet,1.25,7.59,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-08-14,cement,1.327,tons,124.85,165.68,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-21,rebar,6.532,tons,678.99,4435.16,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-01-05,rebar,2.292,tons,715.33,1639.54,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-02-27,aggregate,6.228,tons,17.58,109.49,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-11-10,aggregate,1.585,tons,18.7,29.64,True,synthetic_generator_v1
+P.S. 4 - BRONX,2024-05-08,aggregate,4.465,tons,13.81,61.66,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-06-10,aggregate,0.511,tons,17.33,8.86,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-01-03,aggregate,17.126,tons,13.08,224.01,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-07-28,lumber,1.756,board_feet,1.24,2.18,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-05-20,cement,0.745,tons,141.29,105.26,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-04-13,steel,1.064,tons,1064.72,1132.86,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-01-13,lumber,1.645,board_feet,1.23,2.02,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-07-14,lumber,10.412,board_feet,1.4,14.58,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-11-12,rebar,0.948,tons,718.23,680.88,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-05-20,cement,10.379,tons,136.7,1418.81,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-10-30,aggregate,7.766,tons,18.46,143.36,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-01-24,aggregate,3.438,tons,15.67,53.87,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-05-23,rebar,15.339,tons,759.11,11643.99,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-01-31,cement,13.697,tons,127.82,1750.75,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-08-12,lumber,8.263,board_feet,1.07,8.84,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-03-09,cement,2.9,tons,121.86,353.39,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-03-18,steel,20.518,tons,977.33,20052.86,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-10-20,steel,5.039,tons,883.02,4449.54,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-10-06,lumber,1.031,board_feet,1.29,1.33,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-05-29,cement,15.988,tons,143.79,2298.91,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-12-24,lumber,18.34,board_feet,1.48,27.14,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-07-03,aggregate,4.981,tons,14.68,73.12,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-04-26,aggregate,2.054,tons,14.92,30.65,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-04-11,lumber,4.541,board_feet,1.03,4.68,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-03-02,aggregate,21.685,tons,15.31,332.0,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-09-06,cement,6.831,tons,149.5,1021.23,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-07-10,cement,2.028,tons,129.15,261.92,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-01-17,rebar,11.317,tons,745.87,8441.01,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-05-24,rebar,1.469,tons,688.45,1011.33,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-02-04,cement,19.904,tons,139.47,2776.01,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-09-29,steel,5.891,tons,1052.49,6200.22,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-02-14,rebar,17.228,tons,873.03,15040.56,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-02-07,aggregate,1.522,tons,17.66,26.88,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-08-26,aggregate,29.808,tons,13.66,407.18,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-06-18,cement,15.709,tons,110.72,1739.3,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-10-21,lumber,11.809,board_feet,1.37,16.18,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-08-09,cement,10.063,tons,121.27,1220.34,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-05-30,cement,2.188,tons,102.41,224.07,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-06-14,aggregate,2.072,tons,13.65,28.28,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-04-24,rebar,1.04,tons,723.17,752.1,True,synthetic_generator_v1
+P.S. 76 - BRONX,2024-12-06,steel,3.012,tons,1042.17,3139.02,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-07-13,aggregate,6.744,tons,15.15,102.17,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-02-21,lumber,0.607,board_feet,1.05,0.64,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-11-29,lumber,11.724,board_feet,1.13,13.25,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-12-25,cement,5.775,tons,144.05,831.89,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-01-09,lumber,9.877,board_feet,1.37,13.53,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-06-14,cement,9.897,tons,129.1,1277.7,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-03-06,rebar,10.953,tons,638.61,6994.7,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-12-21,aggregate,5.374,tons,17.56,94.37,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-12-04,lumber,1.557,board_feet,1.2,1.87,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-07-31,steel,0.515,tons,951.7,490.13,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-03-18,steel,8.111,tons,896.42,7270.86,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-02-26,steel,11.737,tons,910.32,10684.43,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-07-10,lumber,6.365,board_feet,1.32,8.4,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-01-15,cement,5.38,tons,103.64,557.58,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-03-14,aggregate,23.366,tons,13.03,304.46,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-07-12,rebar,4.052,tons,623.03,2524.52,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-06-27,steel,1.109,tons,798.16,885.16,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-02-03,cement,16.06,tons,121.92,1958.04,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-10-01,aggregate,2.918,tons,13.56,39.57,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-11-04,cement,0.861,tons,145.34,125.14,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-03-06,lumber,15.531,board_feet,1.34,20.81,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-07-06,rebar,2.892,tons,732.98,2119.78,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-10-19,steel,1.176,tons,810.3,952.91,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-09-20,steel,6.994,tons,1002.32,7010.23,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-02-18,aggregate,0.314,tons,14.44,4.53,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-11-10,cement,5.111,tons,137.04,700.41,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-06-03,lumber,12.697,board_feet,1.36,17.27,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-08-24,rebar,8.118,tons,842.4,6838.6,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-03-08,lumber,3.462,board_feet,1.22,4.22,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-12-04,steel,15.612,tons,777.32,12135.52,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-07-16,cement,6.271,tons,140.12,878.69,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-04-03,cement,6.741,tons,140.15,944.75,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-03-23,aggregate,7.161,tons,14.69,105.2,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-10-19,aggregate,4.234,tons,16.52,69.95,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-10-22,aggregate,6.03,tons,15.46,93.22,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-04-19,aggregate,4.188,tons,13.46,56.37,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-05-23,rebar,3.777,tons,853.69,3224.39,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-06-21,steel,4.498,tons,940.45,4230.14,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-10-08,aggregate,23.228,tons,16.73,388.6,True,synthetic_generator_v1
+AUGUST MARTIN HS - QUEENS,2024-12-08,lumber,5.75,board_feet,1.4,8.05,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-09,rebar,8.48,tons,709.91,6020.04,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-03-14,aggregate,4.216,tons,17.68,74.54,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-05-04,aggregate,8.36,tons,15.1,126.24,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-04-09,steel,9.14,tons,1065.36,9737.39,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-02-06,steel,12.929,tons,1086.35,14045.42,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-03-04,rebar,3.265,tons,859.42,2806.01,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-03-18,steel,9.101,tons,1038.81,9454.21,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-01-06,cement,10.302,tons,126.99,1308.25,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-09-25,cement,6.933,tons,113.14,784.4,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-08-12,lumber,8.484,board_feet,1.41,11.96,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-10-04,rebar,1.435,tons,869.12,1247.19,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-06-23,lumber,6.181,board_feet,1.48,9.15,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-01-21,aggregate,9.133,tons,16.51,150.79,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-08-06,rebar,1.637,tons,642.17,1051.23,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-12-29,aggregate,5.479,tons,13.37,73.25,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-04,rebar,2.223,tons,837.22,1861.14,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-05-03,aggregate,18.421,tons,15.28,281.47,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-22,cement,17.083,tons,143.53,2451.92,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-05-23,lumber,16.913,board_feet,1.18,19.96,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-12-07,lumber,3.158,board_feet,1.49,4.71,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-02-12,cement,19.675,tons,113.65,2236.06,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-09-10,steel,15.849,tons,977.79,15496.99,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-12-06,lumber,18.938,board_feet,1.36,25.76,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-10-14,rebar,15.691,tons,829.48,13015.37,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-07-11,rebar,17.714,tons,702.12,12437.35,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-04,cement,2.392,tons,130.34,311.77,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-25,cement,0.655,tons,138.67,90.83,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-07-03,rebar,2.813,tons,783.33,2203.51,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-05,aggregate,11.448,tons,12.99,148.71,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-11-27,aggregate,9.697,tons,17.86,173.19,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-10-20,rebar,14.911,tons,820.46,12233.88,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-08-09,cement,7.441,tons,112.37,836.15,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-04-02,cement,1.193,tons,116.03,138.42,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-07-30,cement,1.631,tons,136.99,223.43,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-05-09,lumber,8.925,board_feet,1.49,13.3,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-05-07,lumber,3.449,board_feet,1.23,4.24,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-01-25,lumber,24.733,board_feet,1.15,28.44,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-03-23,steel,13.066,tons,966.05,12622.41,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-10-07,lumber,4.123,board_feet,1.39,5.73,True,synthetic_generator_v1
+P.S. 105 - BRONX,2024-03-29,aggregate,11.803,tons,17.89,211.16,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-05-31,steel,2.712,tons,1112.25,3016.42,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-11-09,aggregate,10.53,tons,16.06,169.11,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-17,steel,3.908,tons,913.44,3569.72,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-09-22,rebar,5.671,tons,847.66,4807.08,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-07-17,lumber,12.82,board_feet,1.36,17.44,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-07-05,lumber,3.749,board_feet,1.46,5.47,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-04-30,lumber,9.083,board_feet,1.28,11.63,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-02-09,steel,3.258,tons,1017.88,3316.25,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-02,rebar,21.978,tons,631.05,13869.22,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-09-16,aggregate,0.51,tons,17.71,9.03,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-04-26,lumber,4.063,board_feet,1.36,5.53,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-11-26,rebar,8.176,tons,670.36,5480.86,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-01-28,aggregate,1.523,tons,16.46,25.07,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-09-11,rebar,17.881,tons,642.98,11497.13,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-13,aggregate,14.757,tons,16.1,237.59,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-01-30,lumber,10.585,board_feet,1.05,11.11,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-06-30,cement,7.391,tons,147.83,1092.61,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-05-21,rebar,4.831,tons,602.72,2911.74,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-11-02,aggregate,26.398,tons,15.33,404.68,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-03-09,aggregate,7.479,tons,15.98,119.51,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-12-11,lumber,15.809,board_feet,1.18,18.65,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-18,rebar,10.366,tons,746.09,7733.97,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-12-14,rebar,3.251,tons,683.05,2220.6,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-01-04,rebar,20.939,tons,759.49,15902.96,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-02-06,rebar,10.575,tons,612.82,6480.57,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-07-30,steel,4.273,tons,981.55,4194.16,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-04-01,steel,2.619,tons,775.62,2031.35,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-09-10,cement,2.914,tons,121.37,353.67,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-12-24,aggregate,8.973,tons,17.58,157.75,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-07-14,aggregate,11.012,tons,13.33,146.79,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-06-30,steel,12.111,tons,1019.61,12348.5,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-05-09,aggregate,11.64,tons,13.95,162.38,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-06-28,cement,9.293,tons,118.31,1099.45,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-02-18,rebar,4.097,tons,612.05,2507.57,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-12,cement,25.64,tons,134.77,3455.5,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-02-18,steel,34.11,tons,769.53,26248.67,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-06-16,aggregate,5.415,tons,14.59,79.0,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-17,rebar,2.421,tons,643.27,1557.36,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-11-21,rebar,7.784,tons,734.5,5717.35,True,synthetic_generator_v1
+P.S. 282 - BROOKLYN,2024-10-01,steel,9.564,tons,1010.95,9668.73,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-09-08,cement,3.895,tons,125.24,487.81,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-07-18,lumber,5.585,board_feet,1.26,7.04,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-05-27,cement,2.227,tons,147.45,328.37,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-06-06,rebar,4.598,tons,804.4,3698.63,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-10-19,rebar,9.118,tons,608.43,5547.66,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-01-15,cement,12.789,tons,148.4,1897.89,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-07-16,steel,2.513,tons,1061.55,2667.68,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-12-16,aggregate,15.069,tons,17.18,258.89,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-09-25,steel,10.197,tons,781.1,7964.88,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-04-19,cement,4.27,tons,123.95,529.27,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-04-05,steel,4.189,tons,838.3,3511.64,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-04-15,rebar,1.315,tons,774.32,1018.23,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-01-08,cement,11.095,tons,135.09,1498.82,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-05-28,cement,1.906,tons,145.41,277.15,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-12-03,lumber,34.452,board_feet,1.42,48.92,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-07-09,aggregate,2.214,tons,13.02,28.83,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-03-13,rebar,5.457,tons,841.94,4594.47,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-08-04,rebar,19.957,tons,793.85,15842.86,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-11-16,lumber,10.846,board_feet,1.37,14.86,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-05-19,aggregate,24.819,tons,16.89,419.19,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-07-31,aggregate,8.879,tons,13.89,123.33,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-09-06,lumber,18.515,board_feet,1.31,24.25,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-11-16,aggregate,21.587,tons,13.52,291.86,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-12-19,steel,9.532,tons,790.39,7534.0,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-02-28,cement,14.685,tons,105.19,1544.72,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-10-01,lumber,19.98,board_feet,1.1,21.98,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-05-11,aggregate,3.318,tons,17.88,59.33,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-05-13,cement,13.12,tons,138.53,1817.51,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-07-21,steel,17.204,tons,944.27,16245.22,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-03-06,rebar,1.185,tons,873.76,1035.41,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-08-28,aggregate,10.671,tons,17.75,189.41,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-04-04,cement,9.67,tons,138.6,1340.26,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-02-04,steel,3.959,tons,1030.8,4080.94,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-08-14,rebar,8.871,tons,810.36,7188.7,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-12-05,rebar,5.782,tons,653.92,3780.97,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-06-11,cement,1.536,tons,129.3,198.6,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-03-19,lumber,9.925,board_feet,1.1,10.92,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-08-24,steel,0.971,tons,1089.56,1057.96,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-01-29,aggregate,12.762,tons,15.78,201.38,True,synthetic_generator_v1
+I.S. 210 - QUEENS,2024-04-25,steel,21.679,tons,990.8,21479.55,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-10-04,steel,0.341,tons,1120.5,382.09,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-03-05,lumber,7.755,board_feet,1.44,11.17,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-08-23,aggregate,14.952,tons,15.41,230.41,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-07-17,aggregate,0.914,tons,15.14,13.84,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-09-28,steel,11.816,tons,853.56,10085.66,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-12-30,steel,17.207,tons,1027.55,17681.05,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-11-12,lumber,5.23,board_feet,1.45,7.58,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-10-07,aggregate,1.148,tons,15.11,17.35,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-08-28,cement,11.162,tons,128.06,1429.41,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-08-19,lumber,25.724,board_feet,1.44,37.04,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-07-30,cement,9.177,tons,111.57,1023.88,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-06-21,rebar,16.408,tons,857.39,14068.06,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-08-09,steel,4.464,tons,1104.55,4930.71,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-01-13,steel,6.283,tons,863.4,5424.74,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-12-14,rebar,14.839,tons,810.39,12025.38,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-11-24,aggregate,11.103,tons,13.65,151.56,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-06-11,aggregate,3.263,tons,14.22,46.4,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-03-07,aggregate,4.497,tons,16.42,73.84,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-11-17,cement,26.369,tons,134.46,3545.58,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-02-03,cement,27.381,tons,143.73,3935.47,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-06-18,cement,8.123,tons,117.04,950.72,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-07-01,steel,4.085,tons,875.72,3577.32,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-02-03,lumber,20.255,board_feet,1.32,26.74,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-06-10,rebar,14.079,tons,689.81,9711.83,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-03-30,lumber,1.242,board_feet,1.17,1.45,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-10-14,steel,9.763,tons,914.47,8927.97,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-09-29,rebar,1.748,tons,709.71,1240.57,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-10-14,rebar,5.814,tons,673.75,3917.18,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-05-07,cement,6.321,tons,133.87,846.19,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-03-16,aggregate,7.424,tons,18.03,133.85,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-08-30,aggregate,6.724,tons,15.61,104.96,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-01-11,rebar,2.097,tons,855.66,1794.32,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-10-26,rebar,12.18,tons,645.91,7867.18,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-01-11,aggregate,17.313,tons,18.06,312.67,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-02-13,lumber,0.841,board_feet,1.05,0.88,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-03-10,rebar,2.003,tons,636.86,1275.63,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-12-08,steel,14.611,tons,1111.17,16235.3,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-06-13,lumber,0.953,board_feet,1.06,1.01,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-11-04,aggregate,18.764,tons,12.85,241.12,True,synthetic_generator_v1
+HOSTOS-LINCOLN ACADEMY OF SCIENCE,2024-10-29,aggregate,14.621,tons,14.27,208.64,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-06-23,rebar,17.05,tons,865.38,14754.73,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-08-23,lumber,10.758,board_feet,1.4,15.06,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-24,rebar,16.343,tons,650.87,10637.17,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-11,steel,15.924,tons,798.01,12707.51,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-16,cement,8.983,tons,112.09,1006.9,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-10,aggregate,11.319,tons,14.67,166.05,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-09-28,steel,1.655,tons,1120.65,1854.68,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-11-05,steel,6.094,tons,933.92,5691.31,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-12-12,rebar,7.452,tons,646.78,4819.8,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-01-04,cement,2.433,tons,110.44,268.7,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-04-11,lumber,12.828,board_feet,1.49,19.11,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-12-24,cement,14.921,tons,135.74,2025.38,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-08,steel,8.493,tons,1122.11,9530.08,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-03-24,aggregate,13.226,tons,16.56,219.02,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-10-30,lumber,4.648,board_feet,1.16,5.39,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-08-06,lumber,2.181,board_feet,1.42,3.1,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-05-03,rebar,26.115,tons,786.39,20536.57,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-05-24,steel,6.023,tons,788.28,4747.81,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-02,aggregate,4.168,tons,16.47,68.65,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-08-08,cement,18.584,tons,134.35,2496.76,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-08-16,cement,19.929,tons,117.28,2337.27,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-07-04,rebar,2.958,tons,784.89,2321.7,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-03,rebar,3.606,tons,721.22,2600.72,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-09-02,lumber,24.177,board_feet,1.26,30.46,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-09-07,lumber,10.948,board_feet,1.13,12.37,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-03-28,cement,0.397,tons,135.16,53.66,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-07-28,aggregate,11.554,tons,17.53,202.54,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-07-25,aggregate,1.163,tons,17.96,20.89,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-08-25,aggregate,14.494,tons,15.06,218.28,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-01-13,steel,18.499,tons,1048.78,19401.38,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-07-14,steel,3.748,tons,1049.9,3935.03,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-12-04,steel,6.09,tons,819.37,4989.96,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-04-04,steel,13.347,tons,818.96,10930.66,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-06-21,steel,10.693,tons,772.81,8263.66,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-07-19,steel,3.324,tons,962.76,3200.21,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-04-26,steel,28.626,tons,940.15,26912.73,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-09-12,aggregate,13.032,tons,15.67,204.21,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-12-06,cement,12.846,tons,118.96,1528.16,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-02-24,cement,20.069,tons,131.18,2632.65,True,synthetic_generator_v1
+P.S. 222 - QUEENS,2024-03-13,steel,0.541,tons,951.75,514.9,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-01-02,lumber,18.197,board_feet,1.19,21.65,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-11-13,aggregate,11.293,tons,18.49,208.81,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-09-05,lumber,1.733,board_feet,1.31,2.27,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-10-01,steel,11.572,tons,1109.78,12842.37,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-11-01,rebar,7.973,tons,628.7,5012.63,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-01,steel,6.815,tons,854.36,5822.46,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-07-11,aggregate,3.357,tons,16.95,56.9,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-01-06,lumber,4.715,board_feet,1.03,4.86,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-11-29,aggregate,10.664,tons,13.22,140.98,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-08-26,steel,4.366,tons,821.51,3586.71,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-08-15,lumber,8.326,board_feet,1.07,8.91,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-05-20,aggregate,2.559,tons,15.47,39.59,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-03-24,rebar,20.546,tons,630.99,12964.32,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-01-09,cement,13.514,tons,124.9,1687.9,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-03-13,lumber,7.976,board_feet,1.42,11.33,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-07-11,rebar,15.637,tons,685.69,10722.13,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-04-01,lumber,6.801,board_feet,1.31,8.91,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-01-18,lumber,2.638,board_feet,1.04,2.74,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-09-18,cement,20.123,tons,136.69,2750.61,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-12-31,steel,17.971,tons,815.37,14653.01,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-22,rebar,5.578,tons,640.75,3574.1,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-12-31,steel,13.022,tons,893.55,11635.81,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-11,aggregate,10.258,tons,14.81,151.92,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-05,aggregate,2.194,tons,15.25,33.46,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-07-21,steel,7.195,tons,962.32,6923.89,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-15,steel,0.408,tons,1093.11,445.99,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-05-13,steel,6.674,tons,851.14,5680.51,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-11-26,rebar,19.285,tons,790.24,15239.78,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-09-02,cement,7.276,tons,104.02,756.85,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-04-29,steel,10.321,tons,880.01,9082.58,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-07-17,aggregate,3.563,tons,12.87,45.86,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-05-28,aggregate,20.766,tons,15.24,316.47,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-04,cement,7.432,tons,111.61,829.49,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-01-19,steel,6.593,tons,890.78,5872.91,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-02-11,rebar,16.633,tons,841.86,14002.66,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-09-17,steel,0.511,tons,767.65,392.27,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-11-17,rebar,8.56,tons,673.8,5767.73,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-10-11,lumber,0.989,board_feet,1.12,1.11,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-11-07,lumber,4.697,board_feet,1.18,5.54,True,synthetic_generator_v1
+P.S. 171 - QUEENS,2024-06-16,lumber,6.423,board_feet,1.24,7.96,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-12,lumber,7.84,board_feet,1.16,9.09,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-05-14,aggregate,16.315,tons,18.33,299.05,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-04-14,cement,19.542,tons,134.73,2632.89,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-16,aggregate,3.11,tons,13.8,42.92,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-02-27,cement,3.363,tons,144.55,486.12,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-12-21,rebar,5.984,tons,671.48,4018.14,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-12,rebar,11.184,tons,637.92,7134.5,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-02-03,aggregate,7.16,tons,16.82,120.43,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-16,cement,13.937,tons,121.8,1697.53,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-07,rebar,5.405,tons,846.27,4574.09,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-12-02,cement,24.887,tons,136.08,3386.62,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-09-02,steel,0.256,tons,1053.7,269.75,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-13,lumber,11.383,board_feet,1.35,15.37,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-01,cement,3.62,tons,143.93,521.03,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-08-10,rebar,16.16,tons,659.83,10662.85,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-25,lumber,1.67,board_feet,1.19,1.99,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-11-02,lumber,5.985,board_feet,1.1,6.58,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-12-03,lumber,8.169,board_feet,1.37,11.19,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-10-03,steel,1.238,tons,911.52,1128.46,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-10-24,aggregate,17.995,tons,14.98,269.57,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-06-26,lumber,14.063,board_feet,1.45,20.39,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-12-11,rebar,17.059,tons,709.19,12098.07,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-08-09,cement,11.752,tons,117.97,1386.38,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-07-02,aggregate,7.546,tons,15.45,116.59,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-10-03,steel,12.159,tons,1095.59,13321.28,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-11-16,steel,0.959,tons,980.57,940.37,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-10-03,steel,12.848,tons,1116.8,14348.65,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-04-15,aggregate,5.611,tons,13.24,74.29,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-08-02,cement,17.61,tons,126.94,2235.41,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-10-21,cement,4.353,tons,114.23,497.24,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-10-08,steel,4.119,tons,1048.58,4319.1,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-09-07,cement,10.248,tons,117.62,1205.37,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-07-10,rebar,16.326,tons,824.42,13459.48,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-04-22,rebar,0.403,tons,693.32,279.41,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-07-27,cement,7.275,tons,109.47,796.39,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-12-21,steel,19.305,tons,1022.83,19745.73,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-09-15,cement,17.339,tons,135.36,2347.01,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-06-05,steel,5.771,tons,1037.09,5985.05,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-06-04,steel,0.749,tons,1058.22,792.61,True,synthetic_generator_v1
+P.S. 157 - BROOKLYN,2024-01-13,cement,3.925,tons,103.49,406.2,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-02-05,rebar,3.407,tons,645.75,2200.07,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-05-20,rebar,12.469,tons,778.04,9701.38,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-01-25,lumber,19.807,board_feet,1.3,25.75,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-12-23,rebar,16.632,tons,677.15,11262.36,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-03-24,cement,6.305,tons,115.93,730.94,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-06-18,aggregate,9.576,tons,17.77,170.17,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-04-11,aggregate,8.788,tons,15.67,137.71,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-01-03,aggregate,8.02,tons,18.18,145.8,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-07-11,cement,12.996,tons,116.51,1514.16,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-04-24,lumber,13.889,board_feet,1.26,17.5,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-12-31,aggregate,4.998,tons,17.6,87.96,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-02-29,cement,7.825,tons,148.98,1165.77,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-11-05,rebar,9.67,tons,601.63,5817.76,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-09-11,lumber,8.016,board_feet,1.36,10.9,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-12-21,lumber,5.294,board_feet,1.32,6.99,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-02-24,aggregate,3.076,tons,16.09,49.49,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-08-04,cement,6.432,tons,105.13,676.2,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-05-14,lumber,6.844,board_feet,1.14,7.8,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-03-11,cement,6.988,tons,103.16,720.88,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-02-14,rebar,7.659,tons,779.76,5972.18,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-10-06,lumber,11.2,board_feet,1.29,14.45,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-09-01,cement,19.47,tons,129.94,2529.93,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-02-29,rebar,2.44,tons,606.13,1478.96,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-04-13,steel,0.255,tons,905.66,230.94,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-07-09,cement,20.849,tons,126.49,2637.19,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-01-07,cement,2.869,tons,127.46,365.68,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-06-04,steel,3.891,tons,880.03,3424.2,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-05-04,aggregate,7.146,tons,15.6,111.48,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-09-02,steel,1.234,tons,800.66,988.01,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-07-17,rebar,3.452,tons,820.08,2830.92,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-03-15,steel,4.383,tons,1073.82,4706.55,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-03-15,cement,25.108,tons,105.48,2648.39,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-03-25,steel,9.334,tons,990.7,9247.19,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-07-30,lumber,22.439,board_feet,1.22,27.38,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-08-09,cement,2.268,tons,143.79,326.12,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-07-21,cement,10.782,tons,119.94,1293.19,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-08-18,rebar,20.167,tons,829.18,16722.07,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-04-25,steel,19.323,tons,948.44,18326.71,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-07-27,steel,8.258,tons,851.88,7034.83,True,synthetic_generator_v1
+P.S. 209 - QUEENS,2024-09-23,lumber,1.15,board_feet,1.31,1.51,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-29,steel,9.95,tons,1063.94,10586.2,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-03,aggregate,22.087,tons,15.0,331.31,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-19,aggregate,0.326,tons,15.5,5.05,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-06-23,steel,17.822,tons,856.7,15268.11,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-02-06,lumber,11.999,board_feet,1.28,15.36,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-20,cement,11.949,tons,105.19,1256.92,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-10,aggregate,24.512,tons,16.25,398.32,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-21,rebar,13.693,tons,753.89,10323.02,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-11,lumber,15.127,board_feet,1.49,22.54,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-10-31,cement,8.427,tons,124.87,1052.28,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-17,lumber,9.723,board_feet,1.19,11.57,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-28,cement,9.411,tons,142.66,1342.57,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-22,cement,2.642,tons,139.63,368.9,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-12-17,aggregate,2.728,tons,13.98,38.14,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-12-04,rebar,9.621,tons,868.51,8355.93,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-21,lumber,6.886,board_feet,1.23,8.47,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-28,steel,4.673,tons,861.02,4023.55,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-10-09,lumber,3.9,board_feet,1.42,5.54,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-03-18,cement,3.335,tons,112.55,375.35,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-15,steel,2.21,tons,960.02,2121.64,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-09,steel,18.902,tons,1117.32,21119.58,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-18,aggregate,14.003,tons,13.5,189.04,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-05-06,aggregate,7.112,tons,13.74,97.72,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-03-29,steel,16.009,tons,865.61,13857.55,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-02,steel,0.181,tons,1074.92,194.56,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-16,aggregate,4.504,tons,14.03,63.19,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-02-21,cement,4.196,tons,109.22,458.29,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-15,rebar,10.991,tons,805.19,8849.84,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-12,rebar,5.74,tons,783.53,4497.46,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-08-11,rebar,1.846,tons,690.84,1275.29,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-11,aggregate,4.997,tons,15.4,76.95,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-04-15,lumber,4.63,board_feet,1.09,5.05,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-02-09,rebar,12.978,tons,642.15,8333.82,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-25,steel,8.057,tons,843.45,6795.68,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-06-29,aggregate,2.706,tons,18.14,49.09,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-13,rebar,20.761,tons,840.76,17455.02,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-13,rebar,5.676,tons,721.63,4095.97,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-01-12,aggregate,20.555,tons,16.18,332.58,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-07-03,aggregate,15.719,tons,15.42,242.39,True,synthetic_generator_v1
+P.S. 206 - BROOKLYN,2024-08-05,cement,6.475,tons,122.99,796.36,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-10,steel,4.93,tons,782.4,3857.23,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-20,steel,5.795,tons,897.19,5199.22,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-05-22,aggregate,18.786,tons,14.22,267.14,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-30,cement,3.745,tons,131.09,490.93,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-01-22,cement,0.891,tons,149.18,132.92,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-10,cement,2.258,tons,125.52,283.42,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-07-21,rebar,17.036,tons,746.61,12719.25,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-07-25,rebar,9.222,tons,740.5,6828.89,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-11-06,rebar,8.106,tons,796.14,6453.51,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-07-26,lumber,5.223,board_feet,1.26,6.58,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-09-12,steel,3.596,tons,1054.74,3792.85,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-04-15,cement,2.851,tons,116.33,331.66,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-11-05,aggregate,0.716,tons,15.05,10.78,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-06-02,lumber,16.528,board_feet,1.38,22.81,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-04-20,aggregate,6.827,tons,17.4,118.79,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-16,aggregate,16.809,tons,17.25,289.96,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-11-28,lumber,8.348,board_feet,1.21,10.1,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-13,cement,22.642,tons,114.14,2584.36,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-07-23,aggregate,7.76,tons,17.03,132.15,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-07-09,steel,5.194,tons,783.48,4069.4,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-15,cement,7.47,tons,116.18,867.86,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-01-28,lumber,4.749,board_feet,1.33,6.32,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-08-09,cement,7.251,tons,130.72,947.85,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-06-30,rebar,2.373,tons,869.78,2063.99,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-09-02,cement,4.184,tons,118.92,497.56,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-04-09,lumber,10.415,board_feet,1.5,15.62,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-15,rebar,2.264,tons,670.49,1517.99,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-01-13,rebar,7.472,tons,601.76,4496.35,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-07-25,lumber,17.001,board_feet,1.4,23.8,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-08-23,lumber,1.007,board_feet,1.04,1.05,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-09-21,rebar,0.773,tons,629.52,486.62,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-08-12,aggregate,6.076,tons,16.75,101.77,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-10-07,rebar,9.981,tons,736.67,7352.7,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-19,aggregate,2.739,tons,17.14,46.95,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-11-21,lumber,18.963,board_feet,1.09,20.67,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-04-10,cement,1.063,tons,112.57,119.66,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-01-23,lumber,0.483,board_feet,1.03,0.5,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-09,steel,0.817,tons,1052.81,860.15,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-03-18,aggregate,8.319,tons,16.03,133.35,True,synthetic_generator_v1
+P.S. 239 - QUEENS,2024-05-10,steel,8.802,tons,1074.18,9454.93,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-01-30,aggregate,3.934,tons,15.24,59.95,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-01-16,lumber,11.029,board_feet,1.47,16.21,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-01,lumber,6.947,board_feet,1.26,8.75,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-07-21,rebar,25.573,tons,654.93,16748.52,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-08-08,steel,1.981,tons,824.36,1633.06,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-22,rebar,18.475,tons,686.6,12684.94,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-07-11,cement,8.443,tons,137.4,1160.07,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-17,rebar,7.55,tons,714.99,5398.17,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-02-17,steel,5.746,tons,828.93,4763.03,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-09,lumber,5.067,board_feet,1.49,7.55,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-07-06,lumber,2.946,board_feet,1.1,3.24,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-06-07,lumber,1.402,board_feet,1.07,1.5,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-10-25,cement,18.867,tons,141.43,2668.36,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-04-08,steel,4.076,tons,1087.94,4434.44,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-09-08,cement,4.198,tons,142.17,596.83,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-02-06,rebar,13.351,tons,674.64,9007.12,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-02-03,aggregate,1.196,tons,16.61,19.87,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-12-24,rebar,0.299,tons,621.91,185.95,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-11-06,steel,4.146,tons,1071.78,4443.6,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-12-06,steel,2.733,tons,1015.17,2774.46,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-08-19,lumber,13.263,board_feet,1.33,17.64,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-07-24,aggregate,2.544,tons,17.59,44.75,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-04-30,lumber,1.646,board_feet,1.24,2.04,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-12-26,steel,1.046,tons,778.25,814.05,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-01-31,rebar,9.101,tons,874.5,7958.82,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-05,steel,1.106,tons,1025.2,1133.87,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-05-24,lumber,0.118,board_feet,1.36,0.16,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-08-10,aggregate,7.264,tons,13.49,97.99,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-11-25,rebar,4.003,tons,793.55,3176.58,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-08-30,cement,3.518,tons,119.48,420.33,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-07-19,steel,3.318,tons,1067.8,3542.96,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-05-09,aggregate,7.718,tons,13.87,107.05,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-09-11,aggregate,0.583,tons,17.0,9.91,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-06-14,aggregate,3.542,tons,13.55,47.99,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-06-16,aggregate,8.808,tons,17.26,152.03,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-12-24,steel,16.229,tons,767.68,12458.68,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-25,lumber,5.073,board_feet,1.49,7.56,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-03-16,cement,10.93,tons,144.44,1578.73,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-05-02,rebar,15.03,tons,849.05,12761.22,True,synthetic_generator_v1
+MID-MAN ADULT LEARNING CENTER - M,2024-04-02,aggregate,10.344,tons,12.98,134.27,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-11-23,lumber,6.66,board_feet,1.39,9.26,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-12-05,cement,8.272,tons,127.64,1055.84,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-10-09,lumber,5.378,board_feet,1.39,7.48,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-04-30,aggregate,3.384,tons,16.02,54.21,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-04-12,cement,1.775,tons,134.88,239.41,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-02-10,lumber,9.713,board_feet,1.03,10.0,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-03-07,lumber,14.397,board_feet,1.1,15.84,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-05-29,lumber,13.856,board_feet,1.12,15.52,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-03-24,lumber,16.101,board_feet,1.07,17.23,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-05-27,lumber,20.436,board_feet,1.33,27.18,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-02-09,steel,4.896,tons,1079.36,5284.55,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-01-02,steel,20.8,tons,1038.04,21591.23,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-05-18,steel,12.009,tons,805.81,9676.97,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-08-19,lumber,17.418,board_feet,1.39,24.21,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-08-26,rebar,16.879,tons,629.19,10620.1,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-12-08,rebar,4.362,tons,815.92,3559.04,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-06-29,steel,9.204,tons,904.64,8326.31,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-04-06,rebar,20.223,tons,850.06,17190.76,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-11-13,cement,0.551,tons,149.62,82.44,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-03-24,steel,1.746,tons,1013.23,1769.1,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-04-09,aggregate,15.273,tons,18.7,285.61,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-11-19,lumber,24.358,board_feet,1.4,34.1,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-08-09,cement,8.747,tons,140.75,1231.14,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-07-25,steel,12.001,tons,939.03,11269.3,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-10-27,cement,17.202,tons,148.85,2560.52,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-04-26,aggregate,5.452,tons,14.68,80.04,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-07-07,steel,1.191,tons,1088.99,1296.99,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-01-19,aggregate,10.034,tons,12.85,128.94,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-12-06,lumber,17.137,board_feet,1.33,22.79,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-07-31,cement,24.64,tons,106.09,2614.06,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-02-19,rebar,1.32,tons,740.74,977.78,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-02-29,rebar,12.78,tons,873.92,11168.7,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-06-23,cement,13.897,tons,132.0,1834.4,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-01-17,lumber,5.409,board_feet,1.22,6.6,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-01-20,cement,17.507,tons,104.64,1831.93,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-06-02,steel,1.231,tons,1124.74,1384.55,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-05-23,lumber,12.439,board_feet,1.43,17.79,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-02-08,rebar,2.8,tons,801.82,2245.1,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-07-27,cement,13.969,tons,103.26,1442.44,True,synthetic_generator_v1
+P.S. 209 - BROOKLYN,2024-05-25,lumber,6.861,board_feet,1.09,7.48,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-12-14,rebar,14.376,tons,799.36,11491.6,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-06,aggregate,4.368,tons,16.04,70.06,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-01-31,aggregate,8.696,tons,13.9,120.87,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-09-27,lumber,19.485,board_feet,1.19,23.19,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-07-26,rebar,6.264,tons,670.42,4199.51,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-11-11,cement,12.034,tons,135.93,1635.78,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-05-10,rebar,22.696,tons,708.55,16081.25,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-07,lumber,5.503,board_feet,1.35,7.43,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-10-22,steel,10.291,tons,1113.18,11455.74,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-05-07,steel,7.21,tons,1020.98,7361.27,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-28,steel,4.579,tons,1011.26,4630.56,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-03-09,steel,11.303,tons,864.56,9772.12,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-02-27,rebar,11.969,tons,626.02,7492.83,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-12-22,cement,5.222,tons,121.84,636.25,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-06-23,steel,0.43,tons,998.27,429.26,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-03-04,lumber,6.941,board_feet,1.18,8.19,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-07-29,aggregate,3.231,tons,15.41,49.79,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-13,steel,7.827,tons,839.44,6570.3,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-06-29,steel,18.624,tons,1003.43,18687.88,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-09-07,aggregate,9.51,tons,18.44,175.36,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-08-11,cement,4.959,tons,109.61,543.56,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-01-31,aggregate,15.757,tons,15.9,250.54,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-14,aggregate,11.427,tons,14.45,165.12,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-03-31,aggregate,10.362,tons,17.36,179.88,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-08-30,rebar,15.195,tons,679.89,10330.93,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-24,aggregate,9.491,tons,13.96,132.49,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-05-21,aggregate,12.82,tons,15.63,200.38,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-08-12,steel,3.298,tons,771.17,2543.32,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-30,aggregate,17.058,tons,16.06,273.95,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-11-24,steel,24.562,tons,804.54,19761.11,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-07-08,rebar,4.962,tons,836.36,4150.02,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-09-21,lumber,9.66,board_feet,1.38,13.33,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-01-11,cement,14.067,tons,113.58,1597.73,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-05-24,lumber,3.614,board_feet,1.41,5.1,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-12-08,rebar,13.167,tons,853.84,11242.51,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-04-03,aggregate,5.385,tons,18.61,100.21,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-01-02,steel,13.707,tons,1013.27,13888.89,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-10-10,aggregate,2.811,tons,16.16,45.43,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-01-01,aggregate,6.768,tons,14.59,98.75,True,synthetic_generator_v1
+P.S. 55 - BRONX,2024-08-05,lumber,9.592,board_feet,1.35,12.95,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-06-18,cement,0.285,tons,106.26,30.28,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-10-25,steel,12.282,tons,918.76,11284.21,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-06-27,lumber,1.43,board_feet,1.38,1.97,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-10-11,steel,9.565,tons,990.79,9476.91,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-01-11,lumber,5.862,board_feet,1.11,6.51,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-03-21,steel,3.823,tons,835.51,3194.15,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-04-17,steel,11.288,tons,812.75,9174.32,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-08-23,cement,1.331,tons,108.46,144.36,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-03-01,steel,1.178,tons,896.99,1056.65,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-06-02,aggregate,7.152,tons,18.16,129.88,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-08-30,aggregate,8.077,tons,12.8,103.39,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-07-10,cement,9.962,tons,144.86,1443.1,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-02-25,cement,1.971,tons,138.69,273.36,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-04-18,cement,7.824,tons,113.0,884.11,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-03-26,lumber,9.041,board_feet,1.36,12.3,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-12-31,rebar,14.269,tons,847.26,12089.55,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-10-29,rebar,3.304,tons,870.63,2876.56,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-08-19,steel,11.48,tons,1002.79,11512.03,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-04-20,aggregate,6.92,tons,15.3,105.88,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-11-08,aggregate,3.685,tons,14.03,51.7,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-01-11,steel,12.734,tons,911.09,11601.82,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-07-11,rebar,0.837,tons,757.79,634.27,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-12-21,steel,6.057,tons,1089.3,6597.89,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-04-27,rebar,9.757,tons,729.21,7114.9,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-11-28,rebar,3.573,tons,794.49,2838.71,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-03-10,cement,7.466,tons,113.13,844.63,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-03-05,steel,3.699,tons,1091.88,4038.86,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-09-17,rebar,1.321,tons,745.92,985.36,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-02-12,lumber,4.036,board_feet,1.27,5.13,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-02-17,lumber,4.218,board_feet,1.42,5.99,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-01-23,aggregate,17.687,tons,15.69,277.51,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-04-15,steel,7.402,tons,994.05,7357.96,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-09-22,steel,1.773,tons,989.94,1755.16,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-02-06,aggregate,2.814,tons,17.18,48.34,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-06-13,aggregate,7.47,tons,13.74,102.64,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-05-21,lumber,21.83,board_feet,1.39,30.34,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-12-06,cement,8.287,tons,143.42,1188.52,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-01-16,cement,2.506,tons,140.78,352.79,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-10-26,cement,20.218,tons,105.97,2142.5,True,synthetic_generator_v1
+P.S. 56 - QUEENS,2024-04-07,aggregate,9.452,tons,17.45,164.94,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-16,steel,11.735,tons,965.97,11335.66,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-12,lumber,15.63,board_feet,1.4,21.88,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-01-09,rebar,9.524,tons,834.72,7949.87,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-26,steel,19.439,tons,810.28,15751.03,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-01,lumber,12.464,board_feet,1.44,17.95,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-09,rebar,16.834,tons,629.79,10601.88,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-11,rebar,4.538,tons,800.32,3631.85,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-25,steel,2.868,tons,962.09,2759.27,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-08-30,aggregate,10.632,tons,13.91,147.89,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-06,rebar,0.265,tons,776.37,205.74,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-23,lumber,5.83,board_feet,1.09,6.35,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-23,rebar,20.034,tons,784.81,15722.88,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-03-28,rebar,8.507,tons,799.55,6801.77,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-27,lumber,1.556,board_feet,1.1,1.71,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-04,aggregate,5.315,tons,17.08,90.78,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-27,aggregate,0.384,tons,14.03,5.39,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-06-07,lumber,22.782,board_feet,1.41,32.12,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-29,aggregate,15.137,tons,13.69,207.23,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-10,lumber,7.062,board_feet,1.21,8.55,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-27,lumber,2.91,board_feet,1.18,3.43,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-15,steel,1.979,tons,1093.12,2163.28,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-01-12,cement,29.443,tons,124.55,3667.13,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-06-06,aggregate,10.313,tons,15.83,163.25,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-28,rebar,14.348,tons,851.56,12218.18,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-01-12,steel,3.945,tons,965.19,3807.67,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-13,rebar,4.616,tons,644.97,2977.18,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-21,lumber,4.276,board_feet,1.31,5.6,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-22,cement,0.406,tons,134.34,54.54,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-06-23,cement,1.576,tons,149.67,235.88,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-29,steel,18.935,tons,838.67,15880.22,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-20,steel,23.402,tons,834.96,19539.73,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-26,lumber,1.577,board_feet,1.3,2.05,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-28,cement,0.689,tons,108.79,74.96,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-22,cement,9.451,tons,106.54,1006.91,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-03,aggregate,10.868,tons,17.47,189.86,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-05,cement,2.479,tons,131.11,325.02,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-11,steel,6.86,tons,836.28,5736.88,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-20,steel,2.912,tons,910.8,2652.25,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-06-14,steel,15.009,tons,777.51,11669.65,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-09,cement,7.592,tons,146.07,1108.96,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-03-16,cement,0.477,tons,113.53,54.15,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-05-20,lumber,3.008,board_feet,1.14,3.43,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-01-19,lumber,8.505,board_feet,1.08,9.19,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-10-01,aggregate,7.856,tons,14.95,117.45,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-01-11,lumber,4.022,board_feet,1.13,4.54,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-07-21,aggregate,11.349,tons,13.03,147.88,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-12-21,cement,12.086,tons,107.59,1300.33,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-03-06,aggregate,5.46,tons,13.0,70.98,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-04-08,cement,3.23,tons,126.97,410.11,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-04-14,lumber,11.159,board_feet,1.06,11.83,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-01-14,aggregate,18.286,tons,13.67,249.97,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-21,cement,2.176,tons,106.8,232.4,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-03-30,steel,20.045,tons,856.45,17167.54,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-06-23,lumber,15.138,board_feet,1.28,19.38,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-11,rebar,8.505,tons,625.46,5319.54,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-11-16,aggregate,6.52,tons,18.16,118.4,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-11-14,steel,10.966,tons,1119.21,12273.26,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-05-15,lumber,5.094,board_feet,1.14,5.81,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-10-10,cement,2.23,tons,140.1,312.42,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-17,steel,1.053,tons,1075.62,1132.63,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-10-08,rebar,11.251,tons,633.22,7124.36,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-01-24,steel,6.087,tons,1025.59,6242.77,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-01-28,cement,14.733,tons,134.02,1974.52,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-19,cement,2.643,tons,119.68,316.31,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-10-16,rebar,3.177,tons,793.11,2519.71,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-05-28,lumber,15.991,board_feet,1.36,21.75,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-19,lumber,5.594,board_feet,1.3,7.27,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-03-25,aggregate,5.711,tons,16.49,94.17,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-11-16,aggregate,10.739,tons,17.35,186.32,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-10-20,aggregate,15.083,tons,17.73,267.42,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-11-24,rebar,5.787,tons,807.66,4673.93,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-12-12,aggregate,15.376,tons,13.62,209.42,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-07-06,rebar,11.59,tons,702.55,8142.55,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-10-18,steel,12.888,tons,870.99,11225.32,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-09-13,lumber,15.395,board_feet,1.29,19.86,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-04-09,steel,8.801,tons,1067.11,9391.64,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-04-24,lumber,2.06,board_feet,1.39,2.86,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-08,aggregate,18.511,tons,13.08,242.12,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-11-14,cement,5.042,tons,149.52,753.88,True,synthetic_generator_v1
+NEW MILLENNIUM BRONX ACADEMY OF THE ARTS - BRONX,2024-08-30,steel,1.088,tons,1039.96,1131.48,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-09-17,lumber,3.078,board_feet,1.03,3.17,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-25,aggregate,3.052,tons,17.26,52.68,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-01-01,cement,1.037,tons,130.82,135.66,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-18,cement,5.541,tons,149.93,830.76,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-02-29,aggregate,1.151,tons,16.76,19.29,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-11-09,lumber,5.003,board_feet,1.42,7.1,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-01-14,cement,14.232,tons,104.69,1489.95,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-11-27,lumber,1.834,board_feet,1.06,1.94,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-11-18,rebar,19.762,tons,610.21,12058.97,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-27,steel,12.359,tons,1075.64,13293.83,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-09-24,steel,22.029,tons,996.15,21944.19,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-11-17,steel,12.715,tons,783.11,9957.24,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-07,steel,0.254,tons,1087.46,276.21,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-08-13,aggregate,1.134,tons,16.34,18.53,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-19,steel,27.45,tons,1083.76,29749.21,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-25,aggregate,13.655,tons,16.78,229.13,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-11-01,steel,2.228,tons,798.15,1778.28,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-09-08,aggregate,15.652,tons,18.29,286.28,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-01-25,steel,16.384,tons,789.05,12927.8,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-05-14,cement,4.377,tons,121.07,529.92,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-09-25,rebar,2.97,tons,650.56,1932.16,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-08-20,steel,31.534,tons,797.11,25136.07,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-08,lumber,9.586,board_feet,1.12,10.74,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-24,cement,23.093,tons,124.43,2873.46,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-02-10,aggregate,24.52,tons,18.14,444.79,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-25,cement,6.4,tons,105.77,676.93,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-24,cement,0.219,tons,122.25,26.77,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-09-19,lumber,9.917,board_feet,1.08,10.71,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-09-10,rebar,3.337,tons,628.95,2098.81,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-04-21,aggregate,1.005,tons,13.2,13.27,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-12-07,rebar,2.831,tons,608.77,1723.43,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-27,rebar,12.605,tons,685.45,8640.1,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-13,aggregate,4.29,tons,17.65,75.72,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-08-08,lumber,7.952,board_feet,1.16,9.22,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-01-28,steel,9.548,tons,1064.52,10164.04,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-07-22,aggregate,9.62,tons,15.96,153.54,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-13,aggregate,4.429,tons,15.83,70.11,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-04-05,cement,6.849,tons,102.67,703.19,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-03-23,cement,20.386,tons,130.27,2655.68,True,synthetic_generator_v1
+P.S. 28 - BRONX,2024-04-03,cement,9.787,tons,132.16,1293.45,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-16,rebar,14.24,tons,706.42,10059.42,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-08-21,rebar,17.361,tons,744.59,12926.83,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-12-15,lumber,1.529,board_feet,1.13,1.73,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-15,rebar,11.988,tons,838.06,10046.66,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-03-22,steel,0.553,tons,1086.18,600.66,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-01-20,lumber,12.462,board_feet,1.35,16.82,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-27,rebar,18.565,tons,716.28,13297.74,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-02,lumber,3.399,board_feet,1.08,3.67,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-06,lumber,4.716,board_feet,1.43,6.74,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-08,rebar,1.611,tons,618.52,996.44,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-26,aggregate,3.88,tons,16.51,64.06,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-09-16,aggregate,21.317,tons,12.96,276.27,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-12-01,aggregate,1.199,tons,13.3,15.95,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-01,steel,13.116,tons,905.58,11877.59,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-10,rebar,1.302,tons,810.35,1055.08,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-12-02,steel,18.741,tons,863.96,16191.47,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-02-09,rebar,7.368,tons,612.77,4514.89,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-17,aggregate,7.42,tons,15.06,111.75,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-03-17,rebar,5.495,tons,755.89,4153.62,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-08-11,rebar,14.424,tons,829.37,11962.83,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-03-07,lumber,5.437,board_feet,1.27,6.9,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-10,aggregate,7.888,tons,16.61,131.02,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-11,rebar,4.998,tons,595.18,2974.71,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-25,steel,2.413,tons,897.73,2166.22,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-12-22,lumber,11.254,board_feet,1.44,16.21,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-12-05,lumber,5.448,board_feet,1.37,7.46,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-18,aggregate,5.039,tons,16.17,81.48,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-01-16,cement,15.678,tons,110.44,1731.48,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-24,lumber,23.759,board_feet,1.15,27.32,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-03,rebar,5.608,tons,649.91,3644.7,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-29,rebar,13.446,tons,677.37,9107.92,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-11-22,steel,1.539,tons,956.77,1472.47,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-10-21,lumber,1.114,board_feet,1.4,1.56,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-23,steel,15.731,tons,971.13,15276.85,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-02-22,lumber,1.26,board_feet,1.21,1.52,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-05-13,cement,4.007,tons,110.96,444.62,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-21,aggregate,15.497,tons,13.82,214.17,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-06-24,aggregate,11.573,tons,15.17,175.56,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-10-28,steel,16.477,tons,1077.6,17755.62,True,synthetic_generator_v1
+CITY-AS-SCHOOL - MANHATTAN,2024-04-23,lumber,12.242,board_feet,1.2,14.69,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-02-14,cement,6.129,tons,120.38,737.81,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-27,cement,1.263,tons,135.41,171.02,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-25,aggregate,7.727,tons,17.76,137.23,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-01,cement,0.236,tons,115.04,27.15,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-07,steel,11.957,tons,1073.32,12833.69,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-06-27,aggregate,5.23,tons,13.73,71.81,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-11,lumber,15.772,board_feet,1.39,21.92,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-08-01,cement,2.897,tons,147.87,428.38,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-10-25,rebar,9.549,tons,745.9,7122.6,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-05-23,lumber,13.582,board_feet,1.43,19.42,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-11,aggregate,1.846,tons,18.65,34.43,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-12-08,lumber,6.596,board_feet,1.28,8.44,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-06-22,rebar,3.489,tons,837.7,2922.74,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-12-30,rebar,9.578,tons,675.65,6471.38,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-14,steel,0.461,tons,807.72,372.36,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-02-12,aggregate,18.102,tons,18.66,337.78,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-01-14,steel,6.121,tons,779.18,4769.36,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-20,lumber,4.639,board_feet,1.2,5.57,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-04-27,rebar,0.731,tons,863.37,631.12,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-08,cement,0.907,tons,140.37,127.32,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-06-11,cement,7.39,tons,125.07,924.27,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-24,steel,13.648,tons,993.03,13552.87,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-08-05,rebar,3.974,tons,674.49,2680.42,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-05-25,rebar,10.195,tons,741.94,7564.08,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-07-15,aggregate,23.022,tons,15.69,361.22,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-12,steel,11.954,tons,917.31,10965.52,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-11-22,aggregate,3.508,tons,15.23,53.43,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-01-04,steel,3.268,tons,896.87,2930.97,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-20,steel,12.302,tons,1106.89,13616.96,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-02-05,rebar,1.096,tons,656.16,719.15,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-29,rebar,6.779,tons,632.44,4287.31,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-02-02,steel,0.677,tons,837.07,566.7,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-03-14,cement,4.872,tons,104.83,510.73,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-01-05,cement,5.109,tons,126.94,648.54,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-07-31,lumber,1.84,board_feet,1.29,2.37,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-06-25,cement,5.544,tons,127.56,707.19,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-08-29,aggregate,0.86,tons,15.49,13.32,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-04-02,lumber,4.6,board_feet,1.25,5.75,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-06-13,lumber,4.911,board_feet,1.32,6.48,True,synthetic_generator_v1
+I.S. 391 - BRONX,2024-09-04,steel,4.598,tons,901.41,4144.68,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-10-19,lumber,22.928,board_feet,1.15,26.37,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-05-09,rebar,11.535,tons,766.14,8837.42,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-29,steel,11.127,tons,1086.58,12090.38,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-11-05,rebar,1.061,tons,643.81,683.08,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-05,steel,7.512,tons,784.96,5896.62,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-05-06,rebar,7.098,tons,734.36,5212.49,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-27,steel,7.505,tons,941.52,7066.11,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-06-16,steel,6.319,tons,1094.39,6915.45,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-05-04,steel,1.229,tons,818.73,1006.22,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-12-11,cement,11.408,tons,137.0,1562.9,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-01-28,rebar,12.229,tons,647.76,7921.46,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-01-20,cement,3.879,tons,131.12,508.61,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-12-17,aggregate,17.753,tons,15.86,281.56,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-09-16,rebar,9.147,tons,789.13,7218.17,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-12-26,lumber,10.829,board_feet,1.34,14.51,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-07-01,steel,6.125,tons,1097.75,6723.72,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-01-21,steel,17.432,tons,771.24,13444.26,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-06-03,steel,17.828,tons,1058.28,18867.02,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-10-20,lumber,1.835,board_feet,1.07,1.96,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-04,lumber,8.143,board_feet,1.12,9.12,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-10-19,cement,0.231,tons,103.1,23.82,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-03-17,rebar,16.434,tons,858.71,14112.04,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-06-27,cement,24.965,tons,106.44,2657.27,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-04-11,aggregate,1.68,tons,15.82,26.58,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-01-30,rebar,24.926,tons,825.51,20576.66,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-01-03,rebar,4.822,tons,653.92,3153.2,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-10-30,aggregate,10.801,tons,13.31,143.76,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-28,steel,6.444,tons,1028.43,6627.2,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-29,steel,13.582,tons,821.67,11159.92,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-12-17,aggregate,9.219,tons,13.59,125.29,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-28,rebar,14.047,tons,810.99,11391.98,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-12-10,cement,12.428,tons,107.02,1330.04,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-04-02,cement,11.638,tons,107.81,1254.69,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-01-17,aggregate,11.118,tons,17.21,191.34,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-09-27,aggregate,12.012,tons,18.34,220.3,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-04-11,rebar,4.959,tons,677.21,3358.28,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-04-08,aggregate,2.04,tons,15.03,30.66,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-04-16,rebar,11.355,tons,777.18,8824.88,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-12-06,lumber,5.628,board_feet,1.39,7.82,True,synthetic_generator_v1
+P.S. 97 - QUEENS,2024-02-23,steel,5.834,tons,801.17,4674.03,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-08-14,cement,13.171,tons,103.07,1357.53,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-04-26,steel,13.435,tons,810.53,10889.47,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-05-24,rebar,7.734,tons,690.87,5343.19,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-05-13,steel,12.511,tons,1063.0,13299.19,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-12-16,cement,7.871,tons,115.7,910.67,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-05-07,cement,20.596,tons,107.99,2224.16,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-11-11,lumber,13.641,board_feet,1.26,17.19,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-11-23,aggregate,0.674,tons,14.96,10.08,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-06-06,rebar,15.029,tons,784.58,11791.45,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-06-27,lumber,9.388,board_feet,1.16,10.89,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-03-29,steel,4.945,tons,814.27,4026.57,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-05-08,aggregate,24.296,tons,15.36,373.19,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-02-26,cement,11.213,tons,140.27,1572.85,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-09-20,cement,0.894,tons,103.86,92.85,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-01-14,aggregate,0.761,tons,15.14,11.52,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-02-16,aggregate,3.573,tons,13.72,49.02,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-09-21,cement,6.696,tons,140.99,944.07,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-12-09,lumber,1.781,board_feet,1.23,2.19,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-03-16,rebar,20.76,tons,867.78,18015.11,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-12-26,cement,8.136,tons,124.25,1010.9,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-04-10,rebar,15.696,tons,664.02,10422.46,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-08-24,steel,7.995,tons,884.57,7072.14,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-01-25,lumber,3.007,board_feet,1.15,3.46,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-06-02,steel,14.522,tons,1053.37,15297.04,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-03-30,cement,4.462,tons,129.13,576.18,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-04-03,lumber,2.952,board_feet,1.28,3.78,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-09-27,lumber,9.829,board_feet,1.31,12.88,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-09-11,cement,10.213,tons,111.82,1142.02,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-10-14,cement,15.603,tons,140.58,2193.47,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-04-12,rebar,40.392,tons,707.72,28586.23,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-08-13,lumber,16.163,board_feet,1.23,19.88,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-03-17,cement,12.944,tons,118.96,1539.82,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-02-02,rebar,5.424,tons,834.05,4523.89,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-01-10,cement,10.545,tons,104.76,1104.69,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-05-16,aggregate,1.148,tons,18.54,21.28,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-11-16,rebar,7.444,tons,601.98,4481.14,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-02-04,cement,17.759,tons,133.99,2379.53,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-03-04,lumber,9.264,board_feet,1.04,9.63,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-12-01,lumber,5.862,board_feet,1.47,8.62,True,synthetic_generator_v1
+P.S. 215 - BROOKLYN,2024-02-04,rebar,1.516,tons,807.04,1223.47,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-03-28,cement,8.254,tons,106.27,877.15,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-01-29,steel,2.904,tons,992.1,2881.06,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-12-04,lumber,7.527,board_feet,1.07,8.05,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-06,cement,6.509,tons,138.04,898.5,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-19,rebar,20.221,tons,761.73,15402.94,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-26,aggregate,22.431,tons,13.25,297.21,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-08-15,cement,7.554,tons,137.09,1035.58,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-02,rebar,13.266,tons,854.78,11339.51,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-09-17,cement,13.487,tons,141.14,1903.56,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-02-06,rebar,24.166,tons,680.15,16436.5,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-03-11,steel,4.355,tons,1037.82,4519.71,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-08-19,lumber,11.299,board_feet,1.13,12.77,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-08-13,rebar,2.852,tons,699.66,1995.43,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-01-06,rebar,13.646,tons,667.66,9110.89,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-01-24,aggregate,21.258,tons,15.6,331.62,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-08-30,cement,8.092,tons,111.07,898.78,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-15,cement,0.64,tons,116.38,74.48,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-07-25,cement,6.461,tons,146.84,948.73,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-09-18,aggregate,9.887,tons,16.8,166.1,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-29,lumber,8.587,board_feet,1.22,10.48,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-09-15,steel,8.179,tons,931.81,7621.27,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-07-19,rebar,19.06,tons,832.42,15865.93,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-12-06,cement,0.298,tons,114.82,34.22,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-10-28,lumber,5.749,board_feet,1.45,8.34,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-02-15,rebar,10.067,tons,713.59,7183.71,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-06-30,aggregate,25.726,tons,16.6,427.05,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-03-31,aggregate,10.955,tons,14.45,158.3,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-12-19,rebar,3.51,tons,700.67,2459.35,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-02-24,aggregate,1.881,tons,16.24,30.55,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-12-03,aggregate,11.046,tons,18.06,199.49,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-08-03,lumber,18.099,board_feet,1.42,25.7,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-07-11,aggregate,10.379,tons,18.36,190.56,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-08-07,cement,0.473,tons,114.75,54.28,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-09-18,lumber,11.375,board_feet,1.09,12.4,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-06-22,cement,13.932,tons,120.52,1679.08,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-03-22,lumber,1.641,board_feet,1.32,2.17,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-05-20,rebar,1.504,tons,748.08,1125.11,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-01-01,rebar,29.966,tons,813.03,24363.26,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-05-16,rebar,0.223,tons,707.04,157.67,True,synthetic_generator_v1
+P.S. 84 - BROOKLYN,2024-12-22,rebar,5.5,tons,717.05,3943.77,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-02,rebar,5.367,tons,748.08,4014.95,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-01-02,aggregate,9.208,tons,15.52,142.91,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-09,steel,8.442,tons,862.51,7281.31,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-09-21,cement,7.43,tons,139.79,1038.64,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-06-16,rebar,9.095,tons,700.43,6370.41,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-05-15,rebar,14.286,tons,713.21,10188.92,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-12-05,rebar,11.537,tons,790.69,9122.19,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-24,aggregate,10.039,tons,16.93,169.96,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-08,aggregate,0.612,tons,16.15,9.88,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-12-18,cement,16.109,tons,117.71,1896.19,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-28,lumber,22.983,board_feet,1.04,23.9,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-03-04,rebar,2.715,tons,632.73,1717.86,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-11-02,steel,19.329,tons,936.99,18111.08,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-07-03,steel,10.588,tons,1015.92,10756.56,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-07-14,cement,2.83,tons,105.77,299.33,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-12-15,cement,8.173,tons,112.9,922.73,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-11-01,rebar,5.316,tons,705.57,3750.81,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-08-03,lumber,7.828,board_feet,1.14,8.92,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-12-29,steel,15.745,tons,882.96,13902.21,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-11-02,cement,12.835,tons,120.19,1542.64,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-01-04,cement,19.534,tons,129.48,2529.26,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-03-10,lumber,7.365,board_feet,1.27,9.35,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-24,lumber,8.699,board_feet,1.2,10.44,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-07-11,lumber,12.616,board_feet,1.4,17.66,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-12,rebar,5.864,tons,609.0,3571.18,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-08-11,lumber,9.765,board_feet,1.1,10.74,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-06-08,lumber,3.541,board_feet,1.38,4.89,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-06-23,rebar,9.495,tons,844.89,8022.23,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-10-19,aggregate,6.843,tons,14.66,100.32,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-04-23,steel,3.511,tons,1046.25,3673.38,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-11-07,cement,1.744,tons,139.55,243.38,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-05-12,aggregate,8.477,tons,18.01,152.67,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-03-07,steel,6.259,tons,869.11,5439.76,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-02-25,aggregate,4.084,tons,16.55,67.59,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-11-05,rebar,8.144,tons,597.56,4866.53,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-12-11,aggregate,23.778,tons,13.71,326.0,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-04-05,cement,8.893,tons,148.24,1318.3,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-08-19,aggregate,12.534,tons,18.54,232.38,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-09-01,aggregate,3.103,tons,14.65,45.46,True,synthetic_generator_v1
+MURRAY HILL ACADEMY HS - M,2024-02-04,aggregate,10.086,tons,12.92,130.31,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-09,lumber,8.68,board_feet,1.4,12.15,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-17,cement,28.685,tons,114.21,3276.11,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-30,lumber,9.82,board_feet,1.16,11.39,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-08-27,lumber,3.802,board_feet,1.43,5.44,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-09,cement,15.253,tons,108.72,1658.31,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-09,steel,31.616,tons,867.77,27435.42,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-02,rebar,6.643,tons,809.3,5376.18,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-08,rebar,2.129,tons,721.21,1535.46,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-22,steel,23.552,tons,852.44,20076.67,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-30,steel,2.608,tons,1077.34,2809.7,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-11,rebar,5.268,tons,701.26,3694.24,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-03-27,cement,12.579,tons,102.61,1290.73,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-04,cement,0.698,tons,140.46,98.04,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-04,rebar,10.535,tons,826.48,8706.97,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-10,lumber,20.123,board_feet,1.36,27.37,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-09,cement,19.441,tons,148.99,2896.51,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-06-15,rebar,26.125,tons,735.85,19224.08,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-03-15,lumber,0.233,board_feet,1.43,0.33,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-06-05,cement,0.177,tons,103.72,18.36,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-24,cement,10.881,tons,121.02,1316.82,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-08-30,rebar,3.638,tons,675.25,2456.56,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-04,aggregate,1.633,tons,14.27,23.3,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-09,lumber,10.178,board_feet,1.15,11.7,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-08-06,cement,8.252,tons,127.68,1053.62,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-04,cement,1.205,tons,124.81,150.4,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-13,steel,11.769,tons,803.58,9457.33,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-24,lumber,10.477,board_feet,1.14,11.94,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-01,cement,11.753,tons,126.11,1482.17,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-04,lumber,13.913,board_feet,1.44,20.03,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-07-16,rebar,4.686,tons,759.17,3557.47,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-09-20,steel,0.743,tons,1083.53,805.06,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-12-19,rebar,34.411,tons,683.06,23504.78,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-23,steel,16.902,tons,1066.5,18025.98,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-23,lumber,13.18,board_feet,1.14,15.03,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-04-29,cement,7.877,tons,140.89,1109.79,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-11-02,rebar,4.958,tons,665.74,3300.74,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-05-17,steel,4.899,tons,1090.64,5343.05,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-12,steel,0.116,tons,849.77,98.57,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-10-17,cement,1.831,tons,109.25,200.04,True,synthetic_generator_v1
+Q993 SPED - QUEENS,2024-02-27,rebar,5.074,tons,823.74,4179.66,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-04-03,cement,7.692,tons,147.29,1132.95,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-10-28,aggregate,18.499,tons,15.38,284.51,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-02-08,lumber,20.269,board_feet,1.23,24.93,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-12-08,aggregate,6.972,tons,15.28,106.53,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-02-17,cement,19.489,tons,145.97,2844.81,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-06-02,cement,6.282,tons,136.03,854.54,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-12-26,steel,5.661,tons,925.93,5241.69,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-06-14,cement,5.053,tons,121.14,612.12,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-10-29,lumber,6.681,board_feet,1.27,8.48,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-01-08,lumber,6.247,board_feet,1.39,8.68,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-04-09,aggregate,0.986,tons,16.07,15.85,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-07-12,rebar,8.351,tons,798.17,6665.52,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-10-16,rebar,3.311,tons,723.55,2395.67,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-01-08,rebar,10.661,tons,660.54,7042.02,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-08-09,rebar,15.172,tons,753.41,11430.74,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-08-29,rebar,2.386,tons,873.6,2084.41,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-12-04,aggregate,5.866,tons,12.93,75.85,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-10-29,aggregate,1.292,tons,13.83,17.87,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-08-20,cement,14.421,tons,103.12,1487.09,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-10-31,steel,4.095,tons,810.54,3319.16,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-02-14,steel,9.237,tons,1120.77,10352.55,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-08-20,rebar,11.578,tons,756.65,8760.49,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-04-05,aggregate,32.575,tons,16.07,523.48,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-01-03,rebar,7.644,tons,698.19,5336.96,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-03-12,cement,7.105,tons,126.5,898.78,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-03-01,aggregate,4.353,tons,15.67,68.21,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-05-28,cement,2.504,tons,116.25,291.09,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-11-04,steel,0.309,tons,1047.26,323.6,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-02-19,rebar,3.93,tons,749.4,2945.14,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-05-23,cement,11.897,tons,131.21,1561.01,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-10-30,aggregate,15.046,tons,13.81,207.79,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-03-13,rebar,1.16,tons,859.05,996.5,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-06-20,rebar,4.408,tons,822.13,3623.95,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-05-15,lumber,0.815,board_feet,1.15,0.94,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-03-08,cement,9.201,tons,116.1,1068.24,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-09-05,cement,3.364,tons,117.31,394.63,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-09-15,steel,18.233,tons,810.48,14777.48,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-07-06,aggregate,5.338,tons,17.73,94.64,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-12-29,rebar,21.277,tons,612.74,13037.27,True,synthetic_generator_v1
+P.S. 138 - BROOKLYN,2024-07-23,steel,6.944,tons,1098.12,7625.35,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-12-24,cement,3.484,tons,144.11,502.08,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-10-20,lumber,3.341,board_feet,1.16,3.88,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-11-26,steel,1.73,tons,1052.08,1820.1,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-09-24,aggregate,5.985,tons,14.03,83.97,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-07-30,lumber,11.704,board_feet,1.08,12.64,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-05-11,lumber,21.512,board_feet,1.22,26.24,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-02-15,rebar,0.505,tons,817.05,412.61,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-09-20,steel,11.754,tons,876.91,10307.2,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-10-02,cement,4.149,tons,112.23,465.64,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-02-06,cement,4.95,tons,118.89,588.51,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-10-14,rebar,8.145,tons,707.92,5766.01,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-12-16,steel,24.278,tons,841.8,20437.22,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-07-03,aggregate,13.937,tons,14.29,199.16,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-05-03,lumber,9.058,board_feet,1.27,11.5,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-07-26,lumber,0.957,board_feet,1.49,1.43,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-08-10,cement,4.78,tons,130.24,622.55,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-04-22,lumber,5.994,board_feet,1.45,8.69,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-10-04,rebar,7.97,tons,644.53,5136.9,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-04-26,aggregate,13.109,tons,18.28,239.63,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-11-18,lumber,0.577,board_feet,1.04,0.6,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-06-20,cement,8.137,tons,123.38,1003.94,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-08-15,lumber,2.291,board_feet,1.24,2.84,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-06-20,lumber,4.698,board_feet,1.06,4.98,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-07-22,steel,6.835,tons,1061.87,7257.88,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-10-31,cement,11.212,tons,127.96,1434.69,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-06-19,lumber,14.218,board_feet,1.36,19.34,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-01-15,rebar,12.371,tons,623.48,7713.07,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-04-29,cement,37.388,tons,124.21,4643.96,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-09-16,aggregate,5.358,tons,13.32,71.37,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-12-17,cement,16.429,tons,135.8,2231.06,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-08-15,aggregate,19.209,tons,13.07,251.06,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-12-25,steel,6.179,tons,1023.15,6322.04,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-07-08,steel,7.011,tons,878.45,6158.81,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-05-17,cement,9.72,tons,144.86,1408.04,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-12-07,steel,27.526,tons,830.61,22863.37,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-06-09,rebar,11.069,tons,597.96,6618.82,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-08-01,cement,25.073,tons,105.79,2652.47,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-02-26,lumber,8.617,board_feet,1.11,9.56,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-06-26,rebar,20.651,tons,667.7,13788.67,True,synthetic_generator_v1
+P.S. / I.S. 270 - QUEENS,2024-11-20,rebar,0.841,tons,607.27,510.71,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-07,cement,13.95,tons,123.08,1716.97,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-05-14,cement,9.518,tons,139.36,1326.43,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-05-03,aggregate,10.497,tons,13.5,141.71,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-21,steel,5.008,tons,970.3,4859.26,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-05-27,lumber,17.536,board_feet,1.2,21.04,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-25,cement,7.628,tons,102.13,779.05,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-09-08,aggregate,8.996,tons,13.69,123.16,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-16,cement,18.655,tons,112.46,2097.94,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-11-20,lumber,6.941,board_feet,1.12,7.77,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-07-13,lumber,1.673,board_feet,1.14,1.91,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-07-19,steel,2.622,tons,856.72,2246.32,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-25,cement,15.91,tons,132.13,2102.19,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-12-04,rebar,3.425,tons,816.0,2794.8,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-06,lumber,0.538,board_feet,1.43,0.77,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-02-05,cement,4.896,tons,103.91,508.74,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-03,cement,2.56,tons,119.1,304.9,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-01-03,rebar,4.81,tons,665.92,3203.08,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-01-08,steel,1.55,tons,1084.1,1680.36,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-02-29,cement,3.184,tons,140.14,446.21,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-11-11,cement,12.316,tons,115.52,1422.74,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-12-13,lumber,26.979,board_feet,1.24,33.45,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-15,rebar,1.058,tons,816.19,863.53,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-05,aggregate,0.838,tons,13.87,11.62,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-28,rebar,16.669,tons,801.35,13357.7,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-04,lumber,6.628,board_feet,1.48,9.81,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-05-03,aggregate,7.778,tons,16.78,130.51,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-01,cement,9.237,tons,119.76,1106.22,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-09-23,steel,1.441,tons,792.99,1142.7,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-24,aggregate,16.968,tons,13.51,229.24,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-15,cement,4.927,tons,106.36,524.04,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-25,steel,7.645,tons,767.2,5865.24,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-06,aggregate,21.603,tons,16.95,366.17,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-27,cement,3.349,tons,133.69,447.73,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-02-04,lumber,6.02,board_feet,1.46,8.79,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-09-25,cement,16.824,tons,136.69,2299.67,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-12-17,lumber,2.042,board_feet,1.29,2.63,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-10,cement,6.789,tons,112.15,761.39,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-07-09,lumber,6.806,board_feet,1.28,8.71,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-02-11,rebar,14.598,tons,724.85,10581.36,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-28,steel,3.938,tons,1018.43,4010.58,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-08-12,aggregate,1.04,tons,14.91,15.51,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-03-06,cement,5.73,tons,103.99,595.86,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-03-07,rebar,20.996,tons,621.19,13042.51,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-06-20,cement,3.479,tons,102.14,355.35,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-01-30,lumber,10.63,board_feet,1.36,14.46,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-10-31,steel,14.98,tons,930.46,13938.29,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-07-22,rebar,0.817,tons,621.87,508.07,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-10-02,steel,7.692,tons,773.25,5947.84,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-03-23,rebar,7.932,tons,620.1,4918.63,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-12-15,cement,4.671,tons,131.19,612.79,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-03-22,rebar,6.946,tons,804.74,5589.72,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-09-28,steel,17.935,tons,859.92,15422.67,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-10-04,lumber,17.052,board_feet,1.05,17.9,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-07-17,aggregate,11.886,tons,17.56,208.72,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-04-13,cement,16.127,tons,122.15,1969.91,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-01-08,rebar,14.682,tons,842.74,12373.11,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-08-01,aggregate,8.609,tons,15.51,133.53,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-01-21,aggregate,6.113,tons,13.67,83.56,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-10-19,rebar,15.057,tons,820.17,12349.3,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-07-04,lumber,17.354,board_feet,1.39,24.12,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-05-10,lumber,9.991,board_feet,1.33,13.29,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-08-13,aggregate,0.234,tons,14.59,3.41,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-04-06,steel,9.266,tons,969.32,8981.72,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-06-25,cement,0.704,tons,110.03,77.46,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-04-07,steel,17.992,tons,1069.74,19246.76,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-07-16,steel,12.438,tons,796.85,9911.22,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-03-16,lumber,12.753,board_feet,1.12,14.28,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-07-29,steel,19.442,tons,1103.7,21458.14,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-10-11,lumber,3.027,board_feet,1.15,3.48,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-03-18,cement,3.487,tons,132.54,462.17,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-01-21,rebar,12.687,tons,800.79,10159.62,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-10-31,rebar,16.495,tons,709.12,11696.93,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-11-23,steel,13.171,tons,1025.77,13510.42,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-12-30,cement,2.207,tons,120.25,265.39,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-04-22,steel,5.995,tons,966.49,5794.11,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-05-02,steel,0.326,tons,866.42,282.45,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-08-23,steel,20.267,tons,1085.03,21990.3,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-12-07,cement,0.261,tons,113.79,29.7,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-04-13,cement,10.612,tons,140.83,1494.49,True,synthetic_generator_v1
+BOYS & GIRLS HS - BROOKLYN,2024-05-03,cement,21.795,tons,142.72,3110.58,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-10,steel,5.832,tons,1120.43,6534.35,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-05-16,steel,16.829,tons,903.53,15205.51,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-05-26,cement,29.883,tons,133.23,3981.31,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-10-25,steel,4.741,tons,854.21,4049.81,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-21,aggregate,8.538,tons,14.65,125.08,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-06-07,steel,2.833,tons,1023.62,2899.92,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-01-29,aggregate,1.542,tons,17.37,26.78,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-04-25,cement,2.237,tons,148.13,331.37,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-12-14,cement,19.249,tons,137.08,2638.65,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-09-10,rebar,7.798,tons,825.15,6434.52,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-26,steel,8.801,tons,1027.76,9045.32,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-08-16,cement,3.413,tons,145.98,498.23,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-10-12,lumber,2.248,board_feet,1.41,3.17,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-12-02,lumber,11.328,board_feet,1.37,15.52,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-31,aggregate,14.205,tons,15.51,220.32,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-05-16,aggregate,2.712,tons,13.04,35.36,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-09-11,steel,1.372,tons,998.32,1369.7,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-12-12,cement,0.428,tons,135.19,57.86,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-07-29,lumber,18.228,board_feet,1.13,20.6,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-08-15,aggregate,8.177,tons,15.47,126.5,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-10-22,aggregate,2.268,tons,13.88,31.48,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-08-27,cement,10.287,tons,107.35,1104.31,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-02-01,cement,17.653,tons,119.14,2103.18,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-19,aggregate,1.496,tons,18.34,27.44,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-02-02,cement,13.697,tons,133.16,1823.89,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-12-03,cement,0.893,tons,103.75,92.65,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-18,aggregate,8.981,tons,13.52,121.42,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-06-07,steel,0.182,tons,880.12,160.18,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-12-05,steel,6.789,tons,873.4,5929.51,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-10-20,cement,6.685,tons,138.92,928.68,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-04-21,aggregate,8.92,tons,13.27,118.37,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-25,cement,2.546,tons,111.53,283.96,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-04-11,aggregate,1.781,tons,13.68,24.36,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-07-19,steel,1.569,tons,1091.33,1712.3,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-01-14,rebar,3.133,tons,771.73,2417.83,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-09-05,steel,5.439,tons,888.83,4834.35,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-07-10,rebar,7.774,tons,779.6,6060.61,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-04-19,steel,22.036,tons,818.41,18034.48,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-03-18,aggregate,7.106,tons,18.11,128.69,True,synthetic_generator_v1
+I.S. 109 - QUEENS,2024-11-04,rebar,18.788,tons,643.81,12095.9,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-02-24,rebar,9.71,tons,676.77,6571.44,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-03-19,lumber,8.944,board_feet,1.38,12.34,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-03-19,steel,0.603,tons,829.31,500.07,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-06-30,aggregate,11.053,tons,18.08,199.84,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-06-21,steel,7.335,tons,898.77,6592.48,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-01-26,aggregate,6.139,tons,17.49,107.37,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-09-02,steel,26.4,tons,789.0,20829.6,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-11-27,cement,2.904,tons,134.82,391.52,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-09-08,lumber,3.531,board_feet,1.07,3.78,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-04-30,cement,3.767,tons,143.13,539.17,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-06-05,cement,5.888,tons,133.35,785.16,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-06-14,steel,19.735,tons,844.11,16658.51,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-07-16,steel,6.349,tons,909.47,5774.23,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-01-30,rebar,8.28,tons,659.19,5458.09,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-08-30,lumber,9.522,board_feet,1.21,11.52,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-06-09,lumber,5.869,board_feet,1.17,6.87,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-10-18,cement,2.163,tons,140.37,303.62,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-11-16,cement,2.254,tons,136.58,307.85,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-02-06,cement,12.884,tons,129.18,1664.36,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-12-10,lumber,1.267,board_feet,1.29,1.63,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-12-09,cement,12.078,tons,129.66,1566.03,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-07-11,rebar,18.41,tons,721.24,13278.03,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-09-11,lumber,3.822,board_feet,1.41,5.39,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-01-31,aggregate,11.115,tons,12.86,142.94,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-03-27,aggregate,12.34,tons,18.61,229.65,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-12-07,cement,23.21,tons,125.81,2920.05,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-03-10,cement,13.778,tons,109.18,1504.28,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-02-07,steel,10.137,tons,919.8,9324.01,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-11-13,aggregate,2.358,tons,15.53,36.62,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-10-17,aggregate,5.837,tons,15.89,92.75,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-04-20,cement,12.3,tons,109.92,1352.02,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-09-08,aggregate,7.194,tons,18.66,134.24,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-04-04,steel,22.86,tons,922.63,21091.32,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-07-18,cement,3.921,tons,129.69,508.51,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-09-28,rebar,7.342,tons,769.06,5646.44,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-11-28,rebar,1.557,tons,773.47,1204.29,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-04-16,rebar,8.631,tons,847.03,7310.72,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-12-23,lumber,9.053,board_feet,1.32,11.95,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-07-14,lumber,18.098,board_feet,1.17,21.17,True,synthetic_generator_v1
+INNOVATION DIPLOMA PLUS,2024-01-16,rebar,3.35,tons,773.34,2590.69,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-01-05,steel,1.838,tons,955.45,1756.12,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-08-24,aggregate,8.662,tons,16.8,145.52,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-08-06,lumber,5.486,board_feet,1.17,6.42,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-28,rebar,9.121,tons,768.81,7012.32,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-10-13,rebar,6.261,tons,692.63,4336.56,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-24,aggregate,8.806,tons,16.69,146.97,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-06,lumber,21.589,board_feet,1.44,31.09,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-29,steel,2.209,tons,875.66,1934.33,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-11,cement,7.311,tons,107.82,788.27,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-10-18,rebar,3.345,tons,759.94,2542.0,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-11-07,steel,17.192,tons,858.05,14751.6,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-10-23,aggregate,15.908,tons,14.46,230.03,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-10-21,lumber,10.706,board_feet,1.27,13.6,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-12-12,rebar,0.561,tons,642.97,360.71,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-04-24,cement,4.915,tons,108.16,531.61,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-09-01,steel,1.62,tons,1120.8,1815.7,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-12-08,rebar,8.03,tons,758.14,6087.86,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-18,cement,11.249,tons,113.96,1281.94,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-02-23,cement,21.999,tons,123.39,2714.46,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-02-01,steel,4.856,tons,806.45,3916.12,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-09-02,cement,3.495,tons,142.88,499.37,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-06-27,steel,6.218,tons,868.34,5399.34,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-12-29,aggregate,2.872,tons,16.26,46.7,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-03-05,cement,13.32,tons,113.73,1514.88,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-01-22,lumber,3.227,board_feet,1.17,3.78,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-02-02,steel,15.584,tons,1025.47,15980.92,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-04-24,rebar,7.319,tons,846.23,6193.56,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-07-01,cement,5.893,tons,108.55,639.69,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-02-28,steel,3.972,tons,1074.05,4266.13,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-07-01,rebar,6.168,tons,792.95,4890.92,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-07-19,steel,0.691,tons,1008.91,697.16,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-08-29,cement,13.029,tons,128.66,1676.31,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-08-08,cement,17.227,tons,147.33,2538.05,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-13,lumber,1.502,board_feet,1.29,1.94,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-04-06,lumber,1.741,board_feet,1.13,1.97,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-02-07,steel,4.573,tons,1101.44,5036.89,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-10-08,lumber,11.562,board_feet,1.45,16.76,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-04-07,aggregate,7.113,tons,13.7,97.45,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-12-09,steel,12.495,tons,876.61,10953.24,True,synthetic_generator_v1
+P.S. 31 - STATEN ISLAND,2024-05-29,steel,6.679,tons,860.44,5746.88,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-05-09,aggregate,25.126,tons,15.56,390.96,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-02-04,cement,0.171,tons,123.9,21.19,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-01-06,aggregate,4.37,tons,17.89,78.18,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-13,aggregate,2.23,tons,17.63,39.31,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-05-07,cement,0.974,tons,110.33,107.46,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-11-24,lumber,6.089,board_feet,1.45,8.83,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-04-28,rebar,9.014,tons,750.72,6766.99,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-05-12,aggregate,6.261,tons,14.38,90.03,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-08,cement,7.232,tons,108.1,781.78,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-05-31,aggregate,29.456,tons,16.24,478.37,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-01-09,cement,16.208,tons,123.8,2006.55,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-24,steel,2.299,tons,783.76,1801.86,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-07-10,cement,0.566,tons,123.09,69.67,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-07-30,lumber,1.801,board_feet,1.37,2.47,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-02-22,aggregate,5.741,tons,16.6,95.3,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-12-19,aggregate,1.743,tons,13.39,23.34,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-11-03,steel,12.105,tons,1098.24,13294.2,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-01-26,aggregate,3.047,tons,15.97,48.66,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-08-13,steel,14.736,tons,1048.9,15456.59,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-08-28,steel,5.913,tons,788.07,4659.86,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-20,lumber,22.263,board_feet,1.31,29.16,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-10-26,lumber,7.76,board_feet,1.16,9.0,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-05-10,rebar,16.222,tons,797.92,12943.86,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-16,steel,9.089,tons,927.49,8429.96,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-02-09,steel,6.381,tons,800.9,5110.54,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-02-13,cement,10.096,tons,123.98,1251.7,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-09-19,cement,4.447,tons,113.31,503.89,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-06-26,rebar,14.427,tons,766.97,11065.08,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-12-08,cement,16.378,tons,123.81,2027.76,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-01-26,aggregate,4.404,tons,16.53,72.8,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-04-25,rebar,7.719,tons,637.29,4919.24,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-02-23,rebar,18.739,tons,789.44,14793.32,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-04-01,rebar,2.642,tons,684.14,1807.5,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-02-26,aggregate,10.079,tons,18.18,183.24,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-07-17,lumber,8.815,board_feet,1.14,10.05,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-10-12,aggregate,5.966,tons,17.89,106.73,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-17,steel,6.995,tons,805.68,5635.73,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-03-31,aggregate,1.648,tons,14.31,23.58,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-11-26,aggregate,8.819,tons,17.85,157.42,True,synthetic_generator_v1
+THE FLUSHING INTERNATIONAL HS - Q,2024-04-08,steel,5.066,tons,959.25,4859.56,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-06-10,rebar,3.844,tons,724.72,2785.82,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-03-19,aggregate,11.268,tons,13.78,155.27,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-11-14,lumber,7.853,board_feet,1.04,8.17,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-07-12,cement,16.383,tons,118.09,1934.67,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-05-12,rebar,9.459,tons,749.34,7088.01,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-02-19,steel,3.8,tons,838.71,3187.1,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-02-24,steel,4.626,tons,779.56,3606.24,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-05-19,rebar,9.061,tons,744.64,6747.18,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-04-24,steel,18.288,tons,828.64,15154.17,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-03-18,cement,10.732,tons,147.59,1583.94,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-03-29,cement,0.917,tons,133.81,122.7,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-02-27,lumber,11.132,board_feet,1.28,14.25,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-08-10,rebar,5.307,tons,707.41,3754.22,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-01-05,cement,10.951,tons,138.65,1518.36,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-02-26,rebar,1.01,tons,611.38,617.49,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-06-07,lumber,16.395,board_feet,1.38,22.63,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-12-10,cement,14.662,tons,129.36,1896.68,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-09-14,aggregate,7.721,tons,15.4,118.9,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-09-25,aggregate,5.397,tons,14.71,79.39,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-07-17,aggregate,13.771,tons,14.44,198.85,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-07-23,lumber,5.889,board_feet,1.23,7.24,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-03-07,steel,0.134,tons,871.63,116.8,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-04-02,cement,7.273,tons,122.93,894.07,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-03-15,steel,5.237,tons,792.04,4147.91,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-04-03,cement,3.855,tons,115.65,445.83,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-11-09,lumber,8.516,board_feet,1.28,10.9,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-02-27,lumber,2.55,board_feet,1.46,3.72,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-10-17,cement,18.521,tons,106.32,1969.15,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-11-10,aggregate,14.739,tons,16.28,239.95,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-10-31,rebar,18.986,tons,672.75,12772.83,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-12-19,rebar,9.966,tons,790.53,7878.42,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-02-26,rebar,8.476,tons,600.57,5090.43,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-04-22,aggregate,3.283,tons,16.88,55.42,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-03-27,cement,6.065,tons,104.99,636.76,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-06-27,steel,4.943,tons,834.62,4125.53,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-07-21,steel,7.548,tons,1079.27,8146.33,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-01-02,lumber,1.114,board_feet,1.11,1.24,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-05-05,rebar,1.652,tons,846.76,1398.85,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-10-08,cement,16.759,tons,109.77,1839.64,True,synthetic_generator_v1
+FORT HAMILTON HS - K,2024-08-01,rebar,0.118,tons,642.86,75.86,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-24,steel,6.775,tons,767.26,5198.19,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-02,rebar,16.865,tons,669.59,11292.64,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-02-08,rebar,13.699,tons,630.68,8639.69,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-11-06,aggregate,9.899,tons,18.26,180.76,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-12-21,cement,3.755,tons,118.91,446.51,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-30,aggregate,5.934,tons,14.23,84.44,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-12-20,lumber,1.017,board_feet,1.19,1.21,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-09-11,steel,4.921,tons,1022.83,5033.35,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-03-18,aggregate,3.277,tons,15.01,49.19,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-12-22,aggregate,11.704,tons,16.42,192.18,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-06-30,rebar,1.513,tons,827.24,1251.61,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-03-11,lumber,3.232,board_feet,1.26,4.07,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-16,steel,7.843,tons,888.63,6969.53,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-04-24,rebar,3.572,tons,773.21,2761.91,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-08-15,lumber,15.679,board_feet,1.45,22.73,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-23,rebar,12.922,tons,728.05,9407.86,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-11-12,aggregate,6.212,tons,15.29,94.98,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-06-04,cement,6.286,tons,121.03,760.79,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-01-12,rebar,8.112,tons,596.08,4835.4,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-31,aggregate,0.389,tons,14.28,5.55,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-06-29,rebar,19.233,tons,833.17,16024.36,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-05-25,aggregate,1.1,tons,13.91,15.3,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-11-07,rebar,29.557,tons,832.15,24595.86,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-02-27,aggregate,3.125,tons,15.5,48.44,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-11-18,lumber,7.051,board_feet,1.12,7.9,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-24,rebar,6.806,tons,701.63,4775.29,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-26,rebar,0.664,tons,602.83,400.28,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-05-28,lumber,18.702,board_feet,1.34,25.06,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-09-20,aggregate,5.945,tons,18.01,107.07,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-06-16,steel,20.497,tons,776.3,15911.82,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-07-23,steel,19.247,tons,1111.02,21383.8,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-01-21,aggregate,5.375,tons,18.16,97.61,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-01-10,rebar,12.544,tons,645.16,8092.89,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-09-30,lumber,2.14,board_feet,1.13,2.42,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-11,rebar,8.745,tons,755.48,6606.67,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-04-07,cement,0.995,tons,141.11,140.4,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-10-09,steel,12.58,tons,987.79,12426.4,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-08-30,lumber,13.355,board_feet,1.07,14.29,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-06-26,aggregate,9.383,tons,18.66,175.09,True,synthetic_generator_v1
+P.S. 152 - MANHATTAN,2024-05-01,cement,20.102,tons,139.84,2811.06,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-02-29,lumber,16.714,board_feet,1.23,20.56,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-09-01,steel,2.454,tons,878.55,2155.96,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-08-05,steel,12.993,tons,809.96,10523.81,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-01-05,lumber,23.102,board_feet,1.13,26.11,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-11-21,lumber,2.831,board_feet,1.26,3.57,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-09-02,aggregate,6.005,tons,14.57,87.49,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-05-27,lumber,0.163,board_feet,1.23,0.2,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-03-28,cement,10.203,tons,142.71,1456.07,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-04-28,rebar,5.272,tons,827.52,4362.69,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-03-11,lumber,6.193,board_feet,1.18,7.31,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-06-27,steel,17.586,tons,1075.27,18909.7,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-11-01,cement,14.368,tons,102.16,1467.83,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-05-07,aggregate,9.543,tons,13.3,126.92,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-02-04,aggregate,9.697,tons,14.17,137.41,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-11-23,steel,2.567,tons,821.54,2108.89,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-05-18,rebar,3.39,tons,774.91,2626.94,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-05-06,rebar,0.114,tons,784.03,89.38,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-10-10,lumber,12.33,board_feet,1.1,13.56,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-10-26,lumber,14.317,board_feet,1.09,15.61,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-06-09,cement,21.943,tons,121.49,2665.86,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-09-14,lumber,8.884,board_feet,1.24,11.02,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-01-29,lumber,6.032,board_feet,1.46,8.81,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-09-27,cement,3.933,tons,114.4,449.94,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-08-20,lumber,15.341,board_feet,1.15,17.64,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-04-27,lumber,1.149,board_feet,1.09,1.25,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-08-12,rebar,2.285,tons,799.9,1827.77,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-05-31,cement,14.733,tons,107.72,1587.04,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-10-24,lumber,11.801,board_feet,1.36,16.05,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-10-19,aggregate,7.682,tons,18.16,139.51,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-04-14,cement,12.952,tons,118.0,1528.34,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-09-07,rebar,2.026,tons,629.95,1276.28,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-04-21,aggregate,3.583,tons,13.25,47.47,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-02-05,steel,6.035,tons,1095.64,6612.19,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-04-03,aggregate,19.448,tons,18.37,357.26,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-09-19,aggregate,16.08,tons,17.62,283.33,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-10-12,cement,4.305,tons,118.93,511.99,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-03-30,aggregate,1.468,tons,14.46,21.23,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-10-11,aggregate,3.323,tons,13.85,46.02,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-12-16,cement,3.117,tons,135.19,421.39,True,synthetic_generator_v1
+P.S. 109 - BROOKLYN,2024-07-28,lumber,9.806,board_feet,1.42,13.92,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-08-22,rebar,11.217,tons,698.8,7838.44,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-28,rebar,13.257,tons,812.04,10765.21,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-09-08,lumber,0.216,board_feet,1.32,0.29,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-10-19,lumber,5.238,board_feet,1.27,6.65,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-02-26,rebar,0.297,tons,609.38,180.99,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-14,cement,7.445,tons,137.09,1020.64,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-11-07,cement,9.889,tons,141.36,1397.91,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-06-02,rebar,8.922,tons,849.05,7575.22,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-08-19,cement,1.51,tons,124.18,187.51,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-06-17,rebar,16.981,tons,668.55,11352.65,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-06-17,cement,1.051,tons,139.92,147.06,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-04-15,aggregate,15.443,tons,15.89,245.39,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-07-19,rebar,5.568,tons,624.35,3476.38,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-04-03,steel,0.665,tons,946.0,629.09,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-08-10,rebar,0.339,tons,626.94,212.53,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-02-11,rebar,5.878,tons,732.67,4306.63,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-10-02,cement,34.326,tons,115.2,3954.36,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-06-21,rebar,23.604,tons,801.61,18921.2,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-11-12,rebar,6.423,tons,771.48,4955.22,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-26,cement,7.452,tons,119.78,892.6,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-16,rebar,9.521,tons,836.2,7961.46,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-08-04,rebar,9.986,tons,699.63,6986.51,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-11-17,lumber,23.06,board_feet,1.38,31.82,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-10-02,cement,5.419,tons,137.95,747.55,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-12-08,lumber,6.275,board_feet,1.11,6.97,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-12-10,aggregate,21.488,tons,13.48,289.66,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-05-03,rebar,7.168,tons,617.35,4425.16,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-05-07,rebar,14.293,tons,727.81,10402.59,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-09,lumber,14.369,board_feet,1.19,17.1,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-05-04,aggregate,8.467,tons,15.94,134.96,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-09-30,cement,6.016,tons,143.07,860.71,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-03,cement,4.361,tons,108.51,473.21,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-04-18,aggregate,8.57,tons,13.99,119.89,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-02-05,lumber,21.335,board_feet,1.27,27.1,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-04-15,aggregate,2.41,tons,17.3,41.69,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-03-12,aggregate,18.568,tons,15.81,293.56,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-11-02,aggregate,12.379,tons,16.16,200.04,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-04-17,lumber,5.798,board_feet,1.36,7.89,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-11-16,lumber,18.969,board_feet,1.28,24.28,True,synthetic_generator_v1
+P.S. 199 - QUEENS,2024-08-08,cement,11.808,tons,123.62,1459.7,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-08-04,steel,16.007,tons,801.88,12835.69,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-11-20,lumber,0.268,board_feet,1.34,0.36,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-08-20,cement,8.038,tons,130.41,1048.24,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-04-18,cement,2.727,tons,129.62,353.47,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-10-21,cement,3.938,tons,135.37,533.09,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-12-03,rebar,10.076,tons,770.47,7763.26,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-12-20,cement,0.685,tons,127.76,87.52,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-05-22,rebar,2.486,tons,737.56,1833.57,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-05-18,lumber,5.357,board_feet,1.43,7.66,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-05-01,lumber,4.389,board_feet,1.28,5.62,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-08-20,steel,8.006,tons,860.72,6890.92,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-04-10,cement,0.873,tons,132.81,115.94,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-08-05,rebar,33.191,tons,815.87,27079.54,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-07-15,lumber,2.34,board_feet,1.39,3.25,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-01-18,steel,2.782,tons,946.4,2632.88,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-09-24,cement,11.529,tons,126.35,1456.69,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-04-15,rebar,9.369,tons,695.56,6516.7,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-09-19,steel,7.832,tons,1028.63,8056.23,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-04-19,aggregate,2.696,tons,12.83,34.59,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-05-08,cement,16.193,tons,113.16,1832.4,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-01-05,rebar,27.139,tons,858.78,23306.43,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-06-27,steel,6.828,tons,949.55,6483.53,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-11-22,aggregate,11.402,tons,13.52,154.16,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-03-09,lumber,3.87,board_feet,1.15,4.45,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-03-26,cement,8.427,tons,142.67,1202.28,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-04-29,cement,3.374,tons,131.34,443.14,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-11-30,lumber,0.203,board_feet,1.15,0.23,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-05-23,cement,6.751,tons,102.94,694.95,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-12-28,aggregate,2.193,tons,14.38,31.54,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-10-16,steel,12.842,tons,822.44,10561.77,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-07-09,steel,12.808,tons,786.42,10072.47,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-09-04,rebar,7.213,tons,681.68,4916.96,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-11-20,steel,10.069,tons,1107.76,11154.04,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-01-15,rebar,11.44,tons,799.45,9145.71,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-10-12,aggregate,10.89,tons,14.28,155.51,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-10-21,aggregate,13.178,tons,13.98,184.23,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-03-31,lumber,15.424,board_feet,1.16,17.89,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-03-14,steel,10.619,tons,869.26,9230.67,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-05-15,steel,7.247,tons,957.08,6935.96,True,synthetic_generator_v1
+P.S. 205 - QUEENS,2024-11-14,cement,9.149,tons,103.7,948.75,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-02-27,aggregate,6.56,tons,13.42,88.04,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-26,rebar,14.267,tons,727.71,10382.24,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-01-04,aggregate,19.248,tons,14.29,275.05,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-05-05,aggregate,31.223,tons,17.7,552.65,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-03,lumber,14.282,board_feet,1.43,20.42,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-08,steel,2.274,tons,908.03,2064.86,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-14,lumber,8.492,board_feet,1.11,9.43,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-27,lumber,5.285,board_feet,1.37,7.24,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-12-06,cement,0.63,tons,130.0,81.9,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-05,aggregate,8.458,tons,13.83,116.97,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-11-11,cement,5.935,tons,112.0,664.72,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-03,aggregate,0.979,tons,13.32,13.04,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-07,aggregate,2.35,tons,15.2,35.72,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-11-29,aggregate,1.85,tons,16.09,29.77,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-12-12,steel,0.18,tons,862.33,155.22,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-25,lumber,3.12,board_feet,1.2,3.74,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-08,cement,0.402,tons,107.1,43.05,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-12-07,cement,4.88,tons,129.91,633.96,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-02-16,steel,25.995,tons,1054.95,27423.43,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-03,aggregate,20.671,tons,17.15,354.51,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-01,aggregate,4.451,tons,14.28,63.56,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-11,aggregate,10.691,tons,15.83,169.24,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-03,steel,16.233,tons,842.0,13668.19,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-07-13,cement,14.958,tons,114.92,1718.97,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-21,lumber,1.544,board_feet,1.03,1.59,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-28,aggregate,10.6,tons,13.28,140.77,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-16,cement,6.624,tons,129.45,857.48,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-09-08,lumber,4.551,board_feet,1.06,4.82,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-02,cement,3.943,tons,104.42,411.73,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-10-19,rebar,20.727,tons,858.87,17801.8,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-04-13,aggregate,2.062,tons,16.4,33.82,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-11-16,steel,13.898,tons,1117.67,15533.38,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-05-22,rebar,10.279,tons,670.32,6890.22,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-08-11,lumber,18.379,board_feet,1.26,23.16,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-01,steel,12.818,tons,971.67,12454.87,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-09-27,aggregate,0.661,tons,13.64,9.02,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-01-05,steel,14.76,tons,788.73,11641.65,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-26,steel,4.624,tons,1102.97,5100.13,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-03-16,cement,6.723,tons,119.25,801.72,True,synthetic_generator_v1
+P.S. 128 - BROOKLYN,2024-06-17,cement,17.341,tons,102.09,1770.34,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-02-17,rebar,4.129,tons,667.56,2756.36,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-09-13,steel,1.83,tons,1038.32,1900.13,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-06-07,steel,11.48,tons,858.52,9855.81,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-12-06,cement,3.998,tons,105.28,420.91,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-04-14,lumber,5.74,board_feet,1.22,7.0,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-08-16,lumber,3.141,board_feet,1.2,3.77,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-10-21,rebar,1.787,tons,844.36,1508.87,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-05-19,aggregate,0.417,tons,15.34,6.4,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-16,cement,15.538,tons,114.82,1784.07,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-11-25,cement,12.241,tons,140.89,1724.63,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-12-27,rebar,18.012,tons,637.62,11484.81,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-11,steel,3.266,tons,949.8,3102.05,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-11-01,lumber,10.673,board_feet,1.45,15.48,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-13,cement,3.969,tons,127.48,505.97,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-09-13,cement,10.377,tons,145.43,1509.13,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-08-27,steel,5.399,tons,1049.28,5665.06,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-07-02,steel,0.113,tons,1100.0,124.3,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-06-25,aggregate,8.212,tons,12.85,105.52,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-05-30,cement,7.503,tons,139.04,1043.22,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-12,rebar,8.858,tons,791.34,7009.69,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-02-24,rebar,12.861,tons,614.44,7902.31,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-31,lumber,12.047,board_feet,1.19,14.34,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-01-10,lumber,5.782,board_feet,1.07,6.19,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-01-17,cement,13.307,tons,124.3,1654.06,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-29,steel,15.013,tons,773.47,11612.11,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-02-13,steel,8.696,tons,967.16,8410.42,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-09-24,steel,2.731,tons,1025.43,2800.45,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-30,steel,5.736,tons,1119.1,6419.16,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-03-06,rebar,2.958,tons,714.62,2113.85,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-06-28,cement,17.773,tons,108.0,1919.48,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-12-01,lumber,20.065,board_feet,1.03,20.67,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-08-07,aggregate,0.328,tons,17.26,5.66,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-04-24,lumber,1.211,board_feet,1.49,1.8,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-06-05,steel,19.971,tons,1086.78,21704.08,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-08-13,aggregate,24.593,tons,14.55,357.83,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-01-13,cement,3.575,tons,131.86,471.4,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-06-19,steel,16.85,tons,1032.67,17400.49,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-11-16,steel,5.606,tons,1112.05,6234.15,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-06-07,aggregate,9.471,tons,14.85,140.64,True,synthetic_generator_v1
+P.S. 226 - BRONX,2024-08-03,cement,1.501,tons,125.58,188.5,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-05-11,rebar,6.44,tons,814.98,5248.47,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-01-09,aggregate,0.787,tons,14.45,11.37,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-02-15,cement,1.89,tons,106.85,201.95,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-12-29,rebar,1.691,tons,749.12,1266.76,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-09-28,steel,5.388,tons,931.9,5021.08,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-01-02,aggregate,5.839,tons,16.81,98.15,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-05-27,rebar,12.208,tons,839.84,10252.77,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-09-14,steel,3.108,tons,864.8,2687.8,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-08-02,rebar,7.195,tons,601.5,4327.79,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-07-26,aggregate,4.053,tons,14.83,60.11,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-02-20,cement,22.318,tons,149.66,3340.11,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-04-03,cement,15.986,tons,116.93,1869.24,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-12-02,lumber,22.493,board_feet,1.06,23.84,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-04-05,steel,8.378,tons,909.52,7619.96,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-06-08,rebar,1.296,tons,803.31,1041.09,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-09-27,aggregate,29.25,tons,15.73,460.1,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-02-21,rebar,5.736,tons,702.81,4031.32,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-01-30,steel,25.342,tons,837.59,21226.21,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-10-31,aggregate,38.439,tons,16.05,616.95,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-10-30,rebar,15.052,tons,617.45,9293.86,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-05-21,cement,10.455,tons,147.04,1537.3,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-04-17,lumber,15.011,board_feet,1.08,16.21,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-02-24,aggregate,0.631,tons,17.24,10.88,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-10-28,aggregate,6.052,tons,13.02,78.8,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-02-23,aggregate,7.786,tons,18.05,140.54,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-03-20,lumber,0.701,board_feet,1.38,0.97,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-01-27,rebar,7.768,tons,667.34,5183.9,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-10-24,lumber,13.122,board_feet,1.41,18.5,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-06-17,lumber,6.84,board_feet,1.46,9.99,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-11-17,cement,27.404,tons,118.35,3243.26,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-06-21,rebar,16.827,tons,641.38,10792.5,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-03-02,cement,1.045,tons,127.37,133.1,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-08-15,rebar,6.136,tons,803.51,4930.34,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-08-29,steel,7.581,tons,785.25,5952.98,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-04-26,aggregate,8.384,tons,13.42,112.51,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-07-31,cement,6.462,tons,126.58,817.96,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-11-11,aggregate,10.733,tons,18.61,199.74,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-03-20,steel,16.904,tons,1081.48,18281.34,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-10-28,aggregate,4.405,tons,14.26,62.82,True,synthetic_generator_v1
+P.S. 279 - BROOKLYN,2024-09-08,cement,6.338,tons,142.2,901.26,True,synthetic_generator_v1

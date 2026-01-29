@@ -13,8 +13,6 @@ import pandas as pd
 
 ROOT = Path('.')
 DATA_SPLITS = ROOT / 'data_splits'
-OUT = DATA_SPLITS / 'v3'
-OUT.mkdir(parents=True, exist_ok=True)
 
 
 def load_audit_flags():
@@ -78,6 +76,21 @@ def prepare(random_state: int = 42, test_size: float = 0.2):
     drop_features = load_audit_flags()
     # always drop project_id from features (used for splitting)
     drop_features.add('project_id')
+    # drop direct label if present
+    drop_features.add('will_delay')
+    # Also augment drop list from prior diagnostics (constant/id-like flags)
+    diag_path = ROOT / 'analysis_outputs' / 'v3' / 'top_suspicious_features.csv'
+    if diag_path.exists():
+        try:
+            df_diag = pd.read_csv(diag_path, low_memory=False)
+            for _, r in df_diag.iterrows():
+                try:
+                    if bool(r.get('is_constant')) or bool(r.get('is_id_like')):
+                        drop_features.add(r['feature'])
+                except Exception:
+                    pass
+        except Exception:
+            pass
 
     # Also drop any columns that are unnamed or empty
     for c in list(df.columns):
@@ -115,12 +128,13 @@ def prepare(random_state: int = 42, test_size: float = 0.2):
         y_test = y.loc[mask_test]
         split_type = 'project'
 
-    # Save
-    OUT.mkdir(parents=True, exist_ok=True)
-    X_train.to_csv(OUT / 'X_train.csv', index=False)
-    y_train.to_csv(OUT / 'y_train.csv', index=False)
-    X_test.to_csv(OUT / 'X_test.csv', index=False)
-    y_test.to_csv(OUT / 'y_test.csv', index=False)
+    # Save to v4
+    out_dir = DATA_SPLITS / 'v4'
+    out_dir.mkdir(parents=True, exist_ok=True)
+    X_train.to_csv(out_dir / 'X_train.csv', index=False)
+    y_train.to_csv(out_dir / 'y_train.csv', index=False)
+    X_test.to_csv(out_dir / 'X_test.csv', index=False)
+    y_test.to_csv(out_dir / 'y_test.csv', index=False)
 
     # Save metadata
     meta = {
@@ -130,10 +144,10 @@ def prepare(random_state: int = 42, test_size: float = 0.2):
         'drop_features_count': len(drop_features),
         'drop_features_sample': list(sorted(list(drop_features)))[:200],
     }
-    with open(OUT / 'metadata.json', 'w') as fh:
+    with open(out_dir / 'metadata.json', 'w') as fh:
         json.dump(meta, fh, indent=2)
 
-    print('Saved v3 splits to', OUT)
+    print('Saved v4 splits to', out_dir)
     return 0
 
 

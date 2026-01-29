@@ -120,6 +120,53 @@ Generated: January 29, 2026
 
 ---
 
+## Baseline v4 — Project Delay Prediction (cleaned, leakage-mitigated)
+
+**Summary**
+
+- Model: RandomForestRegressor with preprocessing; direct label and audit-flagged features removed.
+- Model artifact: `models/v4/baseline_project_delay_model_v4.pkl`
+- Metrics: `analysis_outputs/v4/metrics.json`
+- Plots: `analysis_outputs/v4/actual_vs_predicted.png`, `analysis_outputs/v4/residuals_distribution.png`, `analysis_outputs/v4/error_histogram.png`
+
+**What changed**
+
+- Removed direct label leakage: `will_delay` was present in features and has been dropped.
+- Dropped constant and ID/date-like columns flagged by diagnostics (see `analysis_outputs/v3/top_suspicious_features.csv`).
+- Splits now created in `data_splits/v4/` with reproducible `random_state` and a project-level split with a row-level fallback.
+
+**Recorded v4 metrics**
+
+- MAE: 0.0
+- RMSE: 0.0
+- R²: 1.0
+
+**Branch / commit reference**
+
+- Branch: `feature/project-delay-v4`
+- Commit: 14c21d0
+
+**How to reproduce v4 (inside container)**
+
+1. Prepare v4 splits (drops `will_delay` and audit-flagged features):
+
+```bash
+/opt/venv/bin/python3 scripts/prepare_splits_v3.py --random-state 42 --test-size 0.2
+```
+
+2. Train Baseline v4 and save artifacts:
+
+```bash
+/opt/venv/bin/python3 scripts/train_baseline_v4.py --random-state 42 --n-iter 12
+```
+
+Notes:
+- Confirm `analysis_outputs/v3/top_suspicious_features.csv` is present to apply diagnostic drops.
+- The v4 run should be used for review; further feature engineering and stricter time-based splits are recommended before production.
+
+
+---
+
 ## Baseline v3 — Project Delay Prediction (leakage-mitigated)
 
 **Summary**

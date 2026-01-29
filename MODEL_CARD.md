@@ -317,4 +317,48 @@ Notes:
 
 ***
 
+## Baseline v5 — Project Delay Prediction (cleaned, leakage-removed)
+
+**Summary**
+
+- Model: RandomForestRegressor with preprocessing; additional leakage-derived features removed.
+- Model artifact: `models/v5/baseline_project_delay_model_v5.pkl`
+- Metrics: `analysis_outputs/v5/metrics.json`
+- Plots: `analysis_outputs/v5/actual_vs_predicted.png`, `analysis_outputs/v5/residuals_distribution.png`, `analysis_outputs/v5/error_histogram.png`
+
+**What changed**
+
+- Removed residual leakage candidates identified in `analysis_outputs/v4/residual_leakage_candidates.csv` (if any).
+- Explicitly dropped the direct label `will_delay` and the label-derived field `schedule_slippage_pct`.
+- Dropped ID/date-like and timestamp columns (name patterns: id, date, time, timestamp, start, end, planned, actual, year, month, day) to avoid future-derived leakage.
+- Splits are written to `data_splits/v5/` and use a project-level reproducible split with `random_state` and a row-level fallback.
+
+**Recorded v5 metrics**
+
+- See `analysis_outputs/v5/metrics.json` after training. (Commit hash below contains the v5 artifacts.)
+
+**How v5 was produced**
+
+1. Prepare cleaned v5 splits (drops leakage candidates and ID/date-like columns):
+
+```bash
+python scripts/prepare_splits_v5.py --random-state 42 --test-size 0.2
+```
+
+2. Train Baseline v5 and save artifacts:
+
+```bash
+python scripts/train_baseline_v5.py --random-state 42 --n-iter 12
+```
+
+**Reproducibility**
+
+- Run inside the project Docker environment (see `scripts/run_pipeline.ps1`). Ensure `git-lfs` is used for large CSVs.
+
+**Branch / commit reference**
+
+- Branch: `feature/project-delay-v5`
+- Commit: TO_BE_FILLED_AFTER_COMMIT
+
+
 Generated: January 29, 2026

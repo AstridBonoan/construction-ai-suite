@@ -117,6 +117,77 @@ Or run the script inside the prepared venv in the container.
 ---
 
 Generated: January 29, 2026
+
+---
+
+## Baseline v3 — Project Delay Prediction (leakage-mitigated)
+
+**Summary**
+
+- Model: RandomForestRegressor with preprocessing; leakage-mitigated split preparation and dropped audit-flagged features.
+- Model artifact: `models/v3/baseline_project_delay_model_v3.pkl`
+- Metrics: `analysis_outputs/v3/metrics.json`
+- Plots: `analysis_outputs/v3/actual_vs_predicted.png`, `analysis_outputs/v3/residuals_distribution.png`, `analysis_outputs/v3/error_histogram.png`
+
+**Features removed / modified (sample)**
+
+The v3 split preparation removed audit-flagged and id/date/constant features. Sample of removed features (from `data_splits/v3/metadata.json`):
+
+- ()
+- Accident Report ID
+- Country Code
+- DSF Number(s)
+- INDICATOR_CODE
+- INDICATOR_NAME
+- Landmark
+- NonresFlag
+- PL_FIRM07
+- PL_PFIRM15
+- Project Budget Amount
+- Project Building Identifier
+- Project Description
+- Project Geographic District
+- Project Phase Name
+- Project School Name
+- Project Status Name
+- Project Type
+- ResidFlag
+- SOURCE_NOTE
+- SOURCE_ORGANIZATION
+- SchMiddle
+- Version
+- project_id
+- schedule_slippage_pct
+
+**Recorded v3 metrics**
+
+- MAE: 0.0
+- RMSE: 0.0
+- R²: 1.0
+
+**Branch / commit reference**
+
+- Branch: `feature/project-delay-v3`
+- Commit: TO_BE_FILLED_AFTER_COMMIT
+
+**How to reproduce v3 (inside container)**
+
+1. Prepare v3 splits (drops audit-flagged features and uses project-level splitting with a row-level fallback):
+
+```bash
+/opt/venv/bin/python3 scripts/prepare_splits_v3.py --random-state 42 --test-size 0.2
+```
+
+2. Train Baseline v3 and save artifacts:
+
+```bash
+/opt/venv/bin/python3 scripts/train_baseline_v3.py --random-state 42 --n-iter 12
+```
+
+Notes:
+- The `prepare_splits_v3.py` script writes `data_splits/v3/` and `metadata.json` with the list of dropped features.
+- Ensure `analysis_outputs/leakage_audit/feature_correlations.csv` exists before running prepare if you want the audit-based drops.
+
 # Baseline v1 — Project Delay Prediction
 
 **Purpose**

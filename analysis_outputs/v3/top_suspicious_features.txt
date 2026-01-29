@@ -1,0 +1,112 @@
+Top suspicious features (abs_corr>=0.9 OR constant OR id-like)
+       feature  corr_with_will_delay  abs_corr is_constant is_id_like
+count      106                   0.0       0.0         106        106
+unique     106                   NaN       NaN           2          2
+top         ID                   NaN       NaN        True      False
+freq         1                   NaN       NaN          96         96
+mean       NaN                   NaN       NaN         NaN        NaN
+std        NaN                   NaN       NaN         NaN        NaN
+min        NaN                   NaN       NaN         NaN        NaN
+25%        NaN                   NaN       NaN         NaN        NaN
+50%        NaN                   NaN       NaN         NaN        NaN
+75%        NaN                   NaN       NaN         NaN        NaN
+max        NaN                   NaN       NaN         NaN        NaN
+
+-- Suspicious features --
+Project Phase Actual Start Date: corr=nan, abs_corr=nan, constant=True, id_like=True
+Project Phase Planned End Date: corr=nan, abs_corr=nan, constant=True, id_like=True
+Project Phase Actual End Date: corr=nan, abs_corr=nan, constant=True, id_like=True
+Final Estimate of Actual Costs Through End of Phase Amount: corr=nan, abs_corr=nan, constant=True, id_like=False
+Total Phase Actual Spending Amount: corr=nan, abs_corr=nan, constant=True, id_like=False
+source_file: corr=nan, abs_corr=nan, constant=True, id_like=False
+synthetic_flag: corr=nan, abs_corr=nan, constant=True, id_like=False
+BIN: corr=nan, abs_corr=nan, constant=True, id_like=False
+Incident Date: corr=nan, abs_corr=nan, constant=True, id_like=True
+Record Type Description: corr=nan, abs_corr=nan, constant=True, id_like=False
+Check2 Description: corr=nan, abs_corr=nan, constant=True, id_like=False
+Fatality: corr=nan, abs_corr=nan, constant=True, id_like=False
+Injury: corr=nan, abs_corr=nan, constant=True, id_like=False
+House Number: corr=nan, abs_corr=nan, constant=True, id_like=False
+Street Name: corr=nan, abs_corr=nan, constant=True, id_like=False
+Block: corr=nan, abs_corr=nan, constant=True, id_like=False
+Lot: corr=nan, abs_corr=nan, constant=True, id_like=False
+Postcode: corr=nan, abs_corr=nan, constant=True, id_like=False
+Latitude: corr=nan, abs_corr=nan, constant=True, id_like=False
+Longitude: corr=nan, abs_corr=nan, constant=True, id_like=False
+Community Board: corr=nan, abs_corr=nan, constant=True, id_like=False
+Council District: corr=nan, abs_corr=nan, constant=True, id_like=False
+BBL: corr=nan, abs_corr=nan, constant=True, id_like=False
+Census Tract (2020): corr=nan, abs_corr=nan, constant=True, id_like=False
+Neighborhood Tabulation Area (NTA) (2020): corr=nan, abs_corr=nan, constant=True, id_like=False
+the_geom: corr=nan, abs_corr=nan, constant=True, id_like=False
+Job_Number: corr=nan, abs_corr=nan, constant=True, id_like=False
+Job_Type: corr=nan, abs_corr=nan, constant=True, id_like=False
+Job_Status: corr=nan, abs_corr=nan, constant=True, id_like=False
+CompltYear: corr=nan, abs_corr=nan, constant=True, id_like=False
+PermitYear: corr=nan, abs_corr=nan, constant=True, id_like=False
+ClassAInit: corr=nan, abs_corr=nan, constant=True, id_like=False
+ClassAProp: corr=nan, abs_corr=nan, constant=True, id_like=False
+ClassANet: corr=nan, abs_corr=nan, constant=True, id_like=False
+HotelInit: corr=nan, abs_corr=nan, constant=True, id_like=False
+HotelProp: corr=nan, abs_corr=nan, constant=True, id_like=False
+OtherBInit: corr=nan, abs_corr=nan, constant=True, id_like=False
+OtherBProp: corr=nan, abs_corr=nan, constant=True, id_like=False
+Units_CO: corr=nan, abs_corr=nan, constant=True, id_like=False
+Boro: corr=nan, abs_corr=nan, constant=True, id_like=False
+AddressNum: corr=nan, abs_corr=nan, constant=True, id_like=False
+AddressSt: corr=nan, abs_corr=nan, constant=True, id_like=False
+Occ_Init: corr=nan, abs_corr=nan, constant=True, id_like=False
+Occ_Prop: corr=nan, abs_corr=nan, constant=True, id_like=False
+Bldg_Class: corr=nan, abs_corr=nan, constant=True, id_like=False
+Job_Desc: corr=nan, abs_corr=nan, constant=True, id_like=False
+DateFiled: corr=nan, abs_corr=nan, constant=True, id_like=True
+DatePermit: corr=nan, abs_corr=nan, constant=True, id_like=True
+DateLstUpd: corr=nan, abs_corr=nan, constant=True, id_like=True
+DateComplt: corr=nan, abs_corr=nan, constant=True, id_like=True
+ZoningDst1: corr=nan, abs_corr=nan, constant=True, id_like=False
+ZoningDst2: corr=nan, abs_corr=nan, constant=True, id_like=False
+ZoningDst3: corr=nan, abs_corr=nan, constant=True, id_like=False
+SpeclDst1: corr=nan, abs_corr=nan, constant=True, id_like=False
+SpeclDst2: corr=nan, abs_corr=nan, constant=True, id_like=False
+FloorsInit: corr=nan, abs_corr=nan, constant=True, id_like=False
+FloorsProp: corr=nan, abs_corr=nan, constant=True, id_like=False
+Enlargemnt: corr=nan, abs_corr=nan, constant=True, id_like=False
+Ownership: corr=nan, abs_corr=nan, constant=True, id_like=False
+CenBlock20: corr=nan, abs_corr=nan, constant=True, id_like=False
+CenTract20: corr=nan, abs_corr=nan, constant=True, id_like=False
+BCTCB2020: corr=nan, abs_corr=nan, constant=True, id_like=False
+BCT2020: corr=nan, abs_corr=nan, constant=True, id_like=False
+NTA2020: corr=nan, abs_corr=nan, constant=True, id_like=False
+NTAName20: corr=nan, abs_corr=nan, constant=True, id_like=False
+CDTA2020: corr=nan, abs_corr=nan, constant=True, id_like=False
+CDTAName20: corr=nan, abs_corr=nan, constant=True, id_like=False
+CommntyDst: corr=nan, abs_corr=nan, constant=True, id_like=False
+CouncilDst: corr=nan, abs_corr=nan, constant=True, id_like=False
+SchSubDist: corr=nan, abs_corr=nan, constant=True, id_like=False
+SchCommnty: corr=nan, abs_corr=nan, constant=True, id_like=False
+SchElmntry: corr=nan, abs_corr=nan, constant=True, id_like=False
+FireCmpany: corr=nan, abs_corr=nan, constant=True, id_like=False
+FireBattln: corr=nan, abs_corr=nan, constant=True, id_like=False
+FireDivsn: corr=nan, abs_corr=nan, constant=True, id_like=False
+PolicePcnt: corr=nan, abs_corr=nan, constant=True, id_like=False
+GeomSource: corr=nan, abs_corr=nan, constant=True, id_like=False
+DCPEdited: corr=nan, abs_corr=nan, constant=True, id_like=False
+Region: corr=nan, abs_corr=nan, constant=True, id_like=False
+IncomeGroup: corr=nan, abs_corr=nan, constant=True, id_like=False
+SpecialNotes: corr=nan, abs_corr=nan, constant=True, id_like=False
+TableName: corr=nan, abs_corr=nan, constant=True, id_like=False
+date: corr=nan, abs_corr=nan, constant=True, id_like=True
+equipment: corr=nan, abs_corr=nan, constant=True, id_like=False
+hours_used: corr=nan, abs_corr=nan, constant=True, id_like=False
+hourly_cost_estimated: corr=nan, abs_corr=nan, constant=True, id_like=False
+cost_estimated: corr=nan, abs_corr=nan, constant=True, id_like=False
+maintenance_flag: corr=nan, abs_corr=nan, constant=True, id_like=False
+is_synthetic: corr=nan, abs_corr=nan, constant=True, id_like=False
+source: corr=nan, abs_corr=nan, constant=True, id_like=False
+material: corr=nan, abs_corr=nan, constant=True, id_like=False
+quantity: corr=nan, abs_corr=nan, constant=True, id_like=False
+unit: corr=nan, abs_corr=nan, constant=True, id_like=False
+unit_price_estimated: corr=nan, abs_corr=nan, constant=True, id_like=False
+total_cost_estimated: corr=nan, abs_corr=nan, constant=True, id_like=False
+will_delay: corr=nan, abs_corr=nan, constant=True, id_like=False
+ID: corr=nan, abs_corr=nan, constant=False, id_like=True

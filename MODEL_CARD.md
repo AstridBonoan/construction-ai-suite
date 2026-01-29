@@ -169,6 +169,7 @@ The v3 split preparation removed audit-flagged and id/date/constant features. Sa
 
 - Branch: `feature/project-delay-v3`
 - Commit: TO_BE_FILLED_AFTER_COMMIT
+ - Commit: 6ac3eca
 
 **How to reproduce v3 (inside container)**
 

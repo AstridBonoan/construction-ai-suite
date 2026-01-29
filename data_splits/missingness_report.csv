@@ -1,0 +1,133 @@
+,missing_count,missing_pct
+Project Building Identifier,3757,100.0
+Project School Name,3757,100.0
+Project Type ,3757,100.0
+Project Description,3757,100.0
+Region,3757,100.0
+Project Phase Name,3757,100.0
+Project Status Name,3757,100.0
+Project Phase Actual Start Date,3757,100.0
+Project Phase Planned End Date,3757,100.0
+Project Phase Actual End Date,3757,100.0
+Project Budget Amount,3757,100.0
+DSF Number(s),3757,100.0
+Incident Date,3757,100.0
+Record Type Description,3757,100.0
+Check2 Description,3757,100.0
+Street Name,3757,100.0
+Neighborhood Tabulation Area (NTA) (2020),3757,100.0
+IncomeGroup,3757,100.0
+project_id,3757,100.0
+ (),3757,100.0
+source,3757,100.0
+unit,3757,100.0
+Country Code,3757,100.0
+INDICATOR_NAME,3757,100.0
+INDICATOR_CODE,3757,100.0
+Unnamed: 5,3757,100.0
+TableName,3757,100.0
+SpecialNotes,3757,100.0
+SOURCE_ORGANIZATION,3757,100.0
+SOURCE_NOTE,3757,100.0
+Unnamed: 4,3757,100.0
+material,3757,100.0
+equipment,3757,100.0
+date,3757,100.0
+SpeclDst2,3757,100.0
+Enlargemnt,3757,100.0
+Occ_Init,3756,99.97
+DateLstUpd,3756,99.97
+CDTAName20,3756,99.97
+CDTA2020,3756,99.97
+DateComplt,3756,99.97
+Ownership,3756,99.97
+ZoningDst3,3756,99.97
+SpeclDst1,3756,99.97
+DatePermit,3756,99.97
+DateFiled,3756,99.97
+ZoningDst2,3756,99.97
+ZoningDst1,3756,99.97
+Landmark,3756,99.97
+Job_Type,3756,99.97
+ResidFlag,3756,99.97
+NonresFlag,3756,99.97
+Version,3756,99.97
+Occ_Prop,3756,99.97
+Job_Status,3756,99.97
+the_geom,3756,99.97
+AddressNum,3756,99.97
+AddressSt,3756,99.97
+Job_Desc,3756,99.97
+Bldg_Class,3756,99.97
+NTA2020,3756,99.97
+SchSubDist,3756,99.97
+FireCmpany,3756,99.97
+GeomSource,3756,99.97
+NTAName20,3756,99.97
+DCPEdited,3756,99.97
+Sponsor,28,0.75
+Description,21,0.56
+Fiscal_Year,5,0.13
+Title,4,0.11
+Budget_Line,2,0.05
+Borough,1,0.03
+ID,1,0.03
+Reported,1,0.03
+Project Geographic District ,0,0.0
+OtherBProp,0,0.0
+ClassAInit,0,0.0
+PermitYear,0,0.0
+Council District,0,0.0
+Community Board,0,0.0
+Longitude,0,0.0
+Latitude,0,0.0
+Job_Number,0,0.0
+CompltYear,0,0.0
+Postcode,0,0.0
+Lot,0,0.0
+BBL,0,0.0
+Census Tract (2020),0,0.0
+Final Estimate of Actual Costs Through End of Phase Amount,0,0.0
+Total Phase Actual Spending Amount,0,0.0
+source_file,0,0.0
+synthetic_flag,0,0.0
+Award,0,0.0
+Accident Report ID,0,0.0
+Council_District,0,0.0
+BIN,0,0.0
+Fatality,0,0.0
+Injury,0,0.0
+House Number,0,0.0
+Block,0,0.0
+Boro,0,0.0
+Units_CO,0,0.0
+ClassAProp,0,0.0
+ClassANet,0,0.0
+HotelInit,0,0.0
+HotelProp,0,0.0
+OtherBInit,0,0.0
+SchElmntry,0,0.0
+BCT2020,0,0.0
+BCTCB2020,0,0.0
+CenBlock20,0,0.0
+CenTract20,0,0.0
+FloorsProp,0,0.0
+FloorsInit,0,0.0
+CommntyDst,0,0.0
+CouncilDst,0,0.0
+PolicePcnt,0,0.0
+FireDivsn,0,0.0
+FireBattln,0,0.0
+SchMiddle,0,0.0
+SchCommnty,0,0.0
+PL_PFIRM15,0,0.0
+PL_FIRM07,0,0.0
+hours_used,0,0.0
+maintenance_flag,0,0.0
+cost_estimated,0,0.0
+hourly_cost_estimated,0,0.0
+is_synthetic,0,0.0
+quantity,0,0.0
+unit_price_estimated,0,0.0
+total_cost_estimated,0,0.0
+will_delay,0,0.0

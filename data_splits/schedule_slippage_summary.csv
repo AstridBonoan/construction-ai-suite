@@ -1,0 +1,11 @@
+stat,value
+quantile_0.0,
+quantile_0.25,
+quantile_0.5,
+quantile_0.75,
+quantile_0.9,
+quantile_1.0,
+>0.0,0.0
+>0.01,0.0
+>0.02,0.0
+>0.05,0.0

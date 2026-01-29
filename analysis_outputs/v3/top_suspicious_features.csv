@@ -1,0 +1,98 @@
+feature,corr_with_will_delay,abs_corr,is_constant,is_id_like
+Project Phase Actual Start Date,,,True,True
+Project Phase Planned End Date,,,True,True
+Project Phase Actual End Date,,,True,True
+Final Estimate of Actual Costs Through End of Phase Amount,,,True,False
+Total Phase Actual Spending Amount,,,True,False
+source_file,,,True,False
+synthetic_flag,,,True,False
+BIN,,,True,False
+Incident Date,,,True,True
+Record Type Description,,,True,False
+Check2 Description,,,True,False
+Fatality,,,True,False
+Injury,,,True,False
+House Number,,,True,False
+Street Name,,,True,False
+Block,,,True,False
+Lot,,,True,False
+Postcode,,,True,False
+Latitude,,,True,False
+Longitude,,,True,False
+Community Board,,,True,False
+Council District,,,True,False
+BBL,,,True,False
+Census Tract (2020),,,True,False
+Neighborhood Tabulation Area (NTA) (2020),,,True,False
+the_geom,,,True,False
+Job_Number,,,True,False
+Job_Type,,,True,False
+Job_Status,,,True,False
+CompltYear,,,True,False
+PermitYear,,,True,False
+ClassAInit,,,True,False
+ClassAProp,,,True,False
+ClassANet,,,True,False
+HotelInit,,,True,False
+HotelProp,,,True,False
+OtherBInit,,,True,False
+OtherBProp,,,True,False
+Units_CO,,,True,False
+Boro,,,True,False
+AddressNum,,,True,False
+AddressSt,,,True,False
+Occ_Init,,,True,False
+Occ_Prop,,,True,False
+Bldg_Class,,,True,False
+Job_Desc,,,True,False
+DateFiled,,,True,True
+DatePermit,,,True,True
+DateLstUpd,,,True,True
+DateComplt,,,True,True
+ZoningDst1,,,True,False
+ZoningDst2,,,True,False
+ZoningDst3,,,True,False
+SpeclDst1,,,True,False
+SpeclDst2,,,True,False
+FloorsInit,,,True,False
+FloorsProp,,,True,False
+Enlargemnt,,,True,False
+Ownership,,,True,False
+CenBlock20,,,True,False
+CenTract20,,,True,False
+BCTCB2020,,,True,False
+BCT2020,,,True,False
+NTA2020,,,True,False
+NTAName20,,,True,False
+CDTA2020,,,True,False
+CDTAName20,,,True,False
+CommntyDst,,,True,False
+CouncilDst,,,True,False
+SchSubDist,,,True,False
+SchCommnty,,,True,False
+SchElmntry,,,True,False
+FireCmpany,,,True,False
+FireBattln,,,True,False
+FireDivsn,,,True,False
+PolicePcnt,,,True,False
+GeomSource,,,True,False
+DCPEdited,,,True,False
+Region,,,True,False
+IncomeGroup,,,True,False
+SpecialNotes,,,True,False
+TableName,,,True,False
+date,,,True,True
+equipment,,,True,False
+hours_used,,,True,False
+hourly_cost_estimated,,,True,False
+cost_estimated,,,True,False
+maintenance_flag,,,True,False
+is_synthetic,,,True,False
+source,,,True,False
+material,,,True,False
+quantity,,,True,False
+unit,,,True,False
+unit_price_estimated,,,True,False
+total_cost_estimated,,,True,False
+will_delay,,,True,False
+ID,,,False,True

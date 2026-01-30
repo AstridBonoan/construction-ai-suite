@@ -1,0 +1,5 @@
+Total projects: 48
+Planned window invalid (start==end or missing): 47
+Missing actual_start: 47
+Missing actual_end: 0
+Projects that cannot compute delay: 48

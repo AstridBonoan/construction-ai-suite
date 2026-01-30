@@ -1,0 +1,11 @@
+Total projects: 48
+Total imputed (imputation_rule==RuleB): 48
+
+Per-project-type medians and counts (see CSV):
+ - <unknown>: median=nan, count=48, imputed=48
+
+Counts by imputation_rule:
+ - RuleB: 48
+
+Counts by label_confidence:
+ - low: 48

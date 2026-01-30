@@ -1,0 +1,3 @@
+Input aggregated projects: 48
+Projects with computable delay (relaxed rule): 0
+Projects without computable delay: 48

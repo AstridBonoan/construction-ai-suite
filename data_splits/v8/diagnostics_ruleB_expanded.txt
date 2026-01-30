@@ -1,0 +1,15 @@
+{
+  "total_projects": 48,
+  "projects_with_inferred_project_type": 0,
+  "imputed_count_ruleB": 48,
+  "counts_by_imputation_rule": {
+    "RuleB": 48
+  },
+  "counts_by_label_confidence": {
+    "low": 48
+  },
+  "will_delay_ruleB_positives": 48,
+  "will_delay_ruleB_negatives": 0,
+  "per_type_medians": {},
+  "global_median_used": 365.0
+}

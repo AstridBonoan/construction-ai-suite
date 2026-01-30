@@ -1,0 +1,49 @@
+project_id,project_type,original_planned_duration_days,imputed_planned_duration_days,actual_start,actual_end,elapsed_days,delay_days,schedule_slippage_pct,imputation_rule,actual_start_imputed,label_confidence,imputed_planned_applied
+Unknown,,,365.0,2024-09-30T00:00:00,2025-09-30,365,0.0,0.0,RuleB,True,low,True
+august martin hs - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+boys & girls hs - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+city-as-school - manhattan,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+fort hamilton hs - k,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+hostos-lincoln academy of science,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+i.s. 109 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+i.s. 210 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+i.s. 391 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+innovation diploma plus,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+mid-man adult learning center - m,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+murray hill academy hs - m,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+new millennium bronx academy of the arts - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. / i.s. 270 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 105 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 109 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 128 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 138 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 152 - manhattan,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 157 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 171 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 199 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 2 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 205 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 206 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 209 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 209 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 215 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 222 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 226 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 239 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 279 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 28 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 28 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 282 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 31 - staten island,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 329 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 4 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 52 - staten island,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 55 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 56 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 76 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 84 - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 87 - manhattan,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+p.s. 97 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+q993 sped - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+quest to learn - manhattan,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+the flushing international hs - q,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True

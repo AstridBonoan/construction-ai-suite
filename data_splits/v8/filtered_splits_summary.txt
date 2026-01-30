@@ -1,0 +1,7 @@
+total_input_projects=48
+low_confidence_skipped=47
+projects_after_filter=1
+train_size=1
+test_size=0
+train_label_counts={0: 1}
+test_label_counts={}

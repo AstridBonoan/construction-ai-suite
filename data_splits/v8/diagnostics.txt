@@ -1,0 +1,15 @@
+total_projects=48
+planned_duration_days_non_na=47
+elapsed_days_non_na=48
+delay_days_non_na=0
+
+delay_days>0 positives=0
+schedule_slippage_pct>0 positives=0
+
+projects_using_year_only=0
+projects_using_any_parsed_dates=48
+projects_failed_all_parsing=0
+projects_with_imputed_actual_start=47
+
+Sample numeric rows (up to 5):
+  (no numeric duration rows)

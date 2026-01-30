@@ -1,0 +1,4 @@
+Conservative delay computation run: 2026-01-29T23:40:24.106932Z
+Input aggregated projects: 48
+Projects with computable delay (all four full-date parses present): 1
+Projects missing computable delay: 47

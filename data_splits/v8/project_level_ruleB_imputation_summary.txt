@@ -1,0 +1,14 @@
+Total projects: 48
+Projects with imputed planned_duration (cohort median applied): 48
+will_delay_ruleB positives: 0
+
+Counts by project_type (imputed planned applied):
+ - <unknown>: 48
+
+Counts by imputation_rule:
+ - RuleB: 48
+
+Counts by label_confidence:
+ - low: 48
+
+Sample of changed projects saved to: data_splits\v8\project_level_ruleB_imputation_sample.csv

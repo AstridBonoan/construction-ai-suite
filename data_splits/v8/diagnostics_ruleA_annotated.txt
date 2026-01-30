@@ -1,0 +1,7 @@
+total_projects=48
+counts_by_imputation_rule:
+  median fallback=47
+  none=1
+counts_by_label_confidence:
+  low=47
+  original=1

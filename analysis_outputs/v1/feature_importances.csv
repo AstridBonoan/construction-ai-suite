@@ -1,0 +1,103 @@
+,importance
+schedule_slippage_pct,1.0
+Project Geographic District ,0.0
+Project School Name,0.0
+Project Type ,0.0
+Project Description,0.0
+Project Building Identifier,0.0
+Project Status Name,0.0
+Project Budget Amount,0.0
+synthetic_flag,0.0
+Reported,0.0
+Fiscal_Year,0.0
+Borough,0.0
+Award,0.0
+Council_District,0.0
+Sponsor,0.0
+Title,0.0
+Description,0.0
+Budget_Line,0.0
+BIN,0.0
+Accident Report ID,0.0
+Record Type Description,0.0
+Check2 Description,0.0
+Fatality,0.0
+Injury,0.0
+House Number,0.0
+Street Name,0.0
+Block,0.0
+Lot,0.0
+Postcode,0.0
+Latitude,0.0
+Longitude,0.0
+Community Board,0.0
+Council District,0.0
+BBL,0.0
+Census Tract (2020),0.0
+Neighborhood Tabulation Area (NTA) (2020),0.0
+the_geom,0.0
+Project Phase Name,0.0
+Job_Number,0.0
+Job_Type,0.0
+CompltYear,0.0
+Job_Status,0.0
+ClassAInit,0.0
+ClassAProp,0.0
+ClassANet,0.0
+PermitYear,0.0
+HotelProp,0.0
+OtherBInit,0.0
+OtherBProp,0.0
+Units_CO,0.0
+Boro,0.0
+AddressNum,0.0
+AddressSt,0.0
+HotelInit,0.0
+Occ_Prop,0.0
+Bldg_Class,0.0
+Job_Desc,0.0
+ZoningDst1,0.0
+ZoningDst2,0.0
+ZoningDst3,0.0
+SpeclDst1,0.0
+SpeclDst2,0.0
+FloorsInit,0.0
+FloorsProp,0.0
+Enlargemnt,0.0
+Ownership,0.0
+CenBlock20,0.0
+CenTract20,0.0
+BCTCB2020,0.0
+Occ_Init,0.0
+BCT2020,0.0
+NTA2020,0.0
+CDTA2020,0.0
+NTAName20,0.0
+CommntyDst,0.0
+CouncilDst,0.0
+SchSubDist,0.0
+CDTAName20,0.0
+SchElmntry,0.0
+SchMiddle,0.0
+FireCmpany,0.0
+FireBattln,0.0
+FireDivsn,0.0
+PolicePcnt,0.0
+GeomSource,0.0
+SchCommnty,0.0
+DCPEdited,0.0
+Region,0.0
+SpecialNotes,0.0
+IncomeGroup,0.0
+equipment,0.0
+hours_used,0.0
+hourly_cost_estimated,0.0
+TableName,0.0
+cost_estimated,0.0
+maintenance_flag,0.0
+material,0.0
+is_synthetic,0.0
+quantity,0.0
+unit,0.0
+unit_price_estimated,0.0
+total_cost_estimated,0.0

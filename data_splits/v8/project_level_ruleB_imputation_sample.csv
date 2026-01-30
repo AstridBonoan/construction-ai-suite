@@ -1,0 +1,11 @@
+project_id,project_type,original_planned_duration_days,imputed_planned_duration_days,actual_start,actual_end,elapsed_days,delay_days,schedule_slippage_pct,imputation_rule,actual_start_imputed,label_confidence,imputed_planned_applied
+Unknown,,,365.0,2024-09-30T00:00:00,2025-09-30,365,0.0,0.0,RuleB,True,low,True
+august martin hs - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+boys & girls hs - brooklyn,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+city-as-school - manhattan,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+fort hamilton hs - k,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+hostos-lincoln academy of science,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+i.s. 109 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+i.s. 210 - queens,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+i.s. 391 - bronx,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True
+innovation diploma plus,,0.0,365.0,2015-07-02T00:00:00,2016-07-01,365,0.0,0.0,RuleB,True,low,True

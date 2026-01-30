@@ -1,0 +1,5 @@
+total_projects=48
+planned_duration_days_non_na=47
+elapsed_days_non_na=48
+delay_days_non_na=0
+will_delay_abs30_positives=0

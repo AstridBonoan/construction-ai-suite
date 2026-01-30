@@ -1,0 +1,9 @@
+Total projects: 48
+Projects with inferred project_type: 6
+Projects still missing project_type: 41
+
+Counts by imputation_rule:
+ - RuleB: 48
+
+Counts by label_confidence:
+ - low: 48

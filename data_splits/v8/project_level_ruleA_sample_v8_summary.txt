@@ -1,0 +1,6 @@
+total_ruleA_in_sample=10
+planned_collapsed_in_sample=10
+missing_actual_start_in_sample=0
+missing_actual_end_in_sample=0
+
+Detailed issues per project in CSV.

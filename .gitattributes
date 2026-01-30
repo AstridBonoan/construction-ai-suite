@@ -3,3 +3,7 @@ data_splits/y_*.csv filter=lfs diff=lfs merge=lfs -text
 project_dataset_v1_cleaned*.csv filter=lfs diff=lfs merge=lfs -text
 construction_datasets/*.csv filter=lfs diff=lfs merge=lfs -text
 data_splits/*.csv filter=lfs diff=lfs merge=lfs -text
+<<<<<<< HEAD
+=======
+data_splits/v8/numeric_project_samples.csv filter=lfs diff=lfs merge=lfs -text
+>>>>>>> origin/feature/project-delay-v5

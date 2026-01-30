@@ -10,9 +10,10 @@ Definition:
   - actual_start = min(Project Phase Actual Start Date)
   - planned_end = max(Project Phase Planned End Date)
   - actual_end = max(Project Phase Actual End Date)
-  - planned_duration = (planned_end - actual_start).days
-  - elapsed_days = (actual_end - actual_start).days
-  - schedule_slippage_pct = elapsed_days / planned_duration (if planned_duration>0 else 0)
+    - planned_duration = (planned_end - actual_start).days
+    - elapsed_days = (actual_end - actual_start).days
+    - schedule_slippage_pct = (elapsed_days - planned_duration) / planned_duration
+        (i.e., fraction of overrun relative to planned duration; if planned_duration<=0, set 0)
 - will_delay = 1 if schedule_slippage_pct > 0.05 else 0
 
 Saves stratified splits to `data_splits/`.
@@ -97,19 +98,28 @@ def aggregate_project_level(df: pd.DataFrame, project_col: str, start_col: str, 
     df2["_actual_dt"] = actual_dt
 
     # aggregate per project
-    agg = df2.groupby(project_col).agg(
-        actual_start=("_start_dt", lambda s: s.min()),
-        planned_end=("_planned_dt", lambda s: s.max()),
-        actual_end=("_actual_dt", lambda s: s.max()),
-        # carry forward the most complete row's non-date info by picking first non-null of each col
-    )
+    # Build aggregation dict: date aggregates plus carry-forward for non-date columns
+    agg_dict = {
+        "actual_start": ("_start_dt", lambda s: s.min()),
+        "planned_end": ("_planned_dt", lambda s: s.max()),
+        "actual_end": ("_actual_dt", lambda s: s.max()),
+    }
+    # For non-date, non-project columns, carry forward the first non-null value per project
+    non_date_cols = [c for c in df.columns if c not in (project_col, start_col, planned_col, actual_col)]
+    for c in non_date_cols:
+        # use a lambda that returns first non-null or NaN
+        agg_dict[c] = (c, lambda s: s.dropna().iloc[0] if s.dropna().shape[0] > 0 else pd.NA)
+
+    agg = df2.groupby(project_col).agg(**agg_dict)
     # compute durations
     agg["planned_duration_days"] = (agg["planned_end"] - agg["actual_start"]).dt.days
     agg["elapsed_days"] = (agg["actual_end"] - agg["actual_start"]).dt.days
     # compute schedule_slippage_pct
+    # slippage: fraction of delay relative to planned duration
+    # (elapsed - planned) / planned  => positive when actual took longer than planned
     agg["schedule_slippage_pct"] = np.where(
         agg["planned_duration_days"] > 0,
-        agg["elapsed_days"] / agg["planned_duration_days"],
+        (agg["elapsed_days"] - agg["planned_duration_days"]) / agg["planned_duration_days"],
         0.0,
     )
     return agg.reset_index()
@@ -165,11 +175,17 @@ def create_splits_and_save(df_proj: pd.DataFrame, output_dir: Path, random_state
     X = df_proj.drop(columns=drop_cols + ["will_delay"], errors="ignore")
     y = df_proj["will_delay"].astype(int)
 
-    # Stratified splits
+    # Stratified splits where possible; fall back to random splits if class counts are too small
     test_size = 0.15
-    X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
-    val_frac = 0.15 / (1.0 - test_size)
-    X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_frac, random_state=random_state, stratify=y_train_val)
+    try:
+        X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
+        val_frac = 0.15 / (1.0 - test_size)
+        X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_frac, random_state=random_state, stratify=y_train_val)
+    except ValueError:
+        logger.warning("Stratified split failed due to extreme class imbalance; falling back to random splits without stratification.")
+        X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, shuffle=True)
+        val_frac = 0.15 / (1.0 - test_size)
+        X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_frac, random_state=random_state, shuffle=True)
 
     output_dir.mkdir(parents=True, exist_ok=True)
     X_train.to_csv(output_dir / "X_train.csv", index=False)

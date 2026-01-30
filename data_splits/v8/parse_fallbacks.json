@@ -1,0 +1,732 @@
+[
+  {
+    "project_id": "Unknown",
+    "used": {
+      "planned_start": [
+        "_parsed__DateFiled",
+        "_parsed__DatePermit"
+      ],
+      "planned_end": [
+        "_parsed__Project Phase Planned End Date",
+        "_parsed__PermitYear",
+        "_parsed__DatePermit"
+      ],
+      "actual_start": [
+        "_parsed__Project Phase Actual Start Date",
+        "_parsed__DateFiled"
+      ],
+      "actual_end": [
+        "_parsed__Project Phase Actual End Date",
+        "_parsed__CompltYear",
+        "_parsed__DateComplt"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": false
+  },
+  {
+    "project_id": "august martin hs - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "boys & girls hs - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "city-as-school - manhattan",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "fort hamilton hs - k",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "hostos-lincoln academy of science",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "i.s. 109 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "i.s. 210 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "i.s. 391 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "innovation diploma plus",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "mid-man adult learning center - m",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "murray hill academy hs - m",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "new millennium bronx academy of the arts - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. / i.s. 270 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 105 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 109 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 128 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 138 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 152 - manhattan",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 157 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 171 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 199 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 2 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 205 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 206 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 209 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 209 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 215 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 222 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 226 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 239 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 279 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 28 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 28 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 282 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 31 - staten island",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 329 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 4 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 52 - staten island",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 55 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 56 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 76 - bronx",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 84 - brooklyn",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 87 - manhattan",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "p.s. 97 - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "q993 sped - queens",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "quest to learn - manhattan",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  },
+  {
+    "project_id": "the flushing international hs - q",
+    "used": {
+      "planned_start": [],
+      "planned_end": [
+        "_parsed__PermitYear"
+      ],
+      "actual_start": [],
+      "actual_end": [
+        "_parsed__CompltYear"
+      ]
+    },
+    "year_only_parse": [],
+    "actual_start_imputed": true
+  }
+]

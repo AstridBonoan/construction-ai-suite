@@ -1,0 +1,3 @@
+total_projects=48
+computable_delay_count_relaxed=47
+counts_by_imputation_rule={'RuleA': 47, 'none': 1}

@@ -1,0 +1,62 @@
+Parsing blockers analysis & imputation recommendations (v8)
+
+Input analyzed: parsing_blockers_diagnostics_v8.csv
+
+Key diagnostics (from diagnostics summary):
+- Total projects: 48
+- Planned window invalid (start==end or missing): 47
+- Missing actual_start: 47
+- Missing actual_end: 0
+- Projects that cannot compute delay: 48
+
+1) Primary blockers
+- Collapsed planned windows (planned_start == planned_end): 47/48 projects. This is the dominant blocker — when planned_start equals planned_end there is no meaningful planned duration to compare against.
+- Missing `actual_start`: 47/48 projects. Most projects lack an explicit actual_start row-level date, preventing elapsed computation.
+- `actual_end` presence: present for projects (0 missing), often coming from year-only sources (e.g., `CompltYear`) or full-date parses.
+
+2) Controlled imputation policy (recommended, conservative-first)
+Summary goal: maximize usable projects while minimizing label noise. Apply rules in order; stop when a project's delay can be computed without further imputation.
+
+- Rule A — Safe imputation using full planned window + observed actual_end (preferred):
+  - Conditions: `planned_start` AND `planned_end` are full-date parses (not year-only) AND they form a valid planned window (planned_start != planned_end) AND `actual_end` is present (full-date OR year-only normalized).
+  - Action: Impute `actual_start = actual_end - planned_duration_days` (i.e., assume the project elapsed exactly the planned duration ending at the observed actual_end).
+  - Rationale: Uses only the project's own planned window (full dates) and observed actual_end; does not borrow information from other projects. This yields a conservative anchor for elapsed consistent with the observed completion date and avoids biasing toward historic medians. It does use a post-outcome field (`actual_end`) but only for labeling (not as a feature at prediction time). This is low-risk for label noise because it preserves the observed completion date and measures whether the project finished earlier/later than planned.
+
+- Rule B — Constrained median-based actual_start (when Rule A not applicable):
+  - Conditions: `planned_start` and `planned_end` are full-date parses and valid, but `actual_end` is missing or unusable.
+  - Action: Impute `actual_start = planned_start + median_actual_start_offset`, where `median_actual_start_offset` is computed from projects with full-date planned windows and observed actual_start (use only within the same subpopulation if available — e.g., by project type or region). Compute `actual_end` only if present; otherwise do not impute `actual_end` here.
+  - Rationale: Uses historical structure to infer likely actual_start while avoiding direct use of post-outcome completion times. Restrict the median computation to a narrow cohort (same project type / region) to reduce heterogeneity and label noise. This rule is riskier than Rule A but can expand labeled projects when `actual_end` is unavailable.
+
+- Rule C — Allow year-only `actual_end` for labeling (already supported):
+  - Conditions: `actual_end` is present as normalized year-only (YYYY-07-01) but `actual_start` missing; planned window valid (full dates).
+  - Action: Treat year-only `actual_end` as a coarse completion date and apply Rule A to impute `actual_start = actual_end - planned_duration_days`. Flag labels derived from year-only `actual_end` as lower-confidence.
+  - Rationale: Year-only completion dates are better than nothing; using the July-1 anchor yields a bounded but coarse elapsed value. Mark these labels as lower confidence so downstream modelers can filter or weight them.
+
+- Rules to avoid (do not apply without careful review):
+  - Do not impute planned_start or planned_end from post-outcome fields (e.g., using actual dates) — this would introduce leakage.
+  - Avoid unconditional median imputation of planned windows when many projects have only year-only planned dates; that risks creating synthetic durations that mask true schedule properties.
+
+3) Implementation and flags to add
+- Add an explicit `label_confidence` column with values {high, medium, low}:
+  - high: computed from full-date planned window + full-date actual_end + actual_start observed (no imputation)
+  - medium: derived via Rule A (imputed actual_start from full planned window + observed actual_end)
+  - low: derived from year-only `actual_end` (Rule C) or from cohort median imputation (Rule B)
+
+- Add provenance columns: `imputed_actual_start` (True/False), `actual_end_year_only` (True/False), `planned_window_source` (indicating whether both planned dates are full-date), and `imputation_rule` (A/B/C/none).
+
+4) Expected gains vs. risks
+- Expected gains: Rule A should recover projects that already have valid planned windows but lack actual_start (likely many in your dataset). Because `actual_end` is present for most projects, Rule A can materially increase computable projects without introducing cross-project leakage.
+- Risks: Any imputation introduces label noise. Rule B (cohort median) and Rule C (year-only end) are higher-risk. Mitigate by labeling confidence and by keeping imputed labels separate or weighted down during model training.
+
+5) Practical next steps (ordered):
+ 1. Implement Rule A in a new pass producing `project_level_aggregated_v8_relaxed_imputed.csv`, record provenance and `label_confidence`.
+ 2. Compute counts: how many projects become computable under Rule A alone. If sufficient, stop and use these labels.
+ 3. Optionally implement Rule C (year-only actual_end) but tag as `low` confidence.
+ 4. Only if more labels are required, compute cohort medians and apply Rule B with strict cohorting and `low` confidence tags.
+
+Concise rationale summary:
+- Prioritize using each project's own full-date planned window and observed actual_end (Rule A). This leverages within-project signals and avoids borrowing across projects, which minimizes label noise while increasing computable cases.
+- Use cohort medians only as a last resort and always mark confidence, so modelers can filter/weight accordingly.
+- Avoid imputing planned dates from post-outcome data or indiscriminate median substitution; both risk label leakage and obscure true schedule behaviors.
+
+If you want, I can implement Rule A now and report how many additional projects become computable. I can also produce a CSV that includes `imputation_rule` and `label_confidence` for review.

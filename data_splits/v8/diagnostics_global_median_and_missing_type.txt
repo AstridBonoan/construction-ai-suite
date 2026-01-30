@@ -1,0 +1,16 @@
+Global median planned_duration_days (from relaxed, >0): 365.0
+Total projects (relaxed): 48
+Total imputed (RuleB, from ruleB file): 48
+Projects missing project_type (relaxed): 48
+
+Counts by imputation_rule (from ruleB if available):
+ - RuleB: 48
+
+Counts by label_confidence (from ruleB if available):
+ - low: 48
+
+Plotted histogram saved to: <not created>
+projects_missing_type.csv written to: data_splits\v8\projects_missing_type.csv
+
+Distribution percentiles (0,1,5,10,25,50,75,90,95,99,100):
+No valid planned_duration_days > 0 found in relaxed file.

@@ -1,0 +1,6 @@
+total_projects=48
+counts_by_imputation_rule:
+  RuleA=47
+  none=1
+projects_with_numeric_delay=0
+projects_with_missing_delay=48

@@ -1,0 +1,6 @@
+MAE: 0.0
+RMSE: 0.0
+R2: 1.0
+WARNING: R² is ~1.0 — check for data leakage or training-on-test.
+Training rows: 94859
+Constant columns: 15

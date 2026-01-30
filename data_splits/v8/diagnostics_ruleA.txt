@@ -1,0 +1,7 @@
+total_projects=48
+actual_start_imputed_count=47
+counts_by_imputation_rule={'RuleA': 47, 'none': 1}
+computed_delay_count=47
+will_delay_positives=0
+will_delay_abs30_positives=0
+will_delay_rel5pct_positives=0

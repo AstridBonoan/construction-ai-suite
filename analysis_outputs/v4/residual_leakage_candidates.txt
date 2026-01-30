@@ -1,0 +1,18 @@
+Residual leakage candidates scan
+Total columns scanned: 9
+
+Candidates (pattern match OR perfect predictor OR abs_corr>=0.9):
+
+Summary stats:
+         feature matches   dtype     n_unique  corr_with_target  abs_corr perfect_predictor
+count          9       9       9     9.000000               0.0       0.0                 9
+unique         9       1       2          NaN               NaN       NaN                 1
+top     Reported          object          NaN               NaN       NaN             False
+freq           1       9       7          NaN               NaN       NaN                 9
+mean         NaN     NaN     NaN   731.000000               NaN       NaN               NaN
+std          NaN     NaN     NaN  1046.282945               NaN       NaN               NaN
+min          NaN     NaN     NaN     9.000000               NaN       NaN               NaN
+25%          NaN     NaN     NaN    10.000000               NaN       NaN               NaN
+50%          NaN     NaN     NaN   361.000000               NaN       NaN               NaN
+75%          NaN     NaN     NaN   487.000000               NaN       NaN               NaN
+max          NaN     NaN     NaN  2804.000000               NaN       NaN               NaN

@@ -207,7 +207,9 @@ def impute_missing_numeric(df: pd.DataFrame, exclude: Optional[List[str]] = None
         else:
             fill = ser.mean()
             strategy = "mean"
-        df[col] = ser.fillna(fill)
+        # Coerce to numeric float before filling to avoid pandas nullable-int dtype errors
+        numeric_ser = pd.to_numeric(ser, errors="coerce").astype(float)
+        df[col] = numeric_ser.fillna(float(fill) if pd.notna(fill) else fill)
         strategy_log[col] = strategy
         logger.info("Imputed %d missing in %s using %s (value=%s)", na_count, col, strategy, float(fill) if pd.notna(fill) else None)
     return df, strategy_log
@@ -322,6 +324,94 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
         raise SystemExit("No input files found.")
 
     combined = load_datasets(files, synthetic_keywords)
+    # ------------------ Deny-list enforcement (INGESTION GUARD) ------------------
+    # Purpose: Prevent any target or post-outcome fields from entering the pipeline.
+    # Rationale: Leak-proof at the earliest point by dropping known label-derived
+    # and post-outcome columns immediately after reading raw inputs. Downstream
+    # scripts MUST NOT re-add these columns; assertions below will fail if they do.
+
+    # Exact column names that must be removed if present (from join_aggregation_audit.md)
+    DENY_LIST_EXACT = {
+        "will_delay",
+        "schedule_slippage_pct",
+        "slippage_days",
+        "elapsed_days",
+        "planned_duration_days",
+        # common cost/summary fields that are post-outcome
+        "Final Estimate of Actual Costs Through End of Phase Amount",
+        "Final Estimate of Actual Costs Through End of Phase Amount ",
+        "Final Estimate of Actual Costs Through End of Phase Amount",
+        "Total Phase Actual Spending Amount",
+        # examples from audit
+        "Award",
+        "BBL",
+        "BIN",
+        "Borough",
+        "Budget_Line",
+    }
+
+    # Column name regex patterns to drop (case-insensitive)
+    DENY_LIST_PATTERNS = [
+        r"(?i)^budget_line",            # Budget_Line, Budget_Line_*
+        r"(?i)final.*cost",            # final cost related columns
+        r"(?i)actual.*cost",
+        r"(?i)actual.*spend",
+        r"(?i)actual.*amount",
+        r"(?i)total.*actual.*spend",
+        # Date-like columns (actual/planned start/end) are intentionally not
+        # pattern-matched here because they are required for target derivation
+        # during project-level aggregation. Be cautious when adding new patterns.
+        r"(?i)elapsed_?days",
+        r"(?i)slippage",
+        r"(?i)will_?delay",
+    ]
+
+    def _drop_deny_list(df: pd.DataFrame) -> tuple[pd.DataFrame, list]:
+        import re
+
+        cols = list(df.columns)
+        to_drop_exact = set()
+        to_drop_pattern = set()
+
+        # helper: normalized column name -> original
+        def _normalize_name(s: str) -> str:
+            return re.sub(r"\s+", " ", s.strip()).lower()
+
+        norm_map = {_normalize_name(c): c for c in cols}
+
+        # exact matches (case-insensitive, normalized)
+        for en in DENY_LIST_EXACT:
+            en_norm = _normalize_name(en)
+            if en in df.columns:
+                to_drop_exact.add(en)
+            if en_norm in norm_map:
+                to_drop_exact.add(norm_map[en_norm])
+
+        # pattern matches against normalized names
+        for pat in DENY_LIST_PATTERNS:
+            rx = re.compile(pat)
+            for norm_name, orig in norm_map.items():
+                if rx.search(norm_name):
+                    to_drop_pattern.add(orig)
+
+        # ensure we only drop columns that actually exist in df
+        dropped_exact = sorted([c for c in to_drop_exact if c in df.columns])
+        dropped_pattern = sorted([c for c in to_drop_pattern if c in df.columns and c not in dropped_exact])
+
+        if dropped_exact:
+            logger.info("Deny-list drop (exact): removing %d columns at ingestion: %s", len(dropped_exact), dropped_exact)
+        if dropped_pattern:
+            logger.info("Deny-list drop (pattern): removing %d columns at ingestion: %s", len(dropped_pattern), dropped_pattern)
+        if not dropped_exact and not dropped_pattern:
+            logger.info("Deny-list drop: no deny-list columns present at ingestion")
+
+        dropped_all = dropped_exact + dropped_pattern
+        if dropped_all:
+            df = df.drop(columns=dropped_all, errors="ignore")
+        return df, dropped_all
+
+    combined, dropped_now = _drop_deny_list(combined)
+    # ----------------------------------------------------------------------------
     if combined.empty:
         raise SystemExit("No data loaded from input files.")
 
@@ -334,6 +424,10 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
     combined, impute_log = impute_missing_numeric(combined, exclude=["synthetic_flag"])  # exclude flags
     combined = impute_missing_categorical(combined)
 
+    # Re-assert deny-list before computing derived features (safety in case
+    # standardization or normalization reintroduced name variants).
+    combined, dropped_pre_features = _drop_deny_list(combined)
+
     combined = compute_derived_features(combined)
 
     # Ensure synthetic_flag exists and is boolean
@@ -342,6 +436,16 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
     combined["synthetic_flag"] = combined["synthetic_flag"].astype(bool)
 
     validate_dataset(combined)
+
+    # Final safeguard: assert that deny-list columns are not present in final dataframe.
+    # This enforces causal correctness: if any downstream code (or an earlier file)
+    # reintroduces these columns, fail loudly so the training pipeline cannot proceed.
+    present = [c for c in combined.columns if any(
+        c == ex or c.lower().startswith(ex.lower()) for ex in DENY_LIST_EXACT
+    ) or any(__import__("re").search(pat, c) for pat in DENY_LIST_PATTERNS)]
+    if present:
+        logger.error("Deny-list violation: found forbidden columns in final dataset: %s", present)
+        raise SystemExit("Deny-list violation: post-outcome columns present after ingestion. Aborting.")
 
     out_path = Path(output_file)
     combined.to_csv(out_path, index=False)

@@ -1,0 +1,41 @@
+Projects extracted: 1
+Project IDs:
+ - Unknown
+
+Date-like columns included:
+ - project_id
+ - Project Phase Actual Start Date
+ - Project Phase Planned End Date
+ - Project Phase Actual End Date
+ - Fiscal_Year
+ - Incident Date
+ - date
+ - CompltYear
+ - PermitYear
+ - DateFiled
+ - DatePermit
+ - DateLstUpd
+ - DateComplt
+
+Head of sample rows (first 20 rows):
+project_id Project Phase Actual Start Date Project Phase Planned End Date Project Phase Actual End Date Fiscal_Year Incident Date    date         CompltYear         PermitYear DateFiled DatePermit DateLstUpd DateComplt
+   Unknown                       7/31/2025                            ieh                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       6/28/2024                           doer                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       2/19/2024                           does                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       4/13/2021                      9/13/2021                      7/1/2021     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                        7/6/2021                      12/7/2021                    11/29/2021     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       7/18/2022                      7/16/2024                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       7/18/2022                      7/16/2024                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       6/22/2023                     10/23/2023                      7/6/2023     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                        7/6/2023                       1/3/2024                    12/13/2023     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       5/27/2024                      5/26/2025                     5/12/2025     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       5/27/2024                      5/26/2025                     5/12/2025     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       3/14/2025                            ieh                     9/13/2025     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                        6/4/2025                            ieh                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                      12/23/2024                           doer                     4/25/2025     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                             pns                            pns                           pns     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                      12/27/2024                            ftk                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                        7/7/2021                           does                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                       4/22/2021                       9/7/2021                    12/21/2021     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                      12/22/2021                      6/10/2022                     9/16/2022     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown
+   Unknown                        8/7/2023                       8/5/2025                       Unknown     Unknown       Unknown Unknown 2016.9634929370757 2014.9470979110833   Unknown    Unknown    Unknown    Unknown

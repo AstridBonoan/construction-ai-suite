@@ -1,0 +1,10 @@
+Diagnostics generated: 2026-01-29T23:38:56.710948Z
+Total projects analyzed: 48
+planned_start_eq_planned_end: count=47
+august martin hs - queens, boys & girls hs - brooklyn, city-as-school - manhattan, fort hamilton hs - k, hostos-lincoln academy of science, i.s. 109 - queens, i.s. 210 - queens, i.s. 391 - bronx, innovation diploma plus, mid-man adult learning center - m, murray hill academy hs - m, new millennium bronx academy of the arts - bronx, p.s. / i.s. 270 - queens, p.s. 105 - bronx, p.s. 109 - brooklyn, p.s. 128 - brooklyn, p.s. 138 - brooklyn, p.s. 152 - manhattan, p.s. 157 - brooklyn, p.s. 171 - queens
+missing_actual_start: count=47
+august martin hs - queens, boys & girls hs - brooklyn, city-as-school - manhattan, fort hamilton hs - k, hostos-lincoln academy of science, i.s. 109 - queens, i.s. 210 - queens, i.s. 391 - bronx, innovation diploma plus, mid-man adult learning center - m, murray hill academy hs - m, new millennium bronx academy of the arts - bronx, p.s. / i.s. 270 - queens, p.s. 105 - bronx, p.s. 109 - brooklyn, p.s. 128 - brooklyn, p.s. 138 - brooklyn, p.s. 152 - manhattan, p.s. 157 - brooklyn, p.s. 171 - queens
+missing_planned_start_or_end: count=0
+actual_end_present_but_start_missing: count=47
+august martin hs - queens, boys & girls hs - brooklyn, city-as-school - manhattan, fort hamilton hs - k, hostos-lincoln academy of science, i.s. 109 - queens, i.s. 210 - queens, i.s. 391 - bronx, innovation diploma plus, mid-man adult learning center - m, murray hill academy hs - m, new millennium bronx academy of the arts - bronx, p.s. / i.s. 270 - queens, p.s. 105 - bronx, p.s. 109 - brooklyn, p.s. 128 - brooklyn, p.s. 138 - brooklyn, p.s. 152 - manhattan, p.s. 157 - brooklyn, p.s. 171 - queens
+imputed_actual_start_true: count=0

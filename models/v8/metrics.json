@@ -1,0 +1,7 @@
+{
+  "train_counts": {
+    "0": 1
+  },
+  "test_counts": {},
+  "warning": "Single-class or no positive examples in training set; skipping model training."
+}

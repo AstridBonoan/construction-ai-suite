@@ -1,0 +1,5 @@
+file,exact_matches,pattern_matches
+construction_datasets\Capital_Project_Schedules_and_Budgets.csv,Final Estimate of Actual Costs Through End of Phase Amount;Total Phase Actual Spending Amount,Final Estimate of Actual Costs Through End of Phase Amount;Total Phase Actual Spending Amount
+construction_datasets\City_Council_Capital_Budget.csv,Award;Borough;Budget_Line,Budget_Line
+construction_datasets\Construction-Related_Incidents.csv,BIN;Borough;BBL,
+construction_datasets\Housing_Database_Project_Level_Files.csv,BIN;BBL,

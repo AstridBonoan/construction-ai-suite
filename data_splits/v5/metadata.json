@@ -1,0 +1,33 @@
+{
+  "n_projects_total": 1,
+  "n_projects_test": 0,
+  "split_type": "row",
+  "drop_features_count": 25,
+  "drop_features_sample": [
+    " ()",
+    "Accident Report ID",
+    "CompltYear",
+    "DateComplt",
+    "DateFiled",
+    "DateLstUpd",
+    "DatePermit",
+    "Final Estimate of Actual Costs Through End of Phase Amount",
+    "Fiscal_Year",
+    "ID",
+    "Incident Date",
+    "PermitYear",
+    "Project Building Identifier",
+    "Project Phase Actual End Date",
+    "Project Phase Actual Start Date",
+    "Project Phase Planned End Date",
+    "ResidFlag",
+    "SchMiddle",
+    "Total Phase Actual Spending Amount",
+    "Unnamed: 4",
+    "Unnamed: 5",
+    "date",
+    "project_id",
+    "schedule_slippage_pct",
+    "will_delay"
+  ]
+}

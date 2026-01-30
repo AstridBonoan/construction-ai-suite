@@ -1,0 +1,5 @@
+total=48
+will_delay_positives=0
+will_delay_abs30_positives=0
+will_delay_rel5pct_positives=0
+negatives=48

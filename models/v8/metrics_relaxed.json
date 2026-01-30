@@ -1,0 +1,12 @@
+{
+  "train_counts": {
+    "0": 37
+  },
+  "test_counts": {
+    "0": 10
+  },
+  "counts_by_confidence": {
+    "low": 47
+  },
+  "warning": "Single-class or no positive examples in training set; skipping model training."
+}

@@ -1,0 +1,28 @@
+{
+  "total_projects": 48,
+  "positives": 0,
+  "negatives": 48,
+  "slippage_threshold": 0.0,
+  "test_size": 0.2,
+  "random_state": 42,
+  "candidate_map": {
+    "planned_start": [
+      "DateFiled",
+      "DatePermit"
+    ],
+    "planned_end": [
+      "Project Phase Planned End Date",
+      "PermitYear",
+      "DatePermit"
+    ],
+    "actual_start": [
+      "Project Phase Actual Start Date",
+      "DateFiled"
+    ],
+    "actual_end": [
+      "Project Phase Actual End Date",
+      "CompltYear",
+      "DateComplt"
+    ]
+  }
+}

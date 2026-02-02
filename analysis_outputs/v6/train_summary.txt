@@ -1,2 +1,0 @@
-Best params: {'rf__n_estimators': 400, 'rf__min_samples_split': 10, 'rf__max_depth': None}
-Metrics: {'MAE': 0.0, 'RMSE': 0.0, 'R2': 1.0}

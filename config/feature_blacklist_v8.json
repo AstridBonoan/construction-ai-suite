@@ -1,0 +1,15 @@
+{
+  "note": "These features are excluded due to leakage risk. Do not reintroduce without a new leakage audit.",
+  "columns": [
+    "elapsed_days",
+    "schedule_slippage_pct",
+    "actual_start",
+    "actual_end",
+    "actual_start_imputed",
+    "Project Geographic District"
+  ],
+  "prefixes": [
+    "will_delay",
+    "actual_"
+  ]
+}

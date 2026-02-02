@@ -1,0 +1,12 @@
+# Local test artifacts and virtualenv
+.venv/
+# Temporary report files
+reports/*.tmp
+reports/*.bak
+# Local analysis artifacts
+analysis/*.tmp
+# Prevent accidental large model artifacts in root
+*.pkl
+# Python cache
+__pycache__/
+.pytest_cache/

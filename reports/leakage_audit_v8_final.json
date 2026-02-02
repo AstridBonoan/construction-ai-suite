@@ -1,0 +1,23 @@
+{
+  "target": "delay_days",
+  "group_col": "project_id",
+  "n_total": 48,
+  "n_train": 38,
+  "n_test": 10,
+  "target_stats": {
+    "count": 48,
+    "unique": 2,
+    "min": 1.0,
+    "max": 9223.0,
+    "mean": 193.125,
+    "std": 1331.081045616682
+  },
+  "duplicates_between_splits": 0,
+  "id_overlap": {
+    "group_col": "project_id",
+    "train_unique": 38,
+    "test_unique": 10,
+    "overlap_count": 0
+  },
+  "high_correlation_features": {}
+}

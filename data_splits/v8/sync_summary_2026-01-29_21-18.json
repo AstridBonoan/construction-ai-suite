@@ -1,0 +1,43 @@
+﻿{
+    "processed":  [
+                      "feature/project-delay-prediction",
+                      "feature/project-delay-v2",
+                      "feature/project-delay-v3",
+                      "feature/project-delay-v4",
+                      "feature/project-delay-v5",
+                      "main"
+                  ],
+    "errors":  [
+                   {
+                       "merge":  "merge_failed",
+                       "output":  "fatal: refusing to merge unrelated histories"
+                   }
+               ],
+    "push_attempts":  [
+                          "backup/main-before-merge-2026-01-29",
+                          "backup/main-before-pull-2026-01-29"
+                      ],
+    "reset_backups":  [
+                          {
+                              "backup":  "backup/feature/project-delay-prediction-before-sync-2026-01-29_21-18",
+                              "branch":  "feature/project-delay-prediction"
+                          },
+                          {
+                              "backup":  "backup/feature/project-delay-v2-before-sync-2026-01-29_21-18",
+                              "branch":  "feature/project-delay-v2"
+                          },
+                          {
+                              "backup":  "backup/feature/project-delay-v3-before-sync-2026-01-29_21-18",
+                              "branch":  "feature/project-delay-v3"
+                          },
+                          {
+                              "backup":  "backup/feature/project-delay-v4-before-sync-2026-01-29_21-18",
+                              "branch":  "feature/project-delay-v4"
+                          },
+                          {
+                              "backup":  "backup/main-before-sync-2026-01-29_21-18",
+                              "branch":  "main"
+                          }
+                      ],
+    "timestamp":  "2026-01-29_21-18"
+}

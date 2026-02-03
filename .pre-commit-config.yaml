@@ -6,7 +6,7 @@ repos:
         entry: python scripts/ci_checks.py
         language: system
         files: ^configs/.*\.json$
-        stages: [commit]
+        stages: [pre-commit]
       - id: integration-dryrun
         name: "Optional: Dry-run integration (disabled by default)"
         entry: python scripts/monday_integration.py --configs-dir configs/

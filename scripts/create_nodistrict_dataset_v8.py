@@ -2,9 +2,12 @@ import pandas as pd
 from pathlib import Path
 
 SRC = Path("data_splits/project_level_aggregated_v8_ruleB_imputed_expanded_noleak.csv")
-OUT = Path("data_splits/project_level_aggregated_v8_ruleB_imputed_expanded_noleak_nodistrict.csv")
+OUT = Path(
+    "data_splits/project_level_aggregated_v8_ruleB_imputed_expanded_noleak_nodistrict.csv"
+)
 
-DROP_COL = 'Project Geographic District'
+DROP_COL = "Project Geographic District"
+
 
 def main():
     df = pd.read_csv(SRC, low_memory=False)
@@ -28,5 +31,5 @@ def main():
             df.to_csv(OUT, index=False)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

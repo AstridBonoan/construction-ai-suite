@@ -15,6 +15,7 @@ Guardrails:
 Usage:
   python scripts/create_row_level_splits.py --input project_dataset_v1_cleaned_with_will_delay.csv --output-dir data_splits --random-state 42
 """
+
 from __future__ import annotations
 import argparse
 from pathlib import Path
@@ -28,9 +29,18 @@ logger = logging.getLogger(__name__)
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Create stratified row-level splits on will_delay")
-    p.add_argument("--input", "-i", default="project_dataset_v1_cleaned_with_will_delay.csv", help="Row-level cleaned CSV with will_delay column")
-    p.add_argument("--output-dir", "-o", default="data_splits", help="Directory to save splits")
+    p = argparse.ArgumentParser(
+        description="Create stratified row-level splits on will_delay"
+    )
+    p.add_argument(
+        "--input",
+        "-i",
+        default="project_dataset_v1_cleaned_with_will_delay.csv",
+        help="Row-level cleaned CSV with will_delay column",
+    )
+    p.add_argument(
+        "--output-dir", "-o", default="data_splits", help="Directory to save splits"
+    )
     p.add_argument("--random-state", "-r", type=int, default=42)
     return p.parse_args()
 
@@ -52,7 +62,12 @@ def main():
     # Basic sanity counts
     total = len(df)
     pos_total = int((df["will_delay"] == 1).sum())
-    logger.info("Total rows: %d, positives (will_delay=1): %d (%.2f%%)", total, pos_total, 100.0 * pos_total / total if total>0 else 0.0)
+    logger.info(
+        "Total rows: %d, positives (will_delay=1): %d (%.2f%%)",
+        total,
+        pos_total,
+        100.0 * pos_total / total if total > 0 else 0.0,
+    )
 
     # Features X: all columns except the target
     X = df.drop(columns=["will_delay"], errors="ignore")
@@ -73,7 +88,11 @@ def main():
     val_frac = 0.15 / (1.0 - test_size)
     try:
         X_train, X_val, y_train, y_val = train_test_split(
-            X_train_val, y_train_val, test_size=val_frac, random_state=args.random_state, stratify=y_train_val
+            X_train_val,
+            y_train_val,
+            test_size=val_frac,
+            random_state=args.random_state,
+            stratify=y_train_val,
         )
     except ValueError as exc:
         logger.error("Stratified train/val split failed: %s", exc)
@@ -101,7 +120,9 @@ def main():
     for name, ser in [("train", y_train), ("val", y_val), ("test", y_test)]:
         total_n, pos_n, pos_pct = summarize(ser)
         rows.append({"split": name, "total": total_n, "pos": pos_n, "pos_pct": pos_pct})
-        logger.info("Split %s: total=%d, positives=%d (%.2f%%)", name, total_n, pos_n, pos_pct)
+        logger.info(
+            "Split %s: total=%d, positives=%d (%.2f%%)", name, total_n, pos_n, pos_pct
+        )
 
     pd.DataFrame(rows).to_csv(outdir / "row_level_split_summary.csv", index=False)
     logger.info("Saved split CSVs and summary to %s", outdir)
@@ -109,7 +130,10 @@ def main():
     # Sanity check: confirm positives exist in each split
     for r in rows:
         if r["pos"] == 0:
-            logger.error("No positive samples in split %s — stratification failed or dataset too imbalanced", r["split"])
+            logger.error(
+                "No positive samples in split %s — stratification failed or dataset too imbalanced",
+                r["split"],
+            )
             raise SystemExit(2)
 
 

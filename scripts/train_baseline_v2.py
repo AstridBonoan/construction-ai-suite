@@ -6,6 +6,7 @@ Saves:
 - analysis_outputs/v2/metrics.json
 - analysis_outputs/v2/plots (same set as v1)
 """
+
 from __future__ import annotations
 import argparse
 import json
@@ -22,7 +23,6 @@ from sklearn.preprocessing import OneHotEncoder, StandardScaler
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 
 ROOT = Path(".")
 SPLITS = ROOT / "data_splits"
@@ -53,25 +53,39 @@ def train_v2(random_state: int = 42, n_iter: int = 12):
     X_train, y_train, X_test, y_test = load_splits(SPLITS)
     num_cols, cat_cols = detect_column_types(X_train)
 
-    num_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scaler", StandardScaler()),
-    ])
-    cat_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="constant", fill_value="__MISSING__")),
-        # produce sparse output to limit memory use
-        ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=True, drop="if_binary")),
-    ])
+    num_pipeline = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+        ]
+    )
+    cat_pipeline = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="constant", fill_value="__MISSING__")),
+            # produce sparse output to limit memory use
+            (
+                "ohe",
+                OneHotEncoder(
+                    handle_unknown="ignore", sparse_output=True, drop="if_binary"
+                ),
+            ),
+        ]
+    )
 
-    pre = ColumnTransformer([
-        ("num", num_pipeline, num_cols),
-        ("cat", cat_pipeline, cat_cols),
-    ], remainder="drop")
+    pre = ColumnTransformer(
+        [
+            ("num", num_pipeline, num_cols),
+            ("cat", cat_pipeline, cat_cols),
+        ],
+        remainder="drop",
+    )
 
-    pipe = Pipeline([
-        ("pre", pre),
-        ("rf", RandomForestRegressor(random_state=random_state, n_jobs=-1))
-    ])
+    pipe = Pipeline(
+        [
+            ("pre", pre),
+            ("rf", RandomForestRegressor(random_state=random_state, n_jobs=-1)),
+        ]
+    )
 
     param_dist = {
         "rf__n_estimators": [100, 200, 300],
@@ -80,7 +94,15 @@ def train_v2(random_state: int = 42, n_iter: int = 12):
         "rf__min_samples_split": [2, 5, 10],
     }
 
-    search = RandomizedSearchCV(pipe, param_dist, n_iter=n_iter, scoring="neg_mean_absolute_error", cv=3, random_state=random_state, verbose=1)
+    search = RandomizedSearchCV(
+        pipe,
+        param_dist,
+        n_iter=n_iter,
+        scoring="neg_mean_absolute_error",
+        cv=3,
+        random_state=random_state,
+        verbose=1,
+    )
     search.fit(X_train, y_train)
 
     best = search.best_estimator_
@@ -102,51 +124,51 @@ def train_v2(random_state: int = 42, n_iter: int = 12):
 
     OUT_PLOTS.mkdir(parents=True, exist_ok=True)
     # Actual vs Predicted
-    plt.figure(figsize=(6,6))
+    plt.figure(figsize=(6, 6))
     sns.scatterplot(x=y_test, y=preds, alpha=0.5)
     lims = [min(y_test.min(), preds.min()), max(y_test.max(), preds.max())]
-    plt.plot(lims, lims, '--', color='gray')
-    plt.xlabel('Actual')
-    plt.ylabel('Predicted')
-    plt.title('v2 Actual vs Predicted')
+    plt.plot(lims, lims, "--", color="gray")
+    plt.xlabel("Actual")
+    plt.ylabel("Predicted")
+    plt.title("v2 Actual vs Predicted")
     plt.tight_layout()
-    plt.savefig(OUT_PLOTS / 'actual_vs_predicted.png')
+    plt.savefig(OUT_PLOTS / "actual_vs_predicted.png")
     plt.close()
 
     # Residuals
     errors = preds - y_test.values
-    plt.figure(figsize=(6,4))
+    plt.figure(figsize=(6, 4))
     sns.histplot(errors, kde=True, bins=50)
-    plt.xlabel('Residual')
-    plt.title('v2 Residuals Distribution')
+    plt.xlabel("Residual")
+    plt.title("v2 Residuals Distribution")
     plt.tight_layout()
-    plt.savefig(OUT_PLOTS / 'residuals_distribution.png')
+    plt.savefig(OUT_PLOTS / "residuals_distribution.png")
     plt.close()
 
     # Error histogram
-    plt.figure(figsize=(6,4))
+    plt.figure(figsize=(6, 4))
     sns.histplot(np.abs(errors), bins=50)
-    plt.xlabel('Absolute Error')
-    plt.title('v2 Absolute Error Histogram')
+    plt.xlabel("Absolute Error")
+    plt.title("v2 Absolute Error Histogram")
     plt.tight_layout()
-    plt.savefig(OUT_PLOTS / 'error_histogram.png')
+    plt.savefig(OUT_PLOTS / "error_histogram.png")
     plt.close()
 
     metrics = {"MAE": mae, "RMSE": rmse, "R2": r2}
     OUT_METRICS.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUT_METRICS, 'w') as fh:
+    with open(OUT_METRICS, "w") as fh:
         json.dump(metrics, fh, indent=2)
 
-    print('Saved v2 model to', OUT_MODEL)
-    print('Saved v2 metrics to', OUT_METRICS)
-    print('Saved v2 plots to', OUT_PLOTS)
+    print("Saved v2 model to", OUT_MODEL)
+    print("Saved v2 metrics to", OUT_METRICS)
+    print("Saved v2 plots to", OUT_PLOTS)
 
     return search
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument('--random-state', type=int, default=42)
-    parser.add_argument('--n-iter', type=int, default=12)
+    parser.add_argument("--random-state", type=int, default=42)
+    parser.add_argument("--n-iter", type=int, default=12)
     args = parser.parse_args()
     train_v2(random_state=args.random_state, n_iter=args.n_iter)

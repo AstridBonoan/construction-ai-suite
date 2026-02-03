@@ -1,0 +1,11 @@
+{
+  "api_key": "<YOUR_MONDAY_API_KEY>",
+  "board_id": 1234567890,
+  "columns": {
+    "project_id": "text_column_id",
+    "predicted_delay": "numbers_column_id",
+    "revenue": "numbers_column_id",
+    "risk": "status_column_id",
+    "status": "status_column_id"
+  }
+}

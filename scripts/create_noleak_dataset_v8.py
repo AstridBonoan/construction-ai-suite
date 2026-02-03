@@ -6,9 +6,16 @@ OUT = Path("data_splits/project_level_aggregated_v8_ruleB_imputed_expanded_nolea
 
 # Conservative blacklist (explicit names and prefixes)
 BLACKLIST_EXACT = {
-    'elapsed_days', 'schedule_slippage_pct', 'actual_start', 'actual_end', 'actual_start_imputed'
+    "elapsed_days",
+    "schedule_slippage_pct",
+    "actual_start",
+    "actual_end",
+    "actual_start_imputed",
 }
-BLACKLIST_PREFIXES = ('will_delay', 'actual_',)
+BLACKLIST_PREFIXES = (
+    "will_delay",
+    "actual_",
+)
 
 
 def should_keep(col: str) -> bool:
@@ -25,8 +32,10 @@ def main():
     cols_keep = [c for c in df.columns if should_keep(c)]
     df_clean = df[cols_keep].copy()
     df_clean.to_csv(OUT, index=False)
-    print(f"Wrote cleaned no-leak dataset to {OUT} (kept {len(cols_keep)} of {len(df.columns)} columns)")
+    print(
+        f"Wrote cleaned no-leak dataset to {OUT} (kept {len(cols_keep)} of {len(df.columns)} columns)"
+    )
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

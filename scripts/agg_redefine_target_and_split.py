@@ -18,6 +18,7 @@ Definition:
 
 Saves stratified splits to `data_splits/`.
 """
+
 from __future__ import annotations
 import argparse
 import logging
@@ -46,6 +47,7 @@ def detect_project_id_column(df: pd.DataFrame) -> str | None:
 def parse_date_column_candidates(df: pd.DataFrame):
     """Identify start, planned_end, actual_end columns by token and parseability."""
     import re
+
     candidates = {"start": [], "planned_end": [], "actual_end": []}
     for c in df.columns:
         lc = c.lower()
@@ -56,12 +58,14 @@ def parse_date_column_candidates(df: pd.DataFrame):
             candidates["planned_end"].append(c)
         if "actual" in tokens and "end" in tokens:
             candidates["actual_end"].append(c)
+
     # choose best candidate by how many values parse as dates
     def best(cands):
         best_c = None
         best_score = (-1, -1)
         date_regex = r"\d{1,2}/\d{1,2}/\d{2,4}|\d{4}-\d{2}-\d{2}"
         from pandas.api import types as ptypes
+
         for c in cands:
             # if column is numeric, skip parsed_count since pd.to_datetime
             # will coerce numeric values to timestamps (epoch-based) producing
@@ -83,10 +87,21 @@ def parse_date_column_candidates(df: pd.DataFrame):
                 best_c = c
         # return None if no candidate had any positive score
         return best_c if best_score != (-1, -1) else None
-    return best(candidates["start"]), best(candidates["planned_end"]), best(candidates["actual_end"])
+
+    return (
+        best(candidates["start"]),
+        best(candidates["planned_end"]),
+        best(candidates["actual_end"]),
+    )
 
 
-def aggregate_project_level(df: pd.DataFrame, project_col: str, start_col: str, planned_col: str, actual_col: str) -> pd.DataFrame:
+def aggregate_project_level(
+    df: pd.DataFrame,
+    project_col: str,
+    start_col: str,
+    planned_col: str,
+    actual_col: str,
+) -> pd.DataFrame:
     # parse dates
     start_dt = pd.to_datetime(df[start_col], errors="coerce")
     planned_dt = pd.to_datetime(df[planned_col], errors="coerce")
@@ -105,10 +120,17 @@ def aggregate_project_level(df: pd.DataFrame, project_col: str, start_col: str, 
         "actual_end": ("_actual_dt", lambda s: s.max()),
     }
     # For non-date, non-project columns, carry forward the first non-null value per project
-    non_date_cols = [c for c in df.columns if c not in (project_col, start_col, planned_col, actual_col)]
+    non_date_cols = [
+        c
+        for c in df.columns
+        if c not in (project_col, start_col, planned_col, actual_col)
+    ]
     for c in non_date_cols:
         # use a lambda that returns first non-null or NaN
-        agg_dict[c] = (c, lambda s: s.dropna().iloc[0] if s.dropna().shape[0] > 0 else pd.NA)
+        agg_dict[c] = (
+            c,
+            lambda s: s.dropna().iloc[0] if s.dropna().shape[0] > 0 else pd.NA,
+        )
 
     agg = df2.groupby(project_col).agg(**agg_dict)
     # compute durations
@@ -119,7 +141,8 @@ def aggregate_project_level(df: pd.DataFrame, project_col: str, start_col: str, 
     # (elapsed - planned) / planned  => positive when actual took longer than planned
     agg["schedule_slippage_pct"] = np.where(
         agg["planned_duration_days"] > 0,
-        (agg["elapsed_days"] - agg["planned_duration_days"]) / agg["planned_duration_days"],
+        (agg["elapsed_days"] - agg["planned_duration_days"])
+        / agg["planned_duration_days"],
         0.0,
     )
     return agg.reset_index()
@@ -134,9 +157,19 @@ def build_features_from_row_level(row_csv: Path, output_csv: Path) -> pd.DataFra
         raise SystemExit(1)
     start_col, planned_col, actual_col = parse_date_column_candidates(df)
     if not (start_col and planned_col and actual_col):
-        logger.error("Could not detect suitable date columns for aggregation. start=%s planned=%s actual=%s", start_col, planned_col, actual_col)
+        logger.error(
+            "Could not detect suitable date columns for aggregation. start=%s planned=%s actual=%s",
+            start_col,
+            planned_col,
+            actual_col,
+        )
         raise SystemExit(1)
-    logger.info("Aggregating using columns: start=%s, planned_end=%s, actual_end=%s", start_col, planned_col, actual_col)
+    logger.info(
+        "Aggregating using columns: start=%s, planned_end=%s, actual_end=%s",
+        start_col,
+        planned_col,
+        actual_col,
+    )
     agg = aggregate_project_level(df, project_col, start_col, planned_col, actual_col)
 
     # Save aggregated project-level dataframe with schedule_slippage_pct
@@ -145,20 +178,28 @@ def build_features_from_row_level(row_csv: Path, output_csv: Path) -> pd.DataFra
     return agg
 
 
-def redefine_target_from_agg(agg: pd.DataFrame, threshold: float = 0.05) -> pd.DataFrame:
+def redefine_target_from_agg(
+    agg: pd.DataFrame, threshold: float = 0.05
+) -> pd.DataFrame:
     agg = agg.copy()
-    agg["schedule_slippage_pct"] = pd.to_numeric(agg["schedule_slippage_pct"], errors="coerce").fillna(0.0)
+    agg["schedule_slippage_pct"] = pd.to_numeric(
+        agg["schedule_slippage_pct"], errors="coerce"
+    ).fillna(0.0)
     agg["will_delay"] = (agg["schedule_slippage_pct"] > threshold).astype(int)
     return agg
 
 
-def create_splits_and_save(df_proj: pd.DataFrame, output_dir: Path, random_state: int = 42) -> None:
+def create_splits_and_save(
+    df_proj: pd.DataFrame, output_dir: Path, random_state: int = 42
+) -> None:
     # Validate target
     counts = df_proj["will_delay"].value_counts(dropna=False).to_dict()
     total = len(df_proj)
     pos = int(counts.get(1, 0))
     pos_pct = pos / total * 100 if total > 0 else 0.0
-    logger.info("Project-level target: total=%d positives=%d (%.2f%%)", total, pos, pos_pct)
+    logger.info(
+        "Project-level target: total=%d positives=%d (%.2f%%)", total, pos, pos_pct
+    )
     if pos == 0:
         logger.error("No positive samples in the project-level target. Aborting.")
         raise SystemExit(2)
@@ -171,21 +212,44 @@ def create_splits_and_save(df_proj: pd.DataFrame, output_dir: Path, random_state
     if project_col:
         drop_cols.append(project_col)
     # drop any columns with 'date' or obvious id tokens
-    drop_cols += [c for c in df_proj.columns if any(k in c.lower() for k in ("date", "start", "end")) and c not in ("schedule_slippage_pct", "planned_duration_days", "elapsed_days")]
+    drop_cols += [
+        c
+        for c in df_proj.columns
+        if any(k in c.lower() for k in ("date", "start", "end"))
+        and c not in ("schedule_slippage_pct", "planned_duration_days", "elapsed_days")
+    ]
     X = df_proj.drop(columns=drop_cols + ["will_delay"], errors="ignore")
     y = df_proj["will_delay"].astype(int)
 
     # Stratified splits where possible; fall back to random splits if class counts are too small
     test_size = 0.15
     try:
-        X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
+        X_train_val, X_test, y_train_val, y_test = train_test_split(
+            X, y, test_size=test_size, random_state=random_state, stratify=y
+        )
         val_frac = 0.15 / (1.0 - test_size)
-        X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_frac, random_state=random_state, stratify=y_train_val)
+        X_train, X_val, y_train, y_val = train_test_split(
+            X_train_val,
+            y_train_val,
+            test_size=val_frac,
+            random_state=random_state,
+            stratify=y_train_val,
+        )
     except ValueError:
-        logger.warning("Stratified split failed due to extreme class imbalance; falling back to random splits without stratification.")
-        X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, shuffle=True)
+        logger.warning(
+            "Stratified split failed due to extreme class imbalance; falling back to random splits without stratification."
+        )
+        X_train_val, X_test, y_train_val, y_test = train_test_split(
+            X, y, test_size=test_size, random_state=random_state, shuffle=True
+        )
         val_frac = 0.15 / (1.0 - test_size)
-        X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_frac, random_state=random_state, shuffle=True)
+        X_train, X_val, y_train, y_val = train_test_split(
+            X_train_val,
+            y_train_val,
+            test_size=val_frac,
+            random_state=random_state,
+            shuffle=True,
+        )
 
     output_dir.mkdir(parents=True, exist_ok=True)
     X_train.to_csv(output_dir / "X_train.csv", index=False)
@@ -198,11 +262,31 @@ def create_splits_and_save(df_proj: pd.DataFrame, output_dir: Path, random_state
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Aggregate row-level project data, redefine will_delay, and create splits")
-    p.add_argument("--input-rows", "-i", required=True, help="Row-level cleaned CSV (project_dataset_v1_cleaned_with_will_delay.csv)")
-    p.add_argument("--output-agg", "-a", default="data_splits/project_level_aggregated.csv", help="Path to save aggregated project-level CSV")
-    p.add_argument("--output-dir", "-o", default="data_splits", help="Directory to save splits")
-    p.add_argument("--threshold", "-t", type=float, default=0.05, help="Threshold for schedule_slippage_pct to label will_delay")
+    p = argparse.ArgumentParser(
+        description="Aggregate row-level project data, redefine will_delay, and create splits"
+    )
+    p.add_argument(
+        "--input-rows",
+        "-i",
+        required=True,
+        help="Row-level cleaned CSV (project_dataset_v1_cleaned_with_will_delay.csv)",
+    )
+    p.add_argument(
+        "--output-agg",
+        "-a",
+        default="data_splits/project_level_aggregated.csv",
+        help="Path to save aggregated project-level CSV",
+    )
+    p.add_argument(
+        "--output-dir", "-o", default="data_splits", help="Directory to save splits"
+    )
+    p.add_argument(
+        "--threshold",
+        "-t",
+        type=float,
+        default=0.05,
+        help="Threshold for schedule_slippage_pct to label will_delay",
+    )
     p.add_argument("--random-state", "-r", type=int, default=42, help="Random seed")
     return p.parse_args()
 

@@ -1,0 +1,39 @@
+name: Monday CI (Strict)
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    - cron: '0 3 * * 1' # weekly run on Monday at 03:00 UTC
+
+jobs:
+  strict-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies (best-effort)
+        run: |
+          pip install -r backend/requirements.txt || true
+      - name: Run CI checks (fail on detection)
+        run: python scripts/ci_checks.py
+      - name: Create synthetic config for strict dry-run
+        run: |
+          mkdir -p configs || true
+          cat > configs/strict_synthetic.json <<'JSON'
+          {
+            "board_id": 999999,
+            "api_key": "SIMULATED_PLACEHOLDER",
+            "columns": { "project_id": "col_pid", "predicted_delay": "col_delay" }
+          }
+          JSON
+      - name: Mandatory dry-run integration (will fail workflow on error)
+        env:
+          DRY_RUN: '1'
+        run: |
+          python scripts/monday_integration.py --configs-dir configs/

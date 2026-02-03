@@ -11,6 +11,7 @@ Usage:
 python scripts/eda_and_split.py --input project_dataset_v1_cleaned.csv --out-dir data_splits --random-state 42
 
 """
+
 from __future__ import annotations
 import argparse
 import logging
@@ -50,8 +51,12 @@ def deduplicate_keep_most_complete(df: pd.DataFrame, project_col: str) -> pd.Dat
     df["__completeness_score"] = completeness
     # sort so the best-complete rows come first for each project
     df = df.sort_values([project_col, "__completeness_score"], ascending=[True, False])
-    deduped = df.drop_duplicates(subset=[project_col], keep="first").drop(columns=["__completeness_score"])
-    logger.info("Deduplicated: from %d rows to %d unique projects", len(df), len(deduped))
+    deduped = df.drop_duplicates(subset=[project_col], keep="first").drop(
+        columns=["__completeness_score"]
+    )
+    logger.info(
+        "Deduplicated: from %d rows to %d unique projects", len(df), len(deduped)
+    )
     return deduped
 
 
@@ -110,14 +115,20 @@ def plot_boxplots(df: pd.DataFrame, features: list[str], out_dir: Path) -> None:
 
 
 def categorical_value_counts(df: pd.DataFrame, top_n: int = 20) -> dict:
-    obj_cols = [c for c in df.columns if df[c].dtype == object or str(df[c].dtype).startswith("string")]
+    obj_cols = [
+        c
+        for c in df.columns
+        if df[c].dtype == object or str(df[c].dtype).startswith("string")
+    ]
     counts = {}
     for c in obj_cols:
         counts[c] = df[c].value_counts(dropna=False).head(top_n)
     return counts
 
 
-def train_val_test_split_and_save(df: pd.DataFrame, target_col: str, out_dir: Path, random_state: int = 42) -> None:
+def train_val_test_split_and_save(
+    df: pd.DataFrame, target_col: str, out_dir: Path, random_state: int = 42
+) -> None:
     if target_col not in df.columns:
         raise KeyError(f"Target column '{target_col}' not found in dataframe")
     X = df.drop(columns=[target_col])
@@ -128,10 +139,18 @@ def train_val_test_split_and_save(df: pd.DataFrame, target_col: str, out_dir: Pa
     val_size = 0.15 / (1.0 - test_size)  # fraction of the remaining to use as val
 
     X_train_val, X_test, y_train_val, y_test = train_test_split(
-        X, y, test_size=test_size, random_state=random_state, stratify=y if y.nunique() > 1 else None
+        X,
+        y,
+        test_size=test_size,
+        random_state=random_state,
+        stratify=y if y.nunique() > 1 else None,
     )
     X_train, X_val, y_train, y_val = train_test_split(
-        X_train_val, y_train_val, test_size=val_size, random_state=random_state, stratify=y_train_val if y_train_val.nunique() > 1 else None
+        X_train_val,
+        y_train_val,
+        test_size=val_size,
+        random_state=random_state,
+        stratify=y_train_val if y_train_val.nunique() > 1 else None,
     )
 
     # Save CSVs
@@ -148,9 +167,16 @@ def train_val_test_split_and_save(df: pd.DataFrame, target_col: str, out_dir: Pa
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(description="EDA and splitting for project dataset")
     p.add_argument("--input", "-i", required=True, help="Input cleaned CSV file")
-    p.add_argument("--out-dir", "-o", default="data_splits", help="Output directory for splits and plots")
+    p.add_argument(
+        "--out-dir",
+        "-o",
+        default="data_splits",
+        help="Output directory for splits and plots",
+    )
     p.add_argument("--target", "-t", default="will_delay", help="Target column name")
-    p.add_argument("--random-state", "-r", default=42, type=int, help="Random seed for splits")
+    p.add_argument(
+        "--random-state", "-r", default=42, type=int, help="Random seed for splits"
+    )
     return p.parse_args()
 
 
@@ -185,7 +211,12 @@ def main() -> None:
     plot_correlation_heatmap(df, out_dir / "correlation_heatmap.png")
 
     # Boxplots for key features
-    key_features = ["labor_hours_actual", "material_cost_actual", "equipment_idle_days", "schedule_slippage_pct"]
+    key_features = [
+        "labor_hours_actual",
+        "material_cost_actual",
+        "equipment_idle_days",
+        "schedule_slippage_pct",
+    ]
     plot_boxplots(df, key_features, out_dir)
 
     # Categorical value counts
@@ -196,7 +227,9 @@ def main() -> None:
     logger.info("Saved categorical value counts to %s", out_dir)
 
     # Splitting
-    train_val_test_split_and_save(df, args.target, out_dir, random_state=args.random_state)
+    train_val_test_split_and_save(
+        df, args.target, out_dir, random_state=args.random_state
+    )
 
     logger.info("EDA and splitting complete. Outputs in %s", out_dir)
 

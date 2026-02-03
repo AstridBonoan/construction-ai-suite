@@ -17,6 +17,7 @@ Outputs:
 Run from repository root:
   python scripts/scan_construction_datasets_for_denylist.py
 """
+
 from __future__ import annotations
 import csv
 import sys
@@ -91,7 +92,9 @@ def read_parquet_header(path: Path) -> List[str]:
         try:
             import pandas as pd
 
-            df = pd.read_parquet(path, engine="pyarrow", columns=[])  # may still read metadata
+            df = pd.read_parquet(
+                path, engine="pyarrow", columns=[]
+            )  # may still read metadata
             return list(df.columns)
         except Exception:
             return []
@@ -145,15 +148,23 @@ def main() -> None:
 
         matches = check_columns(cols)
         if matches["exact"] or matches["pattern"]:
-            results.append({
-                "file": str(p.relative_to(ROOT)),
-                "exact_matches": ";".join(matches["exact"]) if matches["exact"] else "",
-                "pattern_matches": ";".join(matches["pattern"]) if matches["pattern"] else "",
-            })
+            results.append(
+                {
+                    "file": str(p.relative_to(ROOT)),
+                    "exact_matches": (
+                        ";".join(matches["exact"]) if matches["exact"] else ""
+                    ),
+                    "pattern_matches": (
+                        ";".join(matches["pattern"]) if matches["pattern"] else ""
+                    ),
+                }
+            )
 
     # Write CSV
     with OUT_CSV.open("w", encoding="utf-8", newline="") as fh:
-        writer = csv.DictWriter(fh, fieldnames=["file", "exact_matches", "pattern_matches"])
+        writer = csv.DictWriter(
+            fh, fieldnames=["file", "exact_matches", "pattern_matches"]
+        )
         writer.writeheader()
         for r in results:
             writer.writerow(r)

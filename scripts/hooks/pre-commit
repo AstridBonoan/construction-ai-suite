@@ -1,0 +1,14 @@
+#!/bin/sh
+# Repository hook template: run scripts/ci_checks.py and block commit if it fails
+PYTHON=python
+if [ -f .venv/Scripts/python.exe ]; then
+  PYTHON=.venv/Scripts/python.exe
+fi
+echo "Running CI checks (scripts/ci_checks.py)..."
+"$PYTHON" scripts/ci_checks.py
+RC=$?
+if [ $RC -ne 0 ]; then
+  echo "Pre-commit: CI checks failed. See the output above for details. Commit aborted."
+  exit $RC
+fi
+exit 0

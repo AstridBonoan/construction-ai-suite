@@ -13,6 +13,7 @@ This script:
 - Saves evaluation plots (ROC curves and confusion matrices) to `--output-dir`.
 
 """
+
 from __future__ import annotations
 import argparse
 import logging
@@ -27,9 +28,16 @@ from joblib import dump
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.linear_model import LogisticRegression
-from sklearn.metrics import (ConfusionMatrixDisplay, accuracy_score, confusion_matrix,
-                             f1_score, precision_score, recall_score, roc_auc_score,
-                             roc_curve)
+from sklearn.metrics import (
+    ConfusionMatrixDisplay,
+    accuracy_score,
+    confusion_matrix,
+    f1_score,
+    precision_score,
+    recall_score,
+    roc_auc_score,
+    roc_curve,
+)
 from sklearn.model_selection import GridSearchCV
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
@@ -99,7 +107,15 @@ def train_logistic(X_train, y_train, preprocessor, class_weight=None, random_sta
     Returns the fitted pipeline.
     """
     pipe = Pipeline(
-        [("preprocessor", preprocessor), ("clf", LogisticRegression(max_iter=2000, class_weight=class_weight, random_state=random_state))]
+        [
+            ("preprocessor", preprocessor),
+            (
+                "clf",
+                LogisticRegression(
+                    max_iter=2000, class_weight=class_weight, random_state=random_state
+                ),
+            ),
+        ]
     )
     pipe.fit(X_train, y_train)
     return pipe
@@ -147,7 +163,15 @@ def evaluate_model(model, X, y, set_name: str, out_dir: Path, plot_prefix: str):
     f1 = f1_score(y, y_pred, zero_division=0)
     roc_auc = roc_auc_score(y, y_proba) if y_proba is not None else float("nan")
 
-    logger.info("%s - Accuracy: %.4f, Precision: %.4f, Recall: %.4f, F1: %.4f, ROC-AUC: %.4f", set_name, acc, prec, rec, f1, roc_auc)
+    logger.info(
+        "%s - Accuracy: %.4f, Precision: %.4f, Recall: %.4f, F1: %.4f, ROC-AUC: %.4f",
+        set_name,
+        acc,
+        prec,
+        rec,
+        f1,
+        roc_auc,
+    )
 
     # Confusion matrix
     cm = confusion_matrix(y, y_pred)
@@ -175,10 +199,18 @@ def evaluate_model(model, X, y, set_name: str, out_dir: Path, plot_prefix: str):
         plt.savefig(roc_path)
         plt.close()
 
-    return {"accuracy": acc, "precision": prec, "recall": rec, "f1": f1, "roc_auc": roc_auc}
+    return {
+        "accuracy": acc,
+        "precision": prec,
+        "recall": rec,
+        "f1": f1,
+        "roc_auc": roc_auc,
+    }
 
 
-def extract_logistic_coefficients(model: Pipeline, numeric_cols: List[str], categorical_cols: List[str]):
+def extract_logistic_coefficients(
+    model: Pipeline, numeric_cols: List[str], categorical_cols: List[str]
+):
     """Return a DataFrame of feature names and logistic coefficients.
 
     Assumes `model` is a pipeline with a ColumnTransformer preprocessor and a logistic classifier.
@@ -200,10 +232,14 @@ def extract_logistic_coefficients(model: Pipeline, numeric_cols: List[str], cate
         feature_names.extend(cat_names)
 
     coefs = clf.coef_.ravel()
-    return pd.DataFrame({"feature": feature_names, "coefficient": coefs}).sort_values(by="coefficient", key=lambda s: np.abs(s), ascending=False)
+    return pd.DataFrame({"feature": feature_names, "coefficient": coefs}).sort_values(
+        by="coefficient", key=lambda s: np.abs(s), ascending=False
+    )
 
 
-def extract_rf_importances(model: Pipeline, numeric_cols: List[str], categorical_cols: List[str]):
+def extract_rf_importances(
+    model: Pipeline, numeric_cols: List[str], categorical_cols: List[str]
+):
     """Return a DataFrame of feature names and Random Forest importances.
 
     Assumes `model` is a pipeline with a ColumnTransformer preprocessor and a RandomForestClassifier.
@@ -221,14 +257,34 @@ def extract_rf_importances(model: Pipeline, numeric_cols: List[str], categorical
         feature_names.extend(cat_names)
 
     importances = clf.feature_importances_
-    return pd.DataFrame({"feature": feature_names, "importance": importances}).sort_values(by="importance", ascending=False)
+    return pd.DataFrame(
+        {"feature": feature_names, "importance": importances}
+    ).sort_values(by="importance", ascending=False)
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Train and evaluate models on prepared splits")
-    p.add_argument("--data-dir", "-d", default="data_splits", help="Directory containing X_/y_ CSV splits")
-    p.add_argument("--output-dir", "-o", default="models", help="Directory to save models and plots")
-    p.add_argument("--random-state", "-r", default=42, type=int, help="Random seed for reproducibility")
+    p = argparse.ArgumentParser(
+        description="Train and evaluate models on prepared splits"
+    )
+    p.add_argument(
+        "--data-dir",
+        "-d",
+        default="data_splits",
+        help="Directory containing X_/y_ CSV splits",
+    )
+    p.add_argument(
+        "--output-dir",
+        "-o",
+        default="models",
+        help="Directory to save models and plots",
+    )
+    p.add_argument(
+        "--random-state",
+        "-r",
+        default=42,
+        type=int,
+        help="Random seed for reproducibility",
+    )
     return p.parse_args()
 
 
@@ -249,11 +305,24 @@ def main():
 
     # Drop columns that are constant or entirely missing in the training set,
     # and drop obvious identifier/source columns that shouldn't be used as features.
-    drop_const = [c for c in X_train.columns if X_train[c].nunique(dropna=True) <= 1 or X_train[c].isna().all()]
-    drop_identifiers = [c for c in X_train.columns if ("project" in c.lower() and "id" in c.lower()) or c.lower() in ("source_file", "source", "project_id", "id")]
+    drop_const = [
+        c
+        for c in X_train.columns
+        if X_train[c].nunique(dropna=True) <= 1 or X_train[c].isna().all()
+    ]
+    drop_identifiers = [
+        c
+        for c in X_train.columns
+        if ("project" in c.lower() and "id" in c.lower())
+        or c.lower() in ("source_file", "source", "project_id", "id")
+    ]
     drop_cols = sorted(set(drop_const + drop_identifiers))
     if drop_cols:
-        logger.info("Dropping %d columns from features (constant/identifier): %s", len(drop_cols), drop_cols[:10])
+        logger.info(
+            "Dropping %d columns from features (constant/identifier): %s",
+            len(drop_cols),
+            drop_cols[:10],
+        )
         X_train = X_train.drop(columns=drop_cols, errors="ignore")
         X_val = X_val.drop(columns=drop_cols, errors="ignore")
         X_test = X_test.drop(columns=drop_cols, errors="ignore")
@@ -264,26 +333,48 @@ def main():
 
     # Build preprocessor
     preprocessor, numeric_cols, categorical_cols = build_preprocessor(X_train)
-    logger.info("Numeric cols: %d, Categorical cols: %d", len(numeric_cols), len(categorical_cols))
+    logger.info(
+        "Numeric cols: %d, Categorical cols: %d",
+        len(numeric_cols),
+        len(categorical_cols),
+    )
 
     # If imbalance, use balanced class weight for logistic
-    imbalance = (class_counts.min() / class_counts.max()) < 0.5 if len(class_counts) > 1 else False
+    imbalance = (
+        (class_counts.min() / class_counts.max()) < 0.5
+        if len(class_counts) > 1
+        else False
+    )
     class_weight = "balanced" if imbalance else None
     if imbalance:
-        logger.info("Detected imbalance; using class_weight='balanced' for LogisticRegression")
+        logger.info(
+            "Detected imbalance; using class_weight='balanced' for LogisticRegression"
+        )
 
     # Train logistic regression
-    log_pipe = train_logistic(X_train, y_train, preprocessor, class_weight=class_weight, random_state=args.random_state)
+    log_pipe = train_logistic(
+        X_train,
+        y_train,
+        preprocessor,
+        class_weight=class_weight,
+        random_state=args.random_state,
+    )
 
     # Train random forest with GridSearchCV
-    rf_best, rf_best_params = train_random_forest(X_train, y_train, preprocessor, random_state=args.random_state)
+    rf_best, rf_best_params = train_random_forest(
+        X_train, y_train, preprocessor, random_state=args.random_state
+    )
 
     # Evaluate on validation set
-    metrics_log_val = evaluate_model(log_pipe, X_val, y_val, "Validation", out_dir, "logistic")
+    metrics_log_val = evaluate_model(
+        log_pipe, X_val, y_val, "Validation", out_dir, "logistic"
+    )
     metrics_rf_val = evaluate_model(rf_best, X_val, y_val, "Validation", out_dir, "rf")
 
     # Evaluate on test set
-    metrics_log_test = evaluate_model(log_pipe, X_test, y_test, "Test", out_dir, "logistic")
+    metrics_log_test = evaluate_model(
+        log_pipe, X_test, y_test, "Test", out_dir, "logistic"
+    )
     metrics_rf_test = evaluate_model(rf_best, X_test, y_test, "Test", out_dir, "rf")
 
     # Feature importances / coefficients

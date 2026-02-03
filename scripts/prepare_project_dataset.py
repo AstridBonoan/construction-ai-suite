@@ -27,7 +27,6 @@ from typing import Dict, Iterable, List, Optional, Tuple
 import numpy as np
 import pandas as pd
 
-
 # ----------------------------- Configuration ---------------------------------
 DEFAULT_SYNTHETIC_KEYWORDS = ["synthetic"]
 NUMERIC_COLUMNS_EXCLUDE = []  # can be extended by user
@@ -63,7 +62,9 @@ def read_file(path: Path) -> pd.DataFrame:
     raise ValueError(f"Unsupported file type: {path}")
 
 
-def load_datasets(files: Iterable[Path], synthetic_keywords: Iterable[str]) -> pd.DataFrame:
+def load_datasets(
+    files: Iterable[Path], synthetic_keywords: Iterable[str]
+) -> pd.DataFrame:
     """Load files and append `source_file` and `synthetic_flag`.
 
     Parameters
@@ -92,12 +93,18 @@ def load_datasets(files: Iterable[Path], synthetic_keywords: Iterable[str]) -> p
 
 # ----------------------------- Standardization -------------------------------
 
+
 def _coerce_numeric_strings(series: pd.Series) -> pd.Series:
     """Coerce strings like '$1,234' or '1,234' to numeric floats."""
     # Be defensive: convert to string first to avoid AttributeError when the
     # series contains mixed types (ints, floats, None) but has object dtype.
     try:
-        s = series.astype("string").str.replace("$", "", regex=False).str.replace(",", "", regex=False).str.strip()
+        s = (
+            series.astype("string")
+            .str.replace("$", "", regex=False)
+            .str.replace(",", "", regex=False)
+            .str.strip()
+        )
         # treat obvious null-like strings as NaN
         s = s.replace({"nan": pd.NA, "none": pd.NA, "": pd.NA})
         return pd.to_numeric(s, errors="coerce")
@@ -131,7 +138,9 @@ def standardize_units(df: pd.DataFrame) -> pd.DataFrame:
                 df[col] = pd.to_numeric(ser, errors="coerce").astype("float")
             elif any(k in name for k in ("day", "duration", "elapsed", "lead_time")):
                 df[col] = pd.to_numeric(ser, errors="coerce").astype("float")
-            elif any(k in name for k in ("count", "qty", "quantity", "number", "units")):
+            elif any(
+                k in name for k in ("count", "qty", "quantity", "number", "units")
+            ):
                 df[col] = pd.to_numeric(ser, errors="coerce").astype("float")
             elif any(k in name for k in ("pct", "percent", "percentage", "ratio")):
                 # normalize percentages: if values appear 0-100 -> convert to 0-1
@@ -151,8 +160,11 @@ def standardize_units(df: pd.DataFrame) -> pd.DataFrame:
     return df
 
 
-def normalize_categoricals(df: pd.DataFrame, mapping: Optional[Dict[str, Dict[str, str]]] = None,
-                           categorical_cols: Optional[List[str]] = None) -> pd.DataFrame:
+def normalize_categoricals(
+    df: pd.DataFrame,
+    mapping: Optional[Dict[str, Dict[str, str]]] = None,
+    categorical_cols: Optional[List[str]] = None,
+) -> pd.DataFrame:
     """Normalize categorical values: strip, lower, map synonyms.
 
     mapping: optional dict where keys are column names and values are dicts mapping
@@ -180,14 +192,19 @@ def normalize_categoricals(df: pd.DataFrame, mapping: Optional[Dict[str, Dict[st
 
 # ----------------------------- Missing values -------------------------------
 
-def impute_missing_numeric(df: pd.DataFrame, exclude: Optional[List[str]] = None) -> Tuple[pd.DataFrame, Dict[str, str]]:
+
+def impute_missing_numeric(
+    df: pd.DataFrame, exclude: Optional[List[str]] = None
+) -> Tuple[pd.DataFrame, Dict[str, str]]:
     """Impute numeric missing values using mean or median based on skewness.
 
     Returns modified df and a dict log of strategies used per column.
     """
     df = df.copy()
     exclude = exclude or []
-    numeric_cols = [c for c in df.select_dtypes(include=[np.number]).columns if c not in exclude]
+    numeric_cols = [
+        c for c in df.select_dtypes(include=[np.number]).columns if c not in exclude
+    ]
     strategy_log: Dict[str, str] = {}
     for col in numeric_cols:
         ser = df[col]
@@ -211,19 +228,30 @@ def impute_missing_numeric(df: pd.DataFrame, exclude: Optional[List[str]] = None
         numeric_ser = pd.to_numeric(ser, errors="coerce").astype(float)
         df[col] = numeric_ser.fillna(float(fill) if pd.notna(fill) else fill)
         strategy_log[col] = strategy
-        logger.info("Imputed %d missing in %s using %s (value=%s)", na_count, col, strategy, float(fill) if pd.notna(fill) else None)
+        logger.info(
+            "Imputed %d missing in %s using %s (value=%s)",
+            na_count,
+            col,
+            strategy,
+            float(fill) if pd.notna(fill) else None,
+        )
     return df, strategy_log
 
 
-def impute_missing_categorical(df: pd.DataFrame, placeholder: str = "Unknown") -> pd.DataFrame:
+def impute_missing_categorical(
+    df: pd.DataFrame, placeholder: str = "Unknown"
+) -> pd.DataFrame:
     df = df.copy()
-    obj_cols = [c for c, t in df.dtypes.items() if str(t).startswith("string") or t == object]
+    obj_cols = [
+        c for c, t in df.dtypes.items() if str(t).startswith("string") or t == object
+    ]
     for col in obj_cols:
         df[col] = df[col].fillna(placeholder).astype("string")
     return df
 
 
 # ----------------------------- Derived features -----------------------------
+
 
 def compute_derived_features(df: pd.DataFrame) -> pd.DataFrame:
     """Compute derived variables, being robust to missing columns and divide-by-zero."""
@@ -247,10 +275,9 @@ def compute_derived_features(df: pd.DataFrame) -> pd.DataFrame:
 
     # material_cost_variance = material_cost_actual - material_cost_planned
     if "material_cost_actual" in df.columns and "material_cost_planned" in df.columns:
-        df["material_cost_variance"] = (
-            pd.to_numeric(df["material_cost_actual"], errors="coerce") -
-            pd.to_numeric(df["material_cost_planned"], errors="coerce")
-        )
+        df["material_cost_variance"] = pd.to_numeric(
+            df["material_cost_actual"], errors="coerce"
+        ) - pd.to_numeric(df["material_cost_planned"], errors="coerce")
 
     # equipment_idle_ratio = equipment_idle_days / equipment_count
     if "equipment_idle_days" in df.columns and "equipment_count" in df.columns:
@@ -265,8 +292,15 @@ def compute_derived_features(df: pd.DataFrame) -> pd.DataFrame:
 
 # -------------------------------- Validation --------------------------------
 
+
 def find_project_id_column(df: pd.DataFrame) -> Optional[str]:
-    candidates = [c for c in df.columns if c.lower() in ("project_id", "id", "proj_id") or "project" in c.lower() and "id" in c.lower()]
+    candidates = [
+        c
+        for c in df.columns
+        if c.lower() in ("project_id", "id", "proj_id")
+        or "project" in c.lower()
+        and "id" in c.lower()
+    ]
     return candidates[0] if candidates else None
 
 
@@ -286,7 +320,11 @@ def validate_dataset(df: pd.DataFrame) -> None:
 
     # Obvious numeric outliers: negative values where not expected
     numeric = df.select_dtypes(include=[np.number])
-    neg_cols = [(c, numeric[c].min(skipna=True)) for c in numeric.columns if numeric[c].min(skipna=True) < 0]
+    neg_cols = [
+        (c, numeric[c].min(skipna=True))
+        for c in numeric.columns
+        if numeric[c].min(skipna=True) < 0
+    ]
     if neg_cols:
         for c, v in neg_cols:
             logger.warning("Column %s has negative minimum: %s", c, v)
@@ -294,31 +332,55 @@ def validate_dataset(df: pd.DataFrame) -> None:
         logger.info("No negative values detected in numeric columns.")
 
     # Extreme ratio checks
-    for ratio_col in ("schedule_slippage_pct", "labor_overrun_ratio", "equipment_idle_ratio"):
+    for ratio_col in (
+        "schedule_slippage_pct",
+        "labor_overrun_ratio",
+        "equipment_idle_ratio",
+    ):
         if ratio_col in df.columns:
             s = df[ratio_col]
             # flag values NaN or extreme
             extreme = s[(s < 0) | (s > 10)].dropna()
             if not extreme.empty:
-                logger.warning("Extreme values in %s: count=%d, sample=%s", ratio_col, len(extreme), extreme.head(3).tolist())
+                logger.warning(
+                    "Extreme values in %s: count=%d, sample=%s",
+                    ratio_col,
+                    len(extreme),
+                    extreme.head(3).tolist(),
+                )
 
     # Summary statistics numeric
     if not numeric.empty:
         desc = numeric.agg(["mean", "median", "min", "max"]).T
-        logger.info("Numeric summary statistics (mean/median/min/max):\n%s", desc.to_string())
+        logger.info(
+            "Numeric summary statistics (mean/median/min/max):\n%s", desc.to_string()
+        )
 
     # Value counts for categorical (show top 10)
-    obj_cols = [c for c in df.columns if df[c].dtype == object or str(df[c].dtype).startswith("string")]
+    obj_cols = [
+        c
+        for c in df.columns
+        if df[c].dtype == object or str(df[c].dtype).startswith("string")
+    ]
     for col in obj_cols:
-        logger.info("Top value counts for %s:\n%s", col, df[col].value_counts(dropna=False).head(10).to_string())
+        logger.info(
+            "Top value counts for %s:\n%s",
+            col,
+            df[col].value_counts(dropna=False).head(10).to_string(),
+        )
 
     logger.info("--- End Validation ---")
 
 
 # --------------------------------- Main -------------------------------------
 
-def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_keywords: Iterable[str],
-                     categorical_map: Optional[Dict[str, Dict[str, str]]] = None) -> None:
+
+def process_datasets(
+    input_paths: Iterable[str],
+    output_file: str,
+    synthetic_keywords: Iterable[str],
+    categorical_map: Optional[Dict[str, Dict[str, str]]] = None,
+) -> None:
     files = discover_data_files(input_paths)
     if not files:
         raise SystemExit("No input files found.")
@@ -352,8 +414,8 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
 
     # Column name regex patterns to drop (case-insensitive)
     DENY_LIST_PATTERNS = [
-        r"(?i)^budget_line",            # Budget_Line, Budget_Line_*
-        r"(?i)final.*cost",            # final cost related columns
+        r"(?i)^budget_line",  # Budget_Line, Budget_Line_*
+        r"(?i)final.*cost",  # final cost related columns
         r"(?i)actual.*cost",
         r"(?i)actual.*spend",
         r"(?i)actual.*amount",
@@ -396,12 +458,22 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
 
         # ensure we only drop columns that actually exist in df
         dropped_exact = sorted([c for c in to_drop_exact if c in df.columns])
-        dropped_pattern = sorted([c for c in to_drop_pattern if c in df.columns and c not in dropped_exact])
+        dropped_pattern = sorted(
+            [c for c in to_drop_pattern if c in df.columns and c not in dropped_exact]
+        )
 
         if dropped_exact:
-            logger.info("Deny-list drop (exact): removing %d columns at ingestion: %s", len(dropped_exact), dropped_exact)
+            logger.info(
+                "Deny-list drop (exact): removing %d columns at ingestion: %s",
+                len(dropped_exact),
+                dropped_exact,
+            )
         if dropped_pattern:
-            logger.info("Deny-list drop (pattern): removing %d columns at ingestion: %s", len(dropped_pattern), dropped_pattern)
+            logger.info(
+                "Deny-list drop (pattern): removing %d columns at ingestion: %s",
+                len(dropped_pattern),
+                dropped_pattern,
+            )
         if not dropped_exact and not dropped_pattern:
             logger.info("Deny-list drop: no deny-list columns present at ingestion")
 
@@ -419,9 +491,13 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
 
     # pick categorical columns heuristically or pass mapping
     cat_cols = list(categorical_map.keys()) if categorical_map else None
-    combined = normalize_categoricals(combined, mapping=categorical_map or {}, categorical_cols=cat_cols)
+    combined = normalize_categoricals(
+        combined, mapping=categorical_map or {}, categorical_cols=cat_cols
+    )
 
-    combined, impute_log = impute_missing_numeric(combined, exclude=["synthetic_flag"])  # exclude flags
+    combined, impute_log = impute_missing_numeric(
+        combined, exclude=["synthetic_flag"]
+    )  # exclude flags
     combined = impute_missing_categorical(combined)
 
     # Re-assert deny-list before computing derived features (safety in case
@@ -440,16 +516,28 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
     # Final safeguard: assert that deny-list columns are not present in final dataframe.
     # This enforces causal correctness: if any downstream code (or an earlier file)
     # reintroduces these columns, fail loudly so the training pipeline cannot proceed.
-    present = [c for c in combined.columns if any(
-        c == ex or c.lower().startswith(ex.lower()) for ex in DENY_LIST_EXACT
-    ) or any(__import__("re").search(pat, c) for pat in DENY_LIST_PATTERNS)]
+    present = [
+        c
+        for c in combined.columns
+        if any(c == ex or c.lower().startswith(ex.lower()) for ex in DENY_LIST_EXACT)
+        or any(__import__("re").search(pat, c) for pat in DENY_LIST_PATTERNS)
+    ]
     if present:
-        logger.error("Deny-list violation: found forbidden columns in final dataset: %s", present)
-        raise SystemExit("Deny-list violation: post-outcome columns present after ingestion. Aborting.")
+        logger.error(
+            "Deny-list violation: found forbidden columns in final dataset: %s", present
+        )
+        raise SystemExit(
+            "Deny-list violation: post-outcome columns present after ingestion. Aborting."
+        )
 
     out_path = Path(output_file)
     combined.to_csv(out_path, index=False)
-    logger.info("Saved cleaned dataset to %s (rows=%d, cols=%d)", out_path, combined.shape[0], combined.shape[1])
+    logger.info(
+        "Saved cleaned dataset to %s (rows=%d, cols=%d)",
+        out_path,
+        combined.shape[0],
+        combined.shape[1],
+    )
 
     # Optionally save imputation log next to output file
     log_path = out_path.with_suffix(".imputation_log.json")
@@ -459,15 +547,35 @@ def process_datasets(input_paths: Iterable[str], output_file: str, synthetic_key
 
 
 def parse_args() -> argparse.Namespace:
-    p = argparse.ArgumentParser(description="Prepare and clean project datasets for modeling")
-    p.add_argument("--input-dir", "-i", nargs="+", required=True,
-                   help="Input file(s) or directories containing CSV/JSON files")
-    p.add_argument("--output", "-o", default="project_dataset_v1_cleaned.csv",
-                   help="Output CSV filename")
-    p.add_argument("--synthetic-keywords", "-s", nargs="*", default=DEFAULT_SYNTHETIC_KEYWORDS,
-                   help="Keywords to mark files as synthetic (default: %(default)s)")
-    p.add_argument("--categorical-map", "-c", type=str,
-                   help="Optional JSON file specifying categorical normalization map")
+    p = argparse.ArgumentParser(
+        description="Prepare and clean project datasets for modeling"
+    )
+    p.add_argument(
+        "--input-dir",
+        "-i",
+        nargs="+",
+        required=True,
+        help="Input file(s) or directories containing CSV/JSON files",
+    )
+    p.add_argument(
+        "--output",
+        "-o",
+        default="project_dataset_v1_cleaned.csv",
+        help="Output CSV filename",
+    )
+    p.add_argument(
+        "--synthetic-keywords",
+        "-s",
+        nargs="*",
+        default=DEFAULT_SYNTHETIC_KEYWORDS,
+        help="Keywords to mark files as synthetic (default: %(default)s)",
+    )
+    p.add_argument(
+        "--categorical-map",
+        "-c",
+        type=str,
+        help="Optional JSON file specifying categorical normalization map",
+    )
     return p.parse_args()
 
 
@@ -481,7 +589,9 @@ def main() -> None:
         except Exception as e:
             logger.error("Failed loading categorical map: %s", e)
             raise
-    process_datasets(args.input_dir, args.output, args.synthetic_keywords, categorical_map=cat_map)
+    process_datasets(
+        args.input_dir, args.output, args.synthetic_keywords, categorical_map=cat_map
+    )
 
 
 if __name__ == "__main__":

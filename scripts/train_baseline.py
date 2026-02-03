@@ -9,6 +9,7 @@ This script:
  - Trains RandomForestClassifier with `class_weight='balanced'`.
  - Evaluates on validation and test sets and saves metrics and model.
 """
+
 from __future__ import annotations
 import argparse
 import json
@@ -21,8 +22,14 @@ from joblib import dump
 from sklearn.compose import ColumnTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.impute import SimpleImputer
-from sklearn.metrics import (accuracy_score, precision_score, recall_score,
-                             f1_score, roc_auc_score, confusion_matrix)
+from sklearn.metrics import (
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+    roc_auc_score,
+    confusion_matrix,
+)
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler
 
@@ -42,24 +49,35 @@ def load_splits(splits_dir: Path):
 
 def build_pipeline(X_sample: pd.DataFrame) -> Pipeline:
     numeric_cols = X_sample.select_dtypes(include=["number"]).columns.tolist()
-    categorical_cols = X_sample.select_dtypes(include=["object", "category"]).columns.tolist()
+    categorical_cols = X_sample.select_dtypes(
+        include=["object", "category"]
+    ).columns.tolist()
 
-    numeric_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scaler", StandardScaler()),
-    ])
+    numeric_pipeline = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+        ]
+    )
 
-    categorical_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="constant", fill_value="__MISSING__")),
-        ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
-    ])
+    categorical_pipeline = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="constant", fill_value="__MISSING__")),
+            ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+        ]
+    )
 
-    preprocessor = ColumnTransformer([
-        ("num", numeric_pipeline, numeric_cols),
-        ("cat", categorical_pipeline, categorical_cols),
-    ], remainder="drop")
+    preprocessor = ColumnTransformer(
+        [
+            ("num", numeric_pipeline, numeric_cols),
+            ("cat", categorical_pipeline, categorical_cols),
+        ],
+        remainder="drop",
+    )
 
-    clf = RandomForestClassifier(n_estimators=200, class_weight="balanced", n_jobs=-1, random_state=42)
+    clf = RandomForestClassifier(
+        n_estimators=200, class_weight="balanced", n_jobs=-1, random_state=42
+    )
     pipeline = Pipeline([("preprocessor", preprocessor), ("clf", clf)])
     return pipeline
 
@@ -72,16 +90,31 @@ def evaluate(model: Pipeline, X: pd.DataFrame, y: pd.Series) -> dict:
         "precision": float(precision_score(y, preds, zero_division=0)),
         "recall": float(recall_score(y, preds, zero_division=0)),
         "f1": float(f1_score(y, preds, zero_division=0)),
-        "roc_auc": float(roc_auc_score(y, probs)) if probs is not None and len(np.unique(y)) > 1 else None,
+        "roc_auc": (
+            float(roc_auc_score(y, probs))
+            if probs is not None and len(np.unique(y)) > 1
+            else None
+        ),
         "confusion_matrix": confusion_matrix(y, preds).tolist(),
     }
 
 
 def parse_args():
     p = argparse.ArgumentParser(description="Train baseline model for will_delay")
-    p.add_argument("--splits-dir", "-s", default="data_splits", help="Directory containing split CSVs")
-    p.add_argument("--model-out", default="models/baseline_rf_v1.joblib", help="Model output path")
-    p.add_argument("--metrics-out", default="data_splits/baseline_metrics.json", help="Metrics JSON output path")
+    p.add_argument(
+        "--splits-dir",
+        "-s",
+        default="data_splits",
+        help="Directory containing split CSVs",
+    )
+    p.add_argument(
+        "--model-out", default="models/baseline_rf_v1.joblib", help="Model output path"
+    )
+    p.add_argument(
+        "--metrics-out",
+        default="data_splits/baseline_metrics.json",
+        help="Metrics JSON output path",
+    )
     return p.parse_args()
 
 
@@ -97,7 +130,13 @@ def main():
     # Sanity checks for positives
     for name, y in (("train", y_train), ("val", y_val)):
         pos = int((y == 1).sum())
-        logger.info("%s: rows=%d, positives=%d (%.2f%%)", name, len(y), pos, 100.0 * pos / len(y) if len(y) > 0 else 0.0)
+        logger.info(
+            "%s: rows=%d, positives=%d (%.2f%%)",
+            name,
+            len(y),
+            pos,
+            100.0 * pos / len(y) if len(y) > 0 else 0.0,
+        )
         if pos == 0:
             logger.error("No positive examples in %s set — aborting", name)
             raise SystemExit(2)

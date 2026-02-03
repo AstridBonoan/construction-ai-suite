@@ -36,7 +36,9 @@ def redact_value(val: Any) -> Any:
     s = val
     for k in REDACT_KEYS:
         try:
-            pattern = re.compile(rf'("?{re.escape(k)}"?\s*:\s*")([^\"]+)(")', flags=re.IGNORECASE)
+            pattern = re.compile(
+                rf'("?{re.escape(k)}"?\s*:\s*")([^\"]+)(")', flags=re.IGNORECASE
+            )
             s, n = pattern.subn(r"\1<REDACTED>\3", s)
             _incr_redactions(n)
         except Exception:
@@ -82,7 +84,9 @@ class RedactingJSONFormatter(logging.Formatter):
             return json.dumps(safe, ensure_ascii=False)
         except Exception:
             try:
-                return json.dumps({"message": redact_value(str(payload.get("message", "")))})
+                return json.dumps(
+                    {"message": redact_value(str(payload.get("message", "")))}
+                )
             except Exception:
                 return json.dumps({"message": "<UNSERIALIZABLE>"})
 
@@ -92,6 +96,7 @@ class DatadogHandler(logging.Handler):
         super().__init__()
         self._use_mock = os.getenv("MOCK_CENTRAL_HANDLER", "0") == "1"
         if self._use_mock:
+
             class _DummyResp:
                 status_code = 200
 

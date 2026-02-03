@@ -10,6 +10,7 @@ Usage (example):
 
 This script is idempotent and will overwrite outputs in `--output-dir`.
 """
+
 from __future__ import annotations
 import argparse
 import logging
@@ -103,7 +104,9 @@ def inspect_distribution(df: pd.DataFrame, col: str, output_dir: Path) -> dict:
     return {"quantiles": q, "counts": counts, "use_log": use_log}
 
 
-def recommend_threshold(df: pd.DataFrame, col: str, target_min: float = 0.10, target_max: float = 0.30) -> float:
+def recommend_threshold(
+    df: pd.DataFrame, col: str, target_min: float = 0.10, target_max: float = 0.30
+) -> float:
     # Candidate thresholds to evaluate (in increasing order)
     candidates = [0.0, 0.0025, 0.005, 0.01, 0.02, 0.03, 0.05, 0.075, 0.1]
     total = len(df)
@@ -136,7 +139,9 @@ def recommend_threshold(df: pd.DataFrame, col: str, target_min: float = 0.10, ta
     return chosen
 
 
-def prepare_ml_dataset(df: pd.DataFrame, target_col: str) -> tuple[pd.DataFrame, pd.Series]:
+def prepare_ml_dataset(
+    df: pd.DataFrame, target_col: str
+) -> tuple[pd.DataFrame, pd.Series]:
     # Drop identifier and date-like columns
     df = df.copy()
     project_col = detect_project_id_column(df)
@@ -144,7 +149,12 @@ def prepare_ml_dataset(df: pd.DataFrame, target_col: str) -> tuple[pd.DataFrame,
     if project_col:
         drop_cols.append(project_col)
     # drop columns with 'date', 'start', 'end' tokens (but keep schedule_slippage_pct and durations)
-    drop_cols += [c for c in df.columns if any(k in c.lower() for k in ("date", "start", "end")) and c not in ("schedule_slippage_pct", "planned_duration_days", "elapsed_days")]
+    drop_cols += [
+        c
+        for c in df.columns
+        if any(k in c.lower() for k in ("date", "start", "end"))
+        and c not in ("schedule_slippage_pct", "planned_duration_days", "elapsed_days")
+    ]
     drop_cols = list(set(drop_cols))
     X = df.drop(columns=drop_cols + [target_col], errors="ignore")
     y = df[target_col].astype(int)
@@ -154,9 +164,17 @@ def prepare_ml_dataset(df: pd.DataFrame, target_col: str) -> tuple[pd.DataFrame,
 def create_splits(X: pd.DataFrame, y: pd.Series, random_state: int = 42) -> dict:
     # Stratified splits: test 15%, validation 15%, train 70%
     test_size = 0.15
-    X_train_val, X_test, y_train_val, y_test = train_test_split(X, y, test_size=test_size, random_state=random_state, stratify=y)
+    X_train_val, X_test, y_train_val, y_test = train_test_split(
+        X, y, test_size=test_size, random_state=random_state, stratify=y
+    )
     val_frac = 0.15 / (1.0 - test_size)
-    X_train, X_val, y_train, y_val = train_test_split(X_train_val, y_train_val, test_size=val_frac, random_state=random_state, stratify=y_train_val)
+    X_train, X_val, y_train, y_val = train_test_split(
+        X_train_val,
+        y_train_val,
+        test_size=val_frac,
+        random_state=random_state,
+        stratify=y_train_val,
+    )
     return {
         "X_train": X_train,
         "X_val": X_val,
@@ -182,18 +200,49 @@ def save_class_distribution_summary(splits: dict, output_dir: Path) -> None:
         total = len(ser)
         pos = int((ser == 1).sum())
         neg = int((ser == 0).sum())
-        rows.append({"split": split_name, "total": total, "pos": pos, "neg": neg, "pos_pct": 100.0 * pos / total if total > 0 else 0.0})
+        rows.append(
+            {
+                "split": split_name,
+                "total": total,
+                "pos": pos,
+                "neg": neg,
+                "pos_pct": 100.0 * pos / total if total > 0 else 0.0,
+            }
+        )
     out = pd.DataFrame(rows)
     out.to_csv(output_dir / "class_distribution_summary.csv", index=False)
-    logger.info("Saved class distribution summary to %s", output_dir / "class_distribution_summary.csv")
+    logger.info(
+        "Saved class distribution summary to %s",
+        output_dir / "class_distribution_summary.csv",
+    )
 
 
 def parse_args():
-    p = argparse.ArgumentParser(description="Inspect schedule_slippage_pct and create stratified splits")
-    p.add_argument("--input-agg", "-i", required=True, help="Aggregated project-level CSV with schedule_slippage_pct")
-    p.add_argument("--output-dir", "-o", default="data_splits", help="Directory to save splits and plots")
-    p.add_argument("--threshold", "-t", type=float, default=None, help="Optional override threshold for schedule_slippage_pct")
-    p.add_argument("--random-state", "-r", type=int, default=42, help="Random seed for splits")
+    p = argparse.ArgumentParser(
+        description="Inspect schedule_slippage_pct and create stratified splits"
+    )
+    p.add_argument(
+        "--input-agg",
+        "-i",
+        required=True,
+        help="Aggregated project-level CSV with schedule_slippage_pct",
+    )
+    p.add_argument(
+        "--output-dir",
+        "-o",
+        default="data_splits",
+        help="Directory to save splits and plots",
+    )
+    p.add_argument(
+        "--threshold",
+        "-t",
+        type=float,
+        default=None,
+        help="Optional override threshold for schedule_slippage_pct",
+    )
+    p.add_argument(
+        "--random-state", "-r", type=int, default=42, help="Random seed for splits"
+    )
     return p.parse_args()
 
 
@@ -219,7 +268,9 @@ def main():
 
     # 3) Redefine target
     df = df.copy()
-    df["will_delay"] = (pd.to_numeric(df["schedule_slippage_pct"], errors="coerce").fillna(0.0) > chosen).astype(int)
+    df["will_delay"] = (
+        pd.to_numeric(df["schedule_slippage_pct"], errors="coerce").fillna(0.0) > chosen
+    ).astype(int)
     counts = df["will_delay"].value_counts()
     logger.info("Post-labeling target counts: %s", counts.to_dict())
     if counts.nunique() == 1:

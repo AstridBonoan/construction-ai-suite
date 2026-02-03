@@ -5,19 +5,20 @@ Writes:
 - analysis_outputs/v5/transformed_feature_mapping.csv
 - analysis_outputs/v5/transformed_leakage_summary.txt
 """
+
 from __future__ import annotations
 from pathlib import Path
 import joblib
 import pandas as pd
 import numpy as np
 
-ROOT = Path('.')
-MODEL = ROOT / 'models' / 'v5' / 'baseline_project_delay_model_v5.pkl'
-OUT_DIR = ROOT / 'analysis_outputs' / 'v5'
+ROOT = Path(".")
+MODEL = ROOT / "models" / "v5" / "baseline_project_delay_model_v5.pkl"
+OUT_DIR = ROOT / "analysis_outputs" / "v5"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
-OUT_CSV = OUT_DIR / 'transformed_feature_mapping.csv'
-OUT_TXT = OUT_DIR / 'transformed_leakage_summary.txt'
-DEEP = OUT_DIR / 'deep_leakage_candidates.csv'
+OUT_CSV = OUT_DIR / "transformed_feature_mapping.csv"
+OUT_TXT = OUT_DIR / "transformed_leakage_summary.txt"
+DEEP = OUT_DIR / "deep_leakage_candidates.csv"
 
 
 def load_deep_candidates():
@@ -25,7 +26,7 @@ def load_deep_candidates():
         return set()
     try:
         df = pd.read_csv(DEEP, low_memory=False)
-        return set(df['feature'].astype(str).tolist())
+        return set(df["feature"].astype(str).tolist())
     except Exception:
         return set()
 
@@ -34,9 +35,9 @@ def main():
     model = joblib.load(MODEL)
     pre = None
     try:
-        pre = model.named_steps['pre']
+        pre = model.named_steps["pre"]
     except Exception:
-        raise SystemExit('Preprocessor not found in model pipeline')
+        raise SystemExit("Preprocessor not found in model pipeline")
 
     feat_names = []
     try:
@@ -59,7 +60,7 @@ def main():
     # For each transformer, try to enumerate transformed names and map
     handled = set()
     for name, trans, cols in transform_info:
-        if name == 'remainder' or trans == 'drop':
+        if name == "remainder" or trans == "drop":
             continue
         # resolve original columns list
         orig_cols = []
@@ -76,7 +77,7 @@ def main():
         # If transformer is a Pipeline, get last step
         last = trans
         try:
-            if hasattr(trans, 'named_steps'):
+            if hasattr(trans, "named_steps"):
                 # pipeline
                 # get last step
                 last_name = list(trans.named_steps.keys())[-1]
@@ -87,6 +88,7 @@ def main():
         # If OneHotEncoder-like
         try:
             from sklearn.preprocessing import OneHotEncoder
+
             is_ohe = isinstance(last, OneHotEncoder)
         except Exception:
             is_ohe = False
@@ -103,13 +105,33 @@ def main():
                 full = f"{name}__{rn}"
                 # try to find match in feat_names
                 if full in feat_names:
-                    mapped_orig = rn.split('_')[0] if '_' in rn else rn
-                    mapping_rows.append({'transformed_feature': full, 'original_column': mapped_orig, 'transformer': name, 'flagged_reason': ('deep_candidate' if full in deep_candidates else '')})
+                    mapped_orig = rn.split("_")[0] if "_" in rn else rn
+                    mapping_rows.append(
+                        {
+                            "transformed_feature": full,
+                            "original_column": mapped_orig,
+                            "transformer": name,
+                            "flagged_reason": (
+                                "deep_candidate" if full in deep_candidates else ""
+                            ),
+                        }
+                    )
                     handled.add(full)
                 else:
                     # try without prefix
                     if rn in feat_names:
-                        mapping_rows.append({'transformed_feature': rn, 'original_column': rn.split('_')[0] if '_' in rn else rn, 'transformer': name, 'flagged_reason': ('deep_candidate' if rn in deep_candidates else '')})
+                        mapping_rows.append(
+                            {
+                                "transformed_feature": rn,
+                                "original_column": (
+                                    rn.split("_")[0] if "_" in rn else rn
+                                ),
+                                "transformer": name,
+                                "flagged_reason": (
+                                    "deep_candidate" if rn in deep_candidates else ""
+                                ),
+                            }
+                        )
                         handled.add(rn)
         else:
             # numeric or passthrough: expect one-to-one mapping
@@ -129,47 +151,94 @@ def main():
                             matched = fn
                             break
                 if matched:
-                    mapping_rows.append({'transformed_feature': matched, 'original_column': col_str, 'transformer': name, 'flagged_reason': ('deep_candidate' if matched in deep_candidates or matched.replace(' ','') in deep_candidates else '')})
+                    mapping_rows.append(
+                        {
+                            "transformed_feature": matched,
+                            "original_column": col_str,
+                            "transformer": name,
+                            "flagged_reason": (
+                                "deep_candidate"
+                                if matched in deep_candidates
+                                or matched.replace(" ", "") in deep_candidates
+                                else ""
+                            ),
+                        }
+                    )
                     handled.add(matched)
                 else:
                     # record no transformed name found
-                    mapping_rows.append({'transformed_feature': '', 'original_column': col_str, 'transformer': name, 'flagged_reason': ''})
+                    mapping_rows.append(
+                        {
+                            "transformed_feature": "",
+                            "original_column": col_str,
+                            "transformer": name,
+                            "flagged_reason": "",
+                        }
+                    )
 
     # For any remaining feat_names not handled, add best-effort mapping
     for fn in feat_names:
         if fn in handled:
             continue
         # split by '__' to get transformer and rest
-        if '__' in fn:
-            prefix, rest = fn.split('__',1)
+        if "__" in fn:
+            prefix, rest = fn.split("__", 1)
             # attempt to extract original col as first token before '_' or '='
-            orig = rest.split('_')[0] if '_' in rest else rest.split('=')[0]
-            mapping_rows.append({'transformed_feature': fn, 'original_column': orig, 'transformer': prefix, 'flagged_reason': ('deep_candidate' if fn in deep_candidates else '')})
+            orig = rest.split("_")[0] if "_" in rest else rest.split("=")[0]
+            mapping_rows.append(
+                {
+                    "transformed_feature": fn,
+                    "original_column": orig,
+                    "transformer": prefix,
+                    "flagged_reason": (
+                        "deep_candidate" if fn in deep_candidates else ""
+                    ),
+                }
+            )
         else:
-            mapping_rows.append({'transformed_feature': fn, 'original_column': '', 'transformer': '', 'flagged_reason': ('deep_candidate' if fn in deep_candidates else '')})
+            mapping_rows.append(
+                {
+                    "transformed_feature": fn,
+                    "original_column": "",
+                    "transformer": "",
+                    "flagged_reason": (
+                        "deep_candidate" if fn in deep_candidates else ""
+                    ),
+                }
+            )
 
     df_map = pd.DataFrame(mapping_rows)
     df_map.to_csv(OUT_CSV, index=False)
 
     # produce summary: group by original_column where any transformed features flagged
-    flagged = df_map[df_map['flagged_reason']!='']
-    with open(OUT_TXT, 'w', encoding='utf8') as fh:
-        fh.write('Transformed feature mapping and leakage summary\n')
-        fh.write(f'Total transformed features mapped: {len(df_map)}\n')
-        fh.write(f'Total flagged transformed features (deep candidates): {len(flagged)}\n\n')
-        fh.write('Flagged original columns (and transformed features):\n')
-        for orig, group in flagged.groupby('original_column'):
-            fh.write(f' - {orig}:\n')
+    flagged = df_map[df_map["flagged_reason"] != ""]
+    with open(OUT_TXT, "w", encoding="utf8") as fh:
+        fh.write("Transformed feature mapping and leakage summary\n")
+        fh.write(f"Total transformed features mapped: {len(df_map)}\n")
+        fh.write(
+            f"Total flagged transformed features (deep candidates): {len(flagged)}\n\n"
+        )
+        fh.write("Flagged original columns (and transformed features):\n")
+        for orig, group in flagged.groupby("original_column"):
+            fh.write(f" - {orig}:\n")
             for _, r in group.iterrows():
-                fh.write(f"    - {r['transformed_feature']} (transformer={r['transformer']})\n")
-        fh.write('\nRecommendations:\n')
-        fh.write('- Remove or prevent construction of the above transformed features that map to original columns containing target-derived values.\n')
-        fh.write('- Audit join/aggregation steps that produce the original columns listed above (look in scripts/prepare_splits_v*.py and any earlier preprocessing).\n')
-        fh.write('- Ensure that `will_delay` and `schedule_slippage_pct` are never merged into feature rows during feature engineering.\n')
+                fh.write(
+                    f"    - {r['transformed_feature']} (transformer={r['transformer']})\n"
+                )
+        fh.write("\nRecommendations:\n")
+        fh.write(
+            "- Remove or prevent construction of the above transformed features that map to original columns containing target-derived values.\n"
+        )
+        fh.write(
+            "- Audit join/aggregation steps that produce the original columns listed above (look in scripts/prepare_splits_v*.py and any earlier preprocessing).\n"
+        )
+        fh.write(
+            "- Ensure that `will_delay` and `schedule_slippage_pct` are never merged into feature rows during feature engineering.\n"
+        )
 
-    print('Wrote mapping to', OUT_CSV)
-    print('Wrote summary to', OUT_TXT)
+    print("Wrote mapping to", OUT_CSV)
+    print("Wrote summary to", OUT_TXT)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

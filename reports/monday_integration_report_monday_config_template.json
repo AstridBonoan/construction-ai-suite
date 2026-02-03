@@ -1,0 +1,247 @@
+{
+  "created": 48,
+  "updated": 0,
+  "failed": [],
+  "ops": [
+    {
+      "action": "create",
+      "project_id": "Unknown",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "august martin hs - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "boys & girls hs - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "city-as-school - manhattan",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "fort hamilton hs - k",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "hostos-lincoln academy of science",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "i.s. 109 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "i.s. 210 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "i.s. 391 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "innovation diploma plus",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "mid-man adult learning center - m",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "murray hill academy hs - m",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "new millennium bronx academy of the arts - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. / i.s. 270 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 105 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 109 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 128 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 138 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 152 - manhattan",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 157 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 171 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 199 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 2 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 205 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 206 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 209 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 209 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 215 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 222 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 226 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 239 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 279 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 28 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 28 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 282 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 31 - staten island",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 329 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 4 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 52 - staten island",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 55 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 56 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 76 - bronx",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 84 - brooklyn",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 87 - manhattan",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "p.s. 97 - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "q993 sped - queens",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "quest to learn - manhattan",
+      "item_id": null
+    },
+    {
+      "action": "create",
+      "project_id": "the flushing international hs - q",
+      "item_id": null
+    }
+  ]
+}

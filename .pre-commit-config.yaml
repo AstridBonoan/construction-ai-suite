@@ -1,0 +1,17 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ci-checks
+        name: CI Checks (configs secrets scan)
+        entry: python scripts/ci_checks.py
+        language: system
+        files: ^configs/.*\.json$
+        stages: [commit]
+      - id: integration-dryrun
+        name: "Optional: Dry-run integration (disabled by default)"
+        entry: python scripts/monday_integration.py --configs-dir configs/
+        language: system
+        pass_filenames: false
+        # Do not run on every commit by default; maintainers can enable this locally
+        always_run: false
+

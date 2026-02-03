@@ -9,6 +9,7 @@ Saves:
 
 This script uses the CSV splits in `data_splits/` and DOES NOT modify them.
 """
+
 from __future__ import annotations
 import logging
 from pathlib import Path
@@ -40,22 +41,33 @@ def build_preprocessor(X: pd.DataFrame):
     numeric_cols = X.select_dtypes(include=["number"]).columns.tolist()
     categorical_cols = X.select_dtypes(include=["object", "category"]).columns.tolist()
 
-    logger.info("Numeric columns: %d, Categorical columns: %d", len(numeric_cols), len(categorical_cols))
+    logger.info(
+        "Numeric columns: %d, Categorical columns: %d",
+        len(numeric_cols),
+        len(categorical_cols),
+    )
 
-    numeric_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="median")),
-        ("scaler", StandardScaler()),
-    ])
+    numeric_pipeline = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="median")),
+            ("scaler", StandardScaler()),
+        ]
+    )
 
-    categorical_pipeline = Pipeline([
-        ("imputer", SimpleImputer(strategy="constant", fill_value="__MISSING__")),
-        ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
-    ])
+    categorical_pipeline = Pipeline(
+        [
+            ("imputer", SimpleImputer(strategy="constant", fill_value="__MISSING__")),
+            ("ohe", OneHotEncoder(handle_unknown="ignore", sparse_output=False)),
+        ]
+    )
 
-    preprocessor = ColumnTransformer([
-        ("num", numeric_pipeline, numeric_cols),
-        ("cat", categorical_pipeline, categorical_cols),
-    ], remainder="drop")
+    preprocessor = ColumnTransformer(
+        [
+            ("num", numeric_pipeline, numeric_cols),
+            ("cat", categorical_pipeline, categorical_cols),
+        ],
+        remainder="drop",
+    )
 
     return preprocessor
 
@@ -74,7 +86,9 @@ def main():
 
     preprocessor = build_preprocessor(X_train)
 
-    clf = RandomForestClassifier(n_estimators=200, class_weight="balanced", n_jobs=-1, random_state=42)
+    clf = RandomForestClassifier(
+        n_estimators=200, class_weight="balanced", n_jobs=-1, random_state=42
+    )
 
     pipeline = Pipeline([("preprocessor", preprocessor), ("clf", clf)])
 

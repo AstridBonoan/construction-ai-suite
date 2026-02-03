@@ -15,6 +15,7 @@ Outputs:
 
 This script does NOT retrain the model; it only loads an existing model.
 """
+
 from __future__ import annotations
 import json
 import logging
@@ -25,9 +26,18 @@ import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
 from joblib import load
-from sklearn.metrics import (auc, average_precision_score, confusion_matrix,
-                             precision_recall_curve, roc_curve, roc_auc_score,
-                             accuracy_score, precision_score, recall_score, f1_score)
+from sklearn.metrics import (
+    auc,
+    average_precision_score,
+    confusion_matrix,
+    precision_recall_curve,
+    roc_curve,
+    roc_auc_score,
+    accuracy_score,
+    precision_score,
+    recall_score,
+    f1_score,
+)
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s: %(message)s")
 logger = logging.getLogger(__name__)
@@ -46,7 +56,9 @@ def load_splits(splits_dir: Path):
     return X_val, y_val
 
 
-def get_feature_names_from_preprocessor(preprocessor, input_df: pd.DataFrame) -> List[str]:
+def get_feature_names_from_preprocessor(
+    preprocessor, input_df: pd.DataFrame
+) -> List[str]:
     """Extract feature names after the preprocessor transformation.
 
     Works for a ColumnTransformer where transformers were created with explicit
@@ -89,7 +101,9 @@ def evaluate_and_save(model, X_val: pd.DataFrame, y_val: pd.Series, out_dir: Pat
     # Predictions and probabilities
     logger.info("Predicting on validation set (%d rows)", len(X_val))
     preds = model.predict(X_val)
-    probs = model.predict_proba(X_val)[:, 1] if hasattr(model, "predict_proba") else None
+    probs = (
+        model.predict_proba(X_val)[:, 1] if hasattr(model, "predict_proba") else None
+    )
 
     # Basic metrics
     metrics = {
@@ -163,7 +177,9 @@ def evaluate_and_save(model, X_val: pd.DataFrame, y_val: pd.Series, out_dir: Pat
             # fallback: create simple numeric indices
             feature_names = [f"f{i}" for i in range(len(importances))]
 
-        fi_series = pd.Series(importances, index=feature_names).sort_values(ascending=False)
+        fi_series = pd.Series(importances, index=feature_names).sort_values(
+            ascending=False
+        )
         topk = fi_series.head(15)
 
         plt.figure(figsize=(8, 6))
@@ -188,7 +204,11 @@ def evaluate_and_save(model, X_val: pd.DataFrame, y_val: pd.Series, out_dir: Pat
         "paths": {
             "metrics_csv": str(metrics_csv),
             "roc": str(out_dir / "roc_curve.png") if probs is not None else None,
-            "pr": str(out_dir / "precision_recall_curve.png") if probs is not None else None,
+            "pr": (
+                str(out_dir / "precision_recall_curve.png")
+                if probs is not None
+                else None
+            ),
             "feature_importance": str(fi_path) if fi_path.exists() or True else None,
         },
     }
@@ -200,7 +220,9 @@ def main():
     out_dir = Path("data_splits")
 
     if not model_path.exists():
-        logger.error("Model file not found at %s. Ensure the trained model exists.", model_path)
+        logger.error(
+            "Model file not found at %s. Ensure the trained model exists.", model_path
+        )
         raise SystemExit(2)
 
     model = load_model(model_path)
@@ -216,7 +238,7 @@ def main():
     print(f"Negative support: {metrics['support_negative']}")
     print(f"Recall (positive class): {metrics['recall']:.4f}")
     print(f"F1 (positive class): {metrics['f1']:.4f}")
-    print("Saved metrics to:", result["paths"]["metrics_csv"]) 
+    print("Saved metrics to:", result["paths"]["metrics_csv"])
     print("Plots: ", result["paths"]["roc"], result["paths"]["feature_importance"])
 
 

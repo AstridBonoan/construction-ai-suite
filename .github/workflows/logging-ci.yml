@@ -1,0 +1,27 @@
+name: Logging CI
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ logging-ci-test ]
+
+jobs:
+  logging-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install test deps
+        run: |
+          pip install requests boto3 || true
+      - name: Run logging test (mock handlers)
+        env:
+          ENABLE_CENTRAL_LOGS: '1'
+          CENTRAL_LOG_SINK: 'datadog'
+          MOCK_CENTRAL_HANDLER: '1'
+          FAIL_ON_LOG_ERRORS: '1'
+        run: |
+          python scripts/logging_test.py

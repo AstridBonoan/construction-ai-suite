@@ -85,6 +85,11 @@ Security notes
 - `scripts/ci_checks.py` ignores template/example files and common placeholder values to avoid false positives.
 - Logs are redacted using `scripts/logger.py`; secrets such as `api_key`, `access_token`, `refresh_token`, and `MONDAY_SECRET_KEY` are redacted from console output.
 
+Developer note — CI-safe guard for `monday_integration.py`:
+
+- To keep `pre-commit` and CI runs offline-safe, `scripts/monday_integration.py` avoids importing network libraries (for example, `requests`) when the environment variable `MOCK_CENTRAL_HANDLER` is set to `1`.
+- This guard allows maintainers to run `pre-commit run --all-files` and other local checks without installing external runtime deps or performing network calls. If you need to run the integration locally against real services, unset `MOCK_CENTRAL_HANDLER` and install the required dependencies (e.g., `requests`).
+
 Ensuring JSON console logs
 
 In some environments (test runners, frameworks, or tools that configure logging late), the root logger may be configured after modules are imported and may attach non-JSON console handlers. `scripts/logger.py` intentionally avoids mutating the root logger to remain non-invasive.

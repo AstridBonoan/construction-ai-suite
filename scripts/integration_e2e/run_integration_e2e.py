@@ -53,7 +53,7 @@ def main() -> int:
         return 2
 
     try:
-        run(["docker", "compose", "-f", COMPOSE_FILE, "up", "--build", "-d"])  # build & detach
+        run(["docker", "compose", "-f", COMPOSE_FILE, "up", "--build", "-d"], cwd=ROOT)  # build & detach
 
         print("Waiting for backend /health ...")
         if not wait_for(BACKEND_HEALTH, timeout=180):
@@ -129,7 +129,7 @@ def main() -> int:
     finally:
         try:
             print("Tearing down compose stack...")
-            run(["docker", "compose", "-f", COMPOSE_FILE, "down", "--volumes", "--remove-orphans"])  # best-effort
+            run(["docker", "compose", "-f", COMPOSE_FILE, "down", "--volumes", "--remove-orphans"], cwd=ROOT)  # best-effort
         except Exception:
             print("Warning: compose down failed (ignored)")
 

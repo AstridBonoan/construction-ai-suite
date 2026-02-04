@@ -12,9 +12,11 @@ def make_valid_output(tmp_path):
         "risk_score": 0.5,
         "risk_level": "medium",
         "predicted_delay_days": 3,
+        "delay_probability": 0.1,
         "confidence_score": 0.8,
         "primary_risk_factors": [{"factor": "schedule_slippage_pct", "contribution": 0.5}],
         "recommended_actions": ["monitor"],
+        "explanation": "Schedule slippage and subcontractor churn are top contributors.",
         "model_version": "v1",
         "generated_at": "2025-01-01T00:00:00",
     }

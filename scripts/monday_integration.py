@@ -121,7 +121,21 @@ class MondayClient:
     ):
         self.api_key = api_key
         self.board_id = int(board_id) if board_id is not None else None
-        self.columns = columns or {}
+        # canonicalize columns mapping if mapping helper available
+        try:
+            from scripts.phase9.monday_mapping import canonicalize_columns
+        except Exception:
+            try:
+                from phase9.monday_mapping import canonicalize_columns
+            except Exception:
+                canonicalize_columns = None
+        if canonicalize_columns and isinstance(columns, dict):
+            try:
+                self.columns = canonicalize_columns(columns)
+            except Exception:
+                self.columns = columns or {}
+        else:
+            self.columns = columns or {}
         self.headers = (
             {"Authorization": api_key, "Content-Type": "application/json"}
             if api_key
@@ -204,12 +218,23 @@ class MondayClient:
         )
         item_id = resp.get("data", {}).get("create_item", {}).get("id")
 
-        # map provided columns only
-        column_values = {}
-        for key in ("predicted_delay", "revenue", "risk", "status"):
-            col_id = self.columns.get(key)
-            if col_id:
-                column_values[col_id] = str(project_row.get(key, ""))
+        # map provided columns using mapping helper when available
+        try:
+            from scripts.phase9.monday_mapping import row_to_column_values
+        except Exception:
+            try:
+                from phase9.monday_mapping import row_to_column_values
+            except Exception:
+                row_to_column_values = None
+
+        if row_to_column_values:
+            column_values = row_to_column_values(project_row, self.columns)
+        else:
+            column_values = {}
+            for key in ("predicted_delay", "revenue", "risk", "status"):
+                col_id = self.columns.get(key)
+                if col_id:
+                    column_values[col_id] = str(project_row.get(key, ""))
 
         if column_values:
             change_mutation = """
@@ -397,12 +422,23 @@ def create_item(project_row: dict):
     item_id = resp.get("data", {}).get("create_item", {}).get("id")
 
     # prepare column values mapping
-    column_values = {
-        COL_PREDICTED_DELAY: str(project_row.get("predicted_delay", "")),
-        COL_REVENUE: str(project_row.get("revenue", "")),
-        COL_RISK: str(project_row.get("risk", "")),
-        COL_STATUS: str(project_row.get("status", "")),
-    }
+    try:
+        from scripts.phase9.monday_mapping import row_to_column_values
+    except Exception:
+        try:
+            from phase9.monday_mapping import row_to_column_values
+        except Exception:
+            row_to_column_values = None
+
+    if row_to_column_values:
+        column_values = row_to_column_values(project_row, self.columns)
+    else:
+        column_values = {
+            COL_PREDICTED_DELAY: str(project_row.get("predicted_delay", "")),
+            COL_REVENUE: str(project_row.get("revenue", "")),
+            COL_RISK: str(project_row.get("risk", "")),
+            COL_STATUS: str(project_row.get("status", "")),
+        }
     # remove placeholders check
     if any(
         k.endswith("PLACEHOLDER")
@@ -596,8 +632,21 @@ def process_account_config(
 
     report_dir.mkdir(parents=True, exist_ok=True)
     out_path = report_dir / f"monday_integration_report_{cfg_name}.json"
-    with open(out_path, "w", encoding="utf-8") as rf:
-        json.dump(report, rf, indent=2)
+    # Prefer using Phase 9 reporting helper so we can attach schema validators
+    try:
+        from scripts.phase9.reporting import write_json_report
+    except Exception:
+        try:
+            from phase9.reporting import write_json_report
+        except Exception:
+            write_json_report = None
+
+    # no validator for this per-account report (legacy format), but use helper when available
+    if write_json_report:
+        write_json_report(out_path, report, validator=None)
+    else:
+        with open(out_path, "w", encoding="utf-8") as rf:
+            json.dump(report, rf, indent=2)
     return out_path, report
 
 

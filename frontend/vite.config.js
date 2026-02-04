@@ -21,7 +21,11 @@ export default ({ mode }) => {
           target: proxyTarget,
           changeOrigin: true,
           secure: false,
-          rewrite: (path) => path.replace(/^\/api/, ''),
+        },
+        '/phase9': {
+          target: proxyTarget,
+          changeOrigin: true,
+          secure: false,
         },
       },
     },

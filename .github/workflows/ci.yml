@@ -64,7 +64,7 @@ jobs:
       - name: Install frontend deps
         run: |
           cd frontend_phase10
-          npm ci
+          npm install --legacy-peer-deps
       - name: Build frontend
         run: |
           cd frontend_phase10
@@ -83,7 +83,7 @@ jobs:
       - name: Install deps
         run: |
           cd frontend_phase10
-          npm ci
+          npm install --legacy-peer-deps
       - name: Build frontend
         run: |
           cd frontend_phase10

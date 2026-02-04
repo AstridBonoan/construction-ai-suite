@@ -16,8 +16,10 @@ REQUIRED_FIELDS = {
     "risk_level": str,
     "predicted_delay_days": (float, int, type(None)),
     "confidence_score": float,
+    "delay_probability": float,
     "primary_risk_factors": list,
     "recommended_actions": list,
+    "explanation": str,
     "model_version": str,
     "generated_at": str,
 }
@@ -66,24 +68,38 @@ def validate_project_output(obj: Dict[str, Any]) -> None:
     prf = obj["primary_risk_factors"]
     if not isinstance(prf, list):
         raise ValueError("primary_risk_factors must be a list")
-        for i, item in enumerate(prf):
-            if not isinstance(item, dict):
-                raise ValueError(f"primary_risk_factors[{i}] must be dict")
-            if "factor" not in item or "contribution" not in item:
-                raise ValueError(f"primary_risk_factors[{i}] missing 'factor' or 'contribution'")
-            # contribution must be numeric and in 0..1
-            try:
-                c = float(item.get("contribution", 0))
-            except Exception:
-                raise ValueError("primary_risk_factors.contribution must be numeric")
-            if c < 0 or c > 1:
-                raise ValueError("primary_risk_factors.contribution must be between 0 and 1")
+    for i, item in enumerate(prf):
+        if not isinstance(item, dict):
+            raise ValueError(f"primary_risk_factors[{i}] must be dict")
+        if "factor" not in item or "contribution" not in item:
+            raise ValueError(f"primary_risk_factors[{i}] missing 'factor' or 'contribution'")
+        # contribution must be numeric and in 0..1
+        try:
+            c = float(item.get("contribution", 0))
+        except Exception:
+            raise ValueError("primary_risk_factors.contribution must be numeric")
+        if c < 0 or c > 1:
+            raise ValueError("primary_risk_factors.contribution must be between 0 and 1")
 
     # generated_at must be ISO timestamp parseable
     try:
         datetime.fromisoformat(obj["generated_at"])
     except Exception as e:
         raise ValueError(f"generated_at must be ISO timestamp: {e}")
+
+    # delay_probability must be in 0..1
+    dp = obj.get("delay_probability")
+    try:
+        dpf = float(dp)
+    except Exception:
+        raise ValueError("delay_probability must be numeric")
+    if dpf < 0.0 or dpf > 1.0:
+        raise ValueError(f"delay_probability out of range 0.0-1.0: {dpf}")
+
+    # explanation must be a non-empty string
+    expl = obj.get("explanation")
+    if not isinstance(expl, str) or not expl.strip():
+        raise ValueError("explanation must be a non-empty string")
 
 
 def validate_many(outputs: List[Dict[str, Any]]) -> None:

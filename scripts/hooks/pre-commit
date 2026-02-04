@@ -1,14 +1,28 @@
-#!/bin/sh
-# Repository hook template: run scripts/ci_checks.py and block commit if it fails
-PYTHON=python
-if [ -f .venv/Scripts/python.exe ]; then
-  PYTHON=.venv/Scripts/python.exe
-fi
-echo "Running CI checks (scripts/ci_checks.py)..."
-"$PYTHON" scripts/ci_checks.py
-RC=$?
-if [ $RC -ne 0 ]; then
-  echo "Pre-commit: CI checks failed. See the output above for details. Commit aborted."
-  exit $RC
-fi
-exit 0
+#!/usr/bin/env python3
+"""Cross-platform git pre-commit hook.
+
+This wrapper invokes `scripts/ci_checks.py` using the repository venv python
+when available, otherwise falls back to the system `python` executable.
+Using a Python wrapper avoids depending on `/bin/sh` on Windows.
+"""
+import os
+import sys
+import subprocess
+
+def find_python():
+  venv_python = os.path.join('.venv', 'Scripts', 'python.exe')
+  if os.path.exists(venv_python):
+    return venv_python
+  return sys.executable or 'python'
+
+def main():
+  python = find_python()
+  print('Running CI checks (scripts/ci_checks.py) with', python)
+  rc = subprocess.call([python, 'scripts/ci_checks.py'])
+  if rc != 0:
+    print('Pre-commit: CI checks failed. See the output above for details. Commit aborted.', file=sys.stderr)
+    sys.exit(rc)
+  return 0
+
+if __name__ == '__main__':
+  sys.exit(main())

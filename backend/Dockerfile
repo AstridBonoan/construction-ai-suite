@@ -1,20 +1,22 @@
-# Use Python 3.11 slim image
 FROM python:3.11-slim
-
-# Set working directory
 WORKDIR /app
 
-# Copy requirements first for caching
-COPY requirements.txt .
-
-# Install dependencies
+# Install runtime dependencies
+COPY backend/requirements.txt ./requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the app
+FROM python:3.11-slim
+WORKDIR /app
+
+# Install runtime dependencies
+COPY requirements.txt ./requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy application code into the image (context is ./backend)
 COPY . .
 
-# Expose port
-EXPOSE 5000
+ENV PYTHONPATH=/app
 
-# Run the app
-CMD ["python", "app/main.py"]
+# Use Gunicorn to serve the Flask app in production
+CMD ["gunicorn", "app.main:app", "-b", "0.0.0.0:5000", "--workers", "2", "--threads", "4"]
+COPY requirements.txt .

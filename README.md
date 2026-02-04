@@ -198,6 +198,60 @@ python scripts/logging_test.py
 
 The `scripts/logging_test.py` will emit messages containing simulated token-like strings; the centralized handlers and console formatter will redact those values before sending or printing.
 
+## Local multi-service integration (Docker Compose)
+
+You can run the frontend and backend together locally using Docker Compose. The compose file builds the images from `./backend` and `./frontend_phase10` and mounts `./reports` into the backend so the canonical Phase9 outputs are served.
+
+ Quick start — run the full stack locally
+
+Recommended: build and run both services in detached mode (rebuilds images).
+
+Use the provided local compose file to avoid deprecated-key warnings:
+
+```bash
+docker compose -f docker-compose.local.yml up --build -d
+```
+
+ Recreate a single service after code changes (example: backend):
+
+ ```bash
+ docker compose up --build --no-deps --force-recreate backend -d
+ ```
+
+ Verify the services are healthy and responding:
+
+ PowerShell / Windows (example checks):
+
+ ```powershell
+ # Backend
+ curl http://localhost:5000/phase9/outputs
+ # Frontend
+ curl http://localhost:5173/
+ ```
+
+ Unix / macOS:
+
+ ```bash
+ curl http://localhost:5000/phase9/outputs
+ curl http://localhost:5173/
+ ```
+
+ Notes:
+ - Backend: serves `reports/phase9_outputs.json` (if present) at `/phase9/outputs` and supports the `?variant=live` query for a development variant.
+ - Frontend: built assets are served by nginx on container port `80` and mapped to host port `5173`.
+ - To see live logs from both services:
+
+ ```bash
+ docker compose logs -f
+ ```
+
+ - To stop and remove containers (clean shutdown):
+
+ ```bash
+ docker compose down
+ ```
+
+
 ### Enhanced logging reliability and CI test
 
 The logging handlers now include retry/backoff and safe async behavior for Datadog and retry logic for CloudWatch. For local CI testing there is a dedicated workflow:

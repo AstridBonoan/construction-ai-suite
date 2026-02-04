@@ -1,43 +1,48 @@
-version: '3.9'
-
+services:
 services:
   backend:
-    build: ./backend
-    container_name: backend
+    build:
+      context: ./backend
+    image: construction-ai-suite-backend:local
+    container_name: construction_ai_backend
     ports:
       - "5000:5000"
-    volumes:
-      - ./backend/app:/app/app
-    environment:
-      - DATABASE_URL=postgresql://postgres:postgres@db:5432/construction_db
-    depends_on:
-      - db
+    services:
+      backend:
+        build:
+          context: ./backend
+        image: construction-ai-suite-backend:local
+        container_name: construction_ai_backend
+        ports:
+          - "5000:5000"
+        environment:
+          - FLASK_ENV=production
+        volumes:
+          - ./reports:/app/reports:rw
+          - ./backend/app:/app/app:ro
+        healthcheck:
+          test: ["CMD-SHELL", "python -c \"import urllib.request, sys; urllib.request.urlopen('http://127.0.0.1:5000/phase9/outputs');\" || exit 1"]
+          interval: 10s
+          timeout: 5s
+          retries: 3
 
-  frontend:
-    build: ./frontend
-    container_name: frontend
-    ports:
-      - "5173:5173"
-    volumes:
-      - ./frontend/src:/app/src
-      # removed host .env mount so container env (docker-compose) wins
-    environment:
-      - VITE_API_URL=http://backend:5000
-    depends_on:
-      - backend
+      frontend:
+        build:
+          context: ./frontend_phase10
+        image: construction-ai-suite-frontend:local
+        container_name: construction_ai_frontend
+        depends_on:
+          backend:
+            condition: service_healthy
+        ports:
+          - "5173:80"
+        environment:
+          - NGINX_HOST=0.0.0.0
+        restart: unless-stopped
 
-  db:
-    image: postgres:16
-    container_name: db
-    restart: always
-    environment:
-      POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: construction_db
-    ports:
-      - "5432:5432"
-    volumes:
-      - db_data:/var/lib/postgresql/data
+    # Notes:
+    # - Frontend Dockerfile in `frontend_phase10` should produce a static site served by nginx
+    #   on container port 80. We map host port 5173 to container port 80 so the dev URL
+    #   http://localhost:5173 continues to work with compose.
+    # - Backend reads canonical outputs from the mounted `./reports` directory.
 
-volumes:
-  db_data:

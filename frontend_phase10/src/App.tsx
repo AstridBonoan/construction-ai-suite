@@ -6,6 +6,7 @@ import ExplainabilityPanel from './components/ExplainabilityPanel'
 import RiskFactorBreakdown from './components/RiskFactorBreakdown'
 import Controls from './components/Controls'
 import IntegrationViz from './components/IntegrationViz'
+import AnalystReviewPanel from './components/AnalystReviewPanel'
 
 const BACKEND_URL = 'http://localhost:5000/phase9/outputs'
 
@@ -48,7 +49,7 @@ const App: React.FC = () => {
 
   return (
     <div className="container">
-      <h1>Phase 10 — Operator UI (Read-only)</h1>
+      <h1>Phase 11 — Analyst Review Layer (Read-only Intelligence)</h1>
 
       <div style={{ marginBottom: 12 }}>
         <label style={{ marginRight: 8 }}>Data:</label>
@@ -61,6 +62,7 @@ const App: React.FC = () => {
       <RiskFactorBreakdown factors={item.primary_risk_factors} />
       <ExplainabilityPanel item={item} />
       <IntegrationViz item={item} />
+      <AnalystReviewPanel item={item} />
       <Controls />
     </div>
   )

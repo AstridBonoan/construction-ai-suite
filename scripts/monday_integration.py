@@ -42,7 +42,17 @@ else:
         import requests
     except Exception:
         requests = None
-from logger import get_logger
+try:
+    from logger import get_logger
+except Exception:
+    try:
+        from scripts.logger import get_logger
+    except Exception:
+        # fallback minimal logger
+        import logging
+
+        def get_logger(name: str = "monday_integration"):
+            return logging.getLogger(name)
 
 logger = get_logger("monday_integration")
 try:

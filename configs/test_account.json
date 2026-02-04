@@ -1,0 +1,10 @@
+{
+  "board_id": 123,
+  "columns": {
+    "project_id": "proj_col",
+    "predicted_delay": "d1",
+    "revenue": "d2",
+    "risk": "d3",
+    "status": "d4"
+  }
+}

@@ -1,0 +1,57 @@
+name: monday-integration-smoke
+
+on:
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    env:
+      DRY_RUN: '1'
+      MOCK_CENTRAL_HANDLER: '1'
+      ENABLE_CENTRAL_LOGS: '1'
+      CENTRAL_LOG_SINK: 'datadog,cloudwatch'
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install deps (best-effort)
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r backend/requirements.txt || true
+      - name: Prepare example config
+        run: |
+          mkdir -p configs
+          cat > configs/test_account.json <<'JSON'
+          {
+            "board_id": 12345678,
+            "columns": {
+              "project_id": "proj_col",
+              "predicted_delay": "d1",
+              "revenue": "d2",
+              "risk": "d3",
+              "status": "d4"
+            }
+          }
+          JSON
+      - name: Ensure input CSV exists
+        run: |
+          mkdir -p data_splits
+          echo "project_id,predicted_delay,revenue,risk,status" > data_splits/project_level_for_monday.csv
+          echo "proj1,2,1000,low,active" >> data_splits/project_level_for_monday.csv
+      - name: Run monday integration (dry-run)
+        run: python scripts/monday_integration.py --configs-dir configs/
+      - name: Validate reports
+        run: |
+          ls -la reports
+          python - <<'PY'
+import glob, json
+files = glob.glob('reports/monday_integration_report_*.json')
+assert files, 'No report files created'
+for f in files:
+    d = json.load(open(f))
+    print(f, d)
+PY

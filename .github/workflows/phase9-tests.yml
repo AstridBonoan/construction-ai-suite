@@ -29,4 +29,7 @@ jobs:
 
       - name: Run Phase 9 unit tests
         run: |
+          # Ensure the repository root is on PYTHONPATH so imports like
+          # `from scripts.phase9 import ...` resolve on the runner.
+          export PYTHONPATH="${{ github.workspace }}:${PYTHONPATH}"
           pytest -q tests/unit/test_phase9_risk_and_recs.py

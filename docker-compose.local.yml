@@ -2,6 +2,7 @@ services:
   backend:
     build:
       context: ./backend
+      dockerfile: Dockerfile
     image: construction-ai-suite-backend:local
     container_name: construction_ai_backend
     ports:
@@ -20,6 +21,7 @@ services:
   frontend:
     build:
       context: ./frontend_phase10
+      dockerfile: Dockerfile
     image: construction-ai-suite-frontend:local
     container_name: construction_ai_frontend
     depends_on:

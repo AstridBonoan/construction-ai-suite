@@ -1,0 +1,21 @@
+[
+  {
+    "schema_version": "phase9-v1",
+    "project_id": "P-1001",
+    "project_name": "Central Plaza Redevelopment",
+    "risk_score": 0.72,
+    "risk_level": "high",
+    "predicted_delay_days": 12,
+    "delay_probability": 0.65,
+    "confidence_score": 0.78,
+    "primary_risk_factors": [
+      { "factor": "schedule_slippage_pct", "contribution": 0.35 },
+      { "factor": "subcontractor_changes", "contribution": 0.25 },
+      { "factor": "inspection_failure_rate", "contribution": 0.12 }
+    ],
+    "recommended_actions": ["schedule-audit", "stabilize-subcontractors"],
+    "explanation": "Recent schedule slippage and subcontractor churn drive elevated risk; quality issues reported in last inspections.",
+    "model_version": "phase9-ruleset-v1",
+    "generated_at": "2026-02-03T12:00:00Z"
+  }
+]

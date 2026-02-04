@@ -1,3 +1,30 @@
+# Node
+frontend_phase10/node_modules/
+node_modules/
+
+# Playwright and caches
+.playwright/
+.playwright_cache/
+frontend_phase10/.playwright_cache/
+
+# Build outputs
+dist/
+frontend_phase10/dist/
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Docker
+*.log
+
+# Test results
+test-results/
+
+# OS files
+.DS_Store
+Thumbs.db
 # Local test artifacts and virtualenv
 .venv/
 # Temporary report files

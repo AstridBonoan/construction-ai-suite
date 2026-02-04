@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: ./backend
+    image: construction-ai-suite-backend:local
+    container_name: construction_ai_backend
+    ports:
+      - "5000:5000"
+    environment:
+      - FLASK_ENV=production
+    volumes:
+      - ./reports:/app/reports:rw
+      - ./backend/app:/app/app:ro
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request, sys; urllib.request.urlopen('http://127.0.0.1:5000/phase9/outputs');\" || exit 1"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+
+  frontend:
+    build:
+      context: ./frontend_phase10
+    image: construction-ai-suite-frontend:local
+    container_name: construction_ai_frontend
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "5173:80"
+    environment:
+      - NGINX_HOST=0.0.0.0
+    restart: unless-stopped

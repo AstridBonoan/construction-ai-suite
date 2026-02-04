@@ -1,6 +1,9 @@
 name: monday-integration-smoke
 
 on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
@@ -48,10 +51,10 @@ jobs:
         run: |
           ls -la reports
           python - <<'PY'
-import glob, json
-files = glob.glob('reports/monday_integration_report_*.json')
-assert files, 'No report files created'
-for f in files:
-    d = json.load(open(f))
-    print(f, d)
-PY
+            import glob, json
+            files = glob.glob('reports/monday_integration_report_*.json')
+            assert files, 'No report files created'
+            for f in files:
+                d = json.load(open(f))
+                print(f, d)
+          PY

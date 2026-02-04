@@ -1,6 +1,9 @@
 name: monday-integration-smoke
 
 on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 

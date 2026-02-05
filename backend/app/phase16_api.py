@@ -16,6 +16,8 @@ import logging
 logger = logging.getLogger(__name__)
 
 schedule_bp = Blueprint('schedule', __name__, url_prefix='/api/schedule')
+# Simple in-memory cache for analyzed schedules (project_id -> dict)
+SCHEDULE_CACHE = {}
 
 
 @schedule_bp.route('/analyze', methods=['POST'])
@@ -125,6 +127,17 @@ def analyze_schedule():
             risk_factors=risk_factors,
             scenarios=scenarios
         )
+
+        # Cache the intelligence (store as serializable dict)
+        try:
+            SCHEDULE_CACHE[project_id] = {
+                "schedule_intelligence": intelligence.to_dict(),
+                "critical_path": cp.critical_path,
+                "project_duration_days": cp.project_duration_days,
+                "integration_risk_score": intelligence.integration_risk_score,
+            }
+        except Exception:
+            logger.exception("Failed to cache schedule intelligence")
         
         # Format response
         response = {
@@ -159,11 +172,19 @@ def get_critical_path(project_id):
     """
     Get critical path for a cached project (placeholder for Monday.com integration).
     """
-    # TODO: Implement with database/cache lookup
+    # Return cached critical path if available
+    cached = SCHEDULE_CACHE.get(project_id)
+    if cached:
+        return jsonify({
+            "project_id": project_id,
+            "critical_path": cached.get("critical_path"),
+            "project_duration_days": cached.get("project_duration_days")
+        }), 200
+
     return jsonify({
-        "message": "Critical path endpoint - integration with data store pending",
+        "message": "Critical path endpoint - no cached analysis available",
         "project_id": project_id
-    }), 200
+    }), 404
 
 
 @schedule_bp.route('/integration-risk/<project_id>', methods=['GET'])
@@ -173,8 +194,14 @@ def get_integration_risk(project_id):
     
     Returns risk contribution to add to project's overall risk score.
     """
-    # TODO: Implement with database lookup
+    cached = SCHEDULE_CACHE.get(project_id)
+    if cached:
+        return jsonify({
+            "project_id": project_id,
+            "integration_risk_score": round(cached.get("integration_risk_score", 0.0), 3)
+        }), 200
+
     return jsonify({
-        "message": "Integration risk endpoint - data store integration pending",
+        "message": "Integration risk endpoint - no cached analysis available",
         "project_id": project_id
-    }), 200
+    }), 404

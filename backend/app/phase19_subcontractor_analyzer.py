@@ -87,8 +87,8 @@ class SubcontractorPerformanceAnalyzer:
                     project_id=project_id,
                     identified_issue="repeated_delays",
                     severity="high",
-                    impact_on_schedule=f"Estimated { (1-summary.reliability_score)*10 :.1f } day(s) delay",
-                    impact_on_cost=f"Estimated ${ (1-summary.reliability_score)*2000 :.0f }",
+                    impact_on_schedule=f"Estimated {(1-summary.reliability_score)*10:.1f} day(s) delay",
+                    impact_on_cost=f"Estimated ${(1-summary.reliability_score)*2000:.0f}",
                     confidence=0.8,
                     recommendation="Consider backup vendors or add schedule buffer",
                     monday_column_suggestion="Subcontractor_Risk_Flag"

@@ -59,5 +59,3 @@ def test_create_project_intelligence(analyzer):
     assert intel.integration_ready
     assert 'S002' in intel.subcontractor_summaries
     assert 0.0 <= intel.subcontractor_risk_score <= 1.0
-
-*** End Patch

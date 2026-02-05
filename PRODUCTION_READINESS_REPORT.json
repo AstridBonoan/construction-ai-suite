@@ -1,0 +1,321 @@
+{
+  "timestamp": "2026-02-04T16:34:05.226869",
+  "checkpoints": {
+    "1_data_reality": {
+      "name": "Data Reality Check",
+      "checks": {
+        "load_dataset": {
+          "status": "PASS",
+          "rows": 13638,
+          "columns": 14
+        },
+        "schema_validation": {
+          "status": "PASS",
+          "found_fields": {
+            "schedule": [
+              "Project Geographic District "
+            ],
+            "budget": [
+              "Final Estimate of Actual Costs Through End of Phase Amount",
+              "Project Budget Amount"
+            ],
+            "risk": [
+              "Project Status Name",
+              "Project Phase Name"
+            ]
+          },
+          "missing_fields": {
+            "schedule": [
+              "Total Budget",
+              "Planned Duration"
+            ],
+            "budget": [],
+            "risk": []
+          }
+        },
+        "data_quality": {
+          "status": "PASS",
+          "total_rows": 13638,
+          "columns": 14,
+          "missing_pct": 2.4390882617895375,
+          "duplicates": 0
+        },
+        "volume": {
+          "status": "PASS",
+          "rows": 13638
+        },
+        "ingestion": {
+          "status": "PASS",
+          "sample_records": 5
+        }
+      },
+      "status": "PASS",
+      "data_summary": {
+        "dataset": "Capital_Project_Schedules_and_Budgets.csv",
+        "shape": [
+          13638,
+          14
+        ],
+        "columns": [
+          "Project Geographic District ",
+          "Project Building Identifier",
+          "Project School Name",
+          "Project Type ",
+          "Project Description",
+          "Project Phase Name",
+          "Project Status Name",
+          "Project Phase Actual Start Date",
+          "Project Phase Planned End Date",
+          "Project Phase Actual End Date"
+        ]
+      }
+    },
+    "2_full_pipeline": {
+      "name": "Full Pipeline Execution",
+      "checks": {
+        "import_module": {
+          "status": "PASS"
+        },
+        "prepare_data": {
+          "status": "PASS"
+        },
+        "risk_scoring": {
+          "status": "PASS",
+          "confidence": 75.0
+        },
+        "delay_prediction": {
+          "status": "PASS",
+          "confidence": 68.0
+        },
+        "recommendations": {
+          "status": "PASS",
+          "count": 4
+        },
+        "explanations": {
+          "status": "PASS",
+          "factors_count": 3
+        },
+        "output_formatting": {
+          "status": "PASS"
+        }
+      },
+      "status": "PASS",
+      "pipeline_outputs": {
+        "api_format": {
+          "summary": "Sample Construction Project: Medium Risk (42% likelihood). Based on historical patterns, this project has some risk of delays. Plan contingencies.",
+          "confidence": {
+            "level": "Medium Confidence",
+            "percentage": "75%"
+          },
+          "key_factors": [
+            "Similar past projects experienced delays",
+            "Project complexity is above average for this type",
+            "Resource allocation patterns match at-risk projects"
+          ],
+          "recommendations": [
+            "Add 10-15% time buffer to schedule",
+            "Assign dedicated project manager",
+            "Plan weekly risk reviews",
+            "Identify key dependencies early"
+          ],
+          "caveats": [
+            "Predictions based on historical project data",
+            "Cannot predict external factors (weather, supply chain disruptions)",
+            "Actual performance depends on execution and management",
+            "Model assumes similar resource availability as historical projects"
+          ],
+          "note": "This explanation uses plain language and business context. All recommendations should be evaluated by project management before implementation."
+        }
+      }
+    },
+    "3_explainability": {
+      "name": "Explainability & Human Trust",
+      "checks": {
+        "plain_language": {
+          "status": "PASS"
+        },
+        "feature_references": {
+          "status": "PASS",
+          "factor_count": 3
+        },
+        "confidence": {
+          "status": "PASS",
+          "level": "Medium Confidence",
+          "percentage": 80.0
+        },
+        "caveats": {
+          "status": "PASS",
+          "count": 4
+        },
+        "recommendations": {
+          "status": "PASS",
+          "count": 5
+        }
+      },
+      "status": "PASS"
+    },
+    "4_production_behavior": {
+      "name": "Production Behavior",
+      "checks": {
+        "missing_data": {
+          "status": "PASS"
+        },
+        "out_of_range": {
+          "status": "PASS"
+        },
+        "error_messages": {
+          "status": "PASS"
+        },
+        "silent_failures": {
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    },
+    "5_integration_surface": {
+      "name": "Integration Surface Test",
+      "checks": {
+        "api_generation": {
+          "status": "PASS"
+        },
+        "json_schema": {
+          "status": "PASS",
+          "fields": [
+            "project_id",
+            "risk_score",
+            "summary",
+            "confidence",
+            "key_factors",
+            "recommendations",
+            "caveats",
+            "note"
+          ]
+        },
+        "json_serialization": {
+          "status": "PASS",
+          "output_size_bytes": 1099
+        },
+        "field_types": {
+          "status": "PASS"
+        },
+        "external_consumer": {
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    },
+    "6_performance": {
+      "name": "Performance & Cost",
+      "checks": {
+        "inference_time": {
+          "status": "PASS",
+          "ms": 0.0
+        },
+        "batch_performance": {
+          "status": "PASS",
+          "total_seconds": 0.0,
+          "avg_per_inference_ms": 0.0
+        },
+        "slowest_stage": {
+          "status": "PASS",
+          "stage": "explain_risk_score",
+          "ms_per_call": 0.0
+        },
+        "memory_growth": {
+          "status": "PASS",
+          "growth_mb": 0.0
+        },
+        "cost": {
+          "status": "PASS",
+          "model": "CPU-bound, no external APIs"
+        }
+      },
+      "status": "PASS",
+      "metrics": {
+        "single_inference_ms": 0.0,
+        "batch_avg_ms": 0.0,
+        "cost_estimate": {
+          "projects_per_month": 1000,
+          "avg_inference_ms": 0.0,
+          "total_compute_hours": 0.0,
+          "estimated_cost_per_month": "Minimal (CPU bound, no ML API calls)"
+        }
+      }
+    },
+    "7_security": {
+      "name": "Security & Data Isolation",
+      "checks": {
+        "hardcoded_secrets": {
+          "status": "PASS"
+        },
+        "env_vars": {
+          "status": "PASS"
+        },
+        "log_leakage": {
+          "status": "PASS"
+        },
+        "project_isolation": {
+          "status": "PASS"
+        },
+        "versioning": {
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    },
+    "8_reproducibility": {
+      "name": "Reproducibility",
+      "checks": {
+        "deterministic": {
+          "status": "PASS"
+        },
+        "version_tagging": {
+          "status": "PASS"
+        },
+        "demo_mode": {
+          "status": "PASS"
+        },
+        "ci_compatibility": {
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    },
+    "9_customer_trial": {
+      "name": "Customer Trial Simulation",
+      "checks": {
+        "easy_setup": {
+          "status": "PASS",
+          "scripts": [
+            "start.ps1",
+            "start.sh",
+            "bootstrap.ps1",
+            "bootstrap.sh"
+          ]
+        },
+        "demo_data": {
+          "status": "PASS",
+          "projects": 5
+        },
+        "plain_output": {
+          "status": "PASS"
+        },
+        "actionable_insights": {
+          "status": "PASS",
+          "count": 4
+        },
+        "value_vs_spreadsheet": {
+          "status": "PASS"
+        }
+      },
+      "status": "PASS"
+    }
+  },
+  "blocking_issues": [],
+  "non_blocking_improvements": [],
+  "overall_status": "PASS",
+  "blocking_issues_count": 0,
+  "non_blocking_improvements_count": 0,
+  "confidence_level": 95,
+  "customer_trial_ready": true
+}

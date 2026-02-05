@@ -2,6 +2,11 @@ from flask import Flask, request
 from flask_cors import CORS
 from app.routes.project_delay import project_delay_bp
 from app.api import api_bp
+try:
+    from app.phase16_api import schedule_bp
+    PHASE16_AVAILABLE = True
+except ImportError:
+    PHASE16_AVAILABLE = False
 import json
 import os
 import sys
@@ -71,6 +76,11 @@ LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
 # Register blueprints
 app.register_blueprint(project_delay_bp)
 app.register_blueprint(api_bp)
+if PHASE16_AVAILABLE:
+    app.register_blueprint(schedule_bp)
+    logger.info("Phase 16 (Schedule Dependencies) enabled")
+else:
+    logger.warning("Phase 16 (Schedule Dependencies) not available")
 
 
 @app.route('/health', methods=['GET'])

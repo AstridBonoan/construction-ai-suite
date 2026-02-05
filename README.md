@@ -1,8 +1,33 @@
 ## Development
 
-This repository contains scripts and services for the Construction AI Suite.
+This repository contains scripts and services for the Construction AI Suite, including comprehensive production hardening in Phase 14.
 
-- `scripts/ci_checks.py` - CI/pre-commit script to detect plaintext `api_key`/`token` in `configs/`.
+### Phase Status
+
+| Phase | Name | Status |
+|-------|------|--------|
+| 9 | Risk Intelligence & Anomaly Detection | ✅ Complete |
+| 10-13 | Recommendations, Feedback, Governance | ✅ Complete |
+| **14** | **Production Hardening & Stability** | **✅ Complete** |
+
+### Phase 14: Production Hardening
+
+Phase 14 implements comprehensive production hardening to ensure the system is stable, debuggable, recoverable, and safe for real usage. Key features:
+
+- **Error Handling**: Application never crashes silently; all errors are captured and logged
+- **Structured Logging**: JSON logs with full context for debugging and monitoring
+- **Data Validation**: All inputs validated before reaching models
+- **Model Safety**: Versioning, locking, and explicit control over model updates
+- **Performance Monitoring**: Memory and resource tracking with automatic alerting
+- **Security Auditing**: Credential detection, environment validation, and access controls
+- **Phase Completion**: Full E2E testing and failure scenario verification
+
+**Integration**: See [PHASE_14_INTEGRATION_GUIDE.md](PHASE_14_INTEGRATION_GUIDE.md) for setup and usage instructions.
+
+### Key Files
+
+- `scripts/ci_checks.py` - CI/pre-commit script to detect plaintext `api_key`/`token` in `configs/`
+- `backend/app/phase14_*.py` - Phase 14 modules (errors, logging, validation, model_safety, performance, security, verification)
 
 ### Installing Git Hooks
 

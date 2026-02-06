@@ -7,6 +7,11 @@ try:
     PHASE16_AVAILABLE = True
 except ImportError:
     PHASE16_AVAILABLE = False
+try:
+    from app.phase23_alert_scheduler import initialize_alert_scheduler, shutdown_alert_scheduler
+    PHASE23_ALERT_SCHEDULER_AVAILABLE = True
+except ImportError:
+    PHASE23_ALERT_SCHEDULER_AVAILABLE = False
 import json
 import os
 import sys
@@ -82,6 +87,22 @@ if PHASE16_AVAILABLE:
 else:
     logger.warning("Phase 16 (Schedule Dependencies) not available")
 
+# Initialize Phase 23 Alert Scheduler
+if PHASE23_ALERT_SCHEDULER_AVAILABLE:
+    try:
+        initialize_alert_scheduler()
+        logger.info("Phase 23 Alert Scheduler initialized successfully")
+        
+        # Register shutdown handler
+        def shutdown_alerts():
+            shutdown_alert_scheduler()
+        
+        app.teardown_appcontext(lambda e: shutdown_alerts())
+    except Exception as e:
+        logger.error(f"Failed to initialize Phase 23 Alert Scheduler: {str(e)}")
+else:
+    logger.warning("Phase 23 Alert Scheduler not available")
+
 
 @app.route('/health', methods=['GET'])
 def health_check():
@@ -153,6 +174,10 @@ if __name__ == "__main__":
         print("  Phase 14: ✓ Production Hardening Available")
     else:
         print("  Phase 14: ⚠ Production Hardening Not Available (OK for demo)")
+    if PHASE23_ALERT_SCHEDULER_AVAILABLE:
+        print("  Phase 23: ✓ Real-Time Alert Service Available")
+    else:
+        print("  Phase 23: ⚠ Real-Time Alert Service Not Available")
     print()
     print("  Endpoints:")
     print("    • Health Check: http://localhost:5000/health")

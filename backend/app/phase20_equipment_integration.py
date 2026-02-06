@@ -23,7 +23,7 @@ def _score_to_tier(score: float) -> str:
     return "minimal"
 
 
-def feed_equipment_to_core_risk_engine(intel: EquipmentIntelligence) -> None:
+def feed_equipment_to_core_risk_engine(intel: EquipmentIntelligence) -> Dict[str, Any]:
     """Feed equipment intelligence into the core risk engine (Feature 1)."""
     payload = {
         "source": "equipment_maintenance_phase20",
@@ -53,17 +53,21 @@ def feed_equipment_to_core_risk_engine(intel: EquipmentIntelligence) -> None:
             except ImportError:
                 continue
         
-        if core_mod and hasattr(core_mod, "update_project_risk"):
+        if core_mod and hasattr(core_mod, "register_equipment_risk"):
             try:
-                core_mod.update_project_risk(payload)
+                result = core_mod.register_equipment_risk(payload)
                 logger.info("Equipment intelligence fed to core risk engine")
-            except Exception:
+                return result
+            except Exception as e:
                 logger.exception("Failed to call core risk engine with equipment payload")
+                return {"status": "error", "error": str(e)}
         else:
             logger.debug("Core risk engine not found; logging equipment payload")
             logger.debug(payload)
-    except Exception:
+            return {"status": "logged", "source": "phase20_equipment"}
+    except Exception as e:
         logger.exception("Unexpected error while integrating equipment intelligence")
+        return {"status": "error", "error": str(e)}
 
 
 def create_equipment_risk_update(intel: EquipmentIntelligence) -> Dict[str, Any]:

@@ -8,6 +8,9 @@ import ScheduleDelaysChart from './components/ScheduleDelaysChart'
 import CostVsScheduleChart from './components/CostVsScheduleChart'
 import FinancialOverviewPanel from './components/FinancialOverviewPanel'
 import FilterPanel from './components/FilterPanel'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import MondayOnboarding from './components/MondayOnboarding'
+import OAuthHandler from './components/OAuthHandler'
 import AlertFeed from './components/AlertFeed'
 import ExplainabilityPanel from './components/ExplainabilityPanel'
 import RiskFactorBreakdown from './components/RiskFactorBreakdown'
@@ -15,7 +18,7 @@ import styles from './App.module.css'
 
 const BACKEND_URL = 'http://localhost:5000/phase9/outputs'
 
-const App: React.FC = () => {
+const MainDashboard: React.FC = () => {
   const [mode, setMode] = React.useState<'mock' | 'live'>('mock')
   const [outputs, setOutputs] = React.useState<Phase9Output[] | null>(null)
   const [loading, setLoading] = React.useState(false)
@@ -66,7 +69,11 @@ const App: React.FC = () => {
         </div>
         <div className={styles.headerControls}>
           <button
-            onClick={() => setMode('mock')}
+            onClick={() => {
+              setMode('mock')
+              window.location.href = '/monday/onboard'
+            }}
+            data-testid="continue-demo"
             className={`${styles.modeButton} ${mode === 'mock' ? styles.active : ''}`}
           >
             📊 Demo Mode
@@ -250,6 +257,19 @@ const App: React.FC = () => {
         </section>
       </main>
     </div>
+  )
+}
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/monday/onboard" element={<MondayOnboarding />} />
+        <Route path="/monday/oauth/callback" element={<OAuthHandler />} />
+        <Route path="/" element={<MainDashboard />} />
+        <Route path="*" element={<MainDashboard />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

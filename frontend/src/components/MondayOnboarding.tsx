@@ -23,7 +23,7 @@ export default function MondayOnboarding() {
     syncTasks: true,
     syncBudgets: true,
     syncSchedule: true,
-    pushRisk scores: false,
+    pushRiskScores: false,
   });
 
   const tenantId = localStorage.getItem('monday_tenant_id') || 'demo_tenant_' + Date.now();
@@ -188,8 +188,7 @@ export default function MondayOnboarding() {
                     <div
                       key={board.id}
                       className={`${styles.boardCard} ${selectedBoard === board.id ? styles.selected : ''}`}
-                      onClick={() => handleBoardSelect(board.id)}
-                    >
+                      onClick={() => handleBoardSelect(board.id)}                      data-testid={`board-card-${idx}`}                    >
                       <h3>{board.name}</h3>
                       <p>{board.description || 'No description'}</p>
                       <div className={styles.meta}>

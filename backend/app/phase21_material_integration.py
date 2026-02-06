@@ -46,13 +46,27 @@ def feed_material_to_core_risk_engine(intelligence: MaterialIntelligence) -> Dic
     }
     
     try:
-        from core_risk_engine import register_material_risk
-        result = register_material_risk(payload)
-        logger.info(f"Phase 21 material risks registered with core engine: {result}")
-        return result
-    except ImportError:
-        logger.warning("Core risk engine not available; material risk will be logged locally")
-        return {"status": "logged", "source": "phase_21_material_ordering"}
+        import importlib
+        core_mod = None
+        candidates = (
+            "backend.app.ml.core_risk_engine",
+            "backend.app.core_risk_engine",
+            "core_risk_engine",
+        )
+        for candidate in candidates:
+            try:
+                core_mod = importlib.import_module(candidate)
+                break
+            except ImportError:
+                continue
+        
+        if core_mod and hasattr(core_mod, "register_material_risk"):
+            result = core_mod.register_material_risk(payload)
+            logger.info(f"Phase 21 material risks registered with core engine: {result}")
+            return result
+        else:
+            logger.warning("Core risk engine not available; material risk will be logged locally")
+            return {"status": "logged", "source": "phase_21_material_ordering"}
     except Exception as e:
         logger.error(f"Error feeding material risks to core engine: {e}")
         return {"status": "error", "error": str(e)}

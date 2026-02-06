@@ -11,7 +11,7 @@ from phase18_workforce_types import WorkforceIntelligence
 logger = logging.getLogger(__name__)
 
 
-def feed_workforce_to_core_risk_engine(intelligence: WorkforceIntelligence) -> None:
+def feed_workforce_to_core_risk_engine(intelligence: WorkforceIntelligence) -> Dict[str, Any]:
     """
     Feed workforce intelligence into the core AI risk engine (Feature 1).
     
@@ -23,6 +23,9 @@ def feed_workforce_to_core_risk_engine(intelligence: WorkforceIntelligence) -> N
     
     Args:
         intelligence: WorkforceIntelligence object with project-level summary
+        
+    Returns:
+        Dict with status and result from core engine or error info
     """
     
     # Prepare structured output for the core risk engine
@@ -47,20 +50,24 @@ def feed_workforce_to_core_risk_engine(intelligence: WorkforceIntelligence) -> N
             except ImportError:
                 continue
         
-        if core_mod and hasattr(core_mod, "update_project_risk"):
+        if core_mod and hasattr(core_mod, "register_workforce_risk"):
             try:
-                # Call the core engine with the structured payload
-                core_mod.update_project_risk(structured_output)
+                # Call the specific workforce handler
+                result = core_mod.register_workforce_risk(structured_output)
                 logger.info("Workforce intelligence integrated with core risk engine successfully")
+                return result
             except Exception as e:
                 logger.exception(f"Core risk engine call failed: {e}")
                 logger.debug(f"Payload was: {structured_output}")
+                return {"status": "error", "error": str(e)}
         else:
             logger.debug("No core risk engine found; logging output only.")
             logger.debug(f"Workforce intelligence: {structured_output}")
+            return {"status": "logged", "source": "phase18_workforce"}
     
     except Exception as e:
         logger.exception(f"Unexpected error while attempting to feed core risk engine: {e}")
+        return {"status": "error", "error": str(e)}
 
 
 def _prepare_workforce_payload(intelligence: WorkforceIntelligence) -> Dict[str, Any]:

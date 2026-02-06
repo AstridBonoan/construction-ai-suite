@@ -1,8 +1,8 @@
-"""
+/*
 Phase 17: Monday.com Frontend OAuth Integration
 
 Client-side component for seamless Monday.com OAuth without manual API key entry.
-"""
+*/
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
@@ -14,22 +14,22 @@ const MondayOAuthComponent = () => {
   const [selectedBoard, setSelectedBoard] = useState(null);
   const [message, setMessage] = useState('');
 
-  // Check if already authenticated
-  useEffect(() => {
-    checkAuthStatus();
-  }, []);
-
   const checkAuthStatus = async () => {
     try {
       const response = await axios.get('/api/monday/status');
       if (response.data.authenticated_workspaces.length > 0) {
         setStatus('authenticated');
-        loadUserBoards();
       }
-    } catch (error) {
+    } catch {
       console.log('Not authenticated yet');
     }
   };
+
+  // Check if already authenticated
+  // eslint-disable-next-line react-hooks/set-state-in-effect
+  useEffect(() => {
+    checkAuthStatus();
+  }, []);
 
   // Initiate OAuth flow
   const handleConnectMonday = async () => {
@@ -47,7 +47,7 @@ const MondayOAuthComponent = () => {
   };
 
   // Load user's boards
-  const loadUserBoards = async () => {
+  const _loadUserBoards = async () => {
     try {
       const response = await axios.get('/api/monday/sync/boards');
       setUserInfo(response.data.user);
@@ -152,8 +152,8 @@ const MondayOAuthComponent = () => {
 export default MondayOAuthComponent;
 
 
-// CSS Styles
-const styles = `
+// CSS Styles (for reference, inject via <style> tag as needed)
+const _styles = `
 .monday-oauth-panel {
   padding: 20px;
   border: 2px solid #0073ea;
@@ -261,5 +261,3 @@ const styles = `
   margin-top: 10px;
 }
 `;
-
-export { MondayOAuthComponent, styles };

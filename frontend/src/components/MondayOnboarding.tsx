@@ -45,12 +45,14 @@ export default function MondayOnboarding() {
       });
   };
 
-  // Step 2: Boards selection (after OAuth)
+  // Step 2: Boards selection (after OAuth or in demo mode)
   useEffect(() => {
-    if (isAuthenticated && step === 'boards') {
+    // Load boards when entering board selection step, regardless of authentication status
+    // (demo mode doesn't require authentication)
+    if (step === 'boards') {
       loadBoards();
     }
-  }, [step, isAuthenticated]);
+  }, [step]);
 
   const loadBoards = async () => {
     setLoading(true);
@@ -69,6 +71,7 @@ export default function MondayOnboarding() {
   };
 
   const handleBoardSelect = async (boardId: string) => {
+    console.log(`[DEBUG] Board selected: ${boardId}`);
     setSelectedBoard(boardId);
     setLoading(true);
 
@@ -184,18 +187,21 @@ export default function MondayOnboarding() {
                 {boards.length === 0 ? (
                   <p className={styles.empty}>No boards found. Please authorize first.</p>
                 ) : (
-                  boards.map((board) => (
-                    <div
+                  boards.map((board, idx) => (
+                    <button
                       key={board.id}
                       className={`${styles.boardCard} ${selectedBoard === board.id ? styles.selected : ''}`}
-                      onClick={() => handleBoardSelect(board.id)}                      data-testid={`board-card-${idx}`}                    >
+                      onClick={() => handleBoardSelect(board.id)}
+                      data-testid={`board-card-${idx}`}
+                      style={{ background: 'none', border: 'none', padding: 0, cursor: 'pointer', width: '100%', textAlign: 'left' }}
+                    >
                       <h3>{board.name}</h3>
                       <p>{board.description || 'No description'}</p>
                       <div className={styles.meta}>
                         <span>{board.groups || 0} groups</span>
                         <span>{board.items || 0} items</span>
                       </div>
-                    </div>
+                    </button>
                   ))
                 )}
               </div>
@@ -216,10 +222,12 @@ export default function MondayOnboarding() {
               </>
             )}
 
+            {/* Next button enables when at least one board is selected */}
             <button
               className={styles.primary}
               onClick={() => setStep('config')}
               disabled={!selectedBoard}
+              data-testid="next-configure-sync-btn"
             >
               Next: Configure Sync
             </button>
@@ -263,8 +271,8 @@ export default function MondayOnboarding() {
               <label className={styles.checkbox}>
                 <input
                   type="checkbox"
-                  checked={syncConfig.pushRiskscores}
-                  onChange={(e) => setSyncConfig({ ...syncConfig, pushRiskscores: e.target.checked })}
+                  checked={syncConfig.pushRiskScores}
+                  onChange={(e) => setSyncConfig({ ...syncConfig, pushRiskScores: e.target.checked })}
                 />
                 <span>Push Risk Scores & Alerts Back to Monday</span>
               </label>

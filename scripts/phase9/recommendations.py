@@ -65,6 +65,54 @@ def recommendations_from(features: Dict[str, float], risk_score: float, breakdow
             "reason": "High recent weather volatility; increase contingency planning.",
         })
 
+    # Phase 20 - Workforce recommendations
+    wf_unrel = features.get("workforce_unreliability_score", 0.0)
+    try:
+        wf_f = float(wf_unrel)
+    except Exception:
+        wf_f = 0.0
+    if wf_f >= 0.4:
+        recs.append({
+            "id": "improve-attendance",
+            "title": "Improve workforce attendance",
+            "reason": "Detected workforce unreliability; consider incentives and backup crews.",
+        })
+    wf_pen = features.get("workforce_pattern_penalty", 0.0)
+    try:
+        wf_pen_f = float(wf_pen)
+    except Exception:
+        wf_pen_f = 0.0
+    if wf_pen_f >= 0.2:
+        recs.append({
+            "id": "address-patterns",
+            "title": "Address repeated no-shows",
+            "reason": "Pattern-based penalties detected; perform crew-level audits and retraining.",
+        })
+
+    # Phase 21 - Compliance & Safety recommendations
+    incident_p = features.get("safety_incident_probability", 0.0)
+    try:
+        incident_f = float(incident_p)
+    except Exception:
+        incident_f = 0.0
+    if incident_f >= 0.25:
+        recs.append({
+            "id": "safety-remediation",
+            "title": "Implement safety remediation",
+            "reason": "Elevated incident probability; prioritize safety interventions and inspections.",
+        })
+    comp_exp = features.get("compliance_exposure_score", 0.0)
+    try:
+        comp_f = float(comp_exp)
+    except Exception:
+        comp_f = 0.0
+    if comp_f >= 0.3:
+        recs.append({
+            "id": "prepare-audit",
+            "title": "Prepare for potential compliance citations",
+            "reason": "Compliance exposure is high; ensure documentation and corrective actions.",
+        })
+
     # Always include a simple next-step recommendation
     recs.append({
         "id": "monitor",

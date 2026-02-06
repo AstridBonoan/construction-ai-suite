@@ -1,14 +1,22 @@
-from flask import Blueprint, request, jsonify
+from flask import Blueprint, request, jsonify, make_response
 
 api_bp = Blueprint("api", __name__)
 
 
-@api_bp.route("/api/analyze_project", methods=["POST"])
+@api_bp.route("/api/analyze_project", methods=["POST", "OPTIONS"])
 def analyze_project():
     """Simple mock analyze endpoint used by the frontend during development.
 
     Returns a deterministic mock analysis based on the incoming payload.
     """
+    # Handle CORS preflight
+    if request.method == "OPTIONS":
+        resp = make_response(('', 204))
+        resp.headers["Access-Control-Allow-Origin"] = "*"
+        resp.headers["Access-Control-Allow-Methods"] = "POST, OPTIONS"
+        resp.headers["Access-Control-Allow-Headers"] = "Content-Type"
+        return resp
+
     try:
         payload = request.get_json(force=True)
     except Exception:
@@ -37,4 +45,7 @@ def analyze_project():
         "delay_confidence": {"level": "low", "percentage": "40%"},
     }
 
-    return jsonify(response), 200
+    resp = jsonify(response)
+    # Ensure CORS headers are present for direct requests (bypass via proxy)
+    resp.headers["Access-Control-Allow-Origin"] = "*"
+    return resp, 200

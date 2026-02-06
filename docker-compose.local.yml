@@ -2,6 +2,7 @@ services:
   backend:
     build:
       context: ./backend
+      dockerfile: Dockerfile
     image: construction-ai-suite-backend:local
     container_name: construction_ai_backend
     ports:
@@ -20,6 +21,7 @@ services:
   frontend:
     build:
       context: ./frontend_phase10
+      dockerfile: Dockerfile
     image: construction-ai-suite-frontend:local
     container_name: construction_ai_frontend
     depends_on:
@@ -30,10 +32,3 @@ services:
     environment:
       - NGINX_HOST=0.0.0.0
     restart: unless-stopped
-
-# Notes:
-# - Frontend Dockerfile in `frontend_phase10` should produce a static site served by nginx
-#   on container port 80. We map host port 5173 to container port 80 so the dev URL
-#   http://localhost:5173 continues to work with compose.
-# - Backend reads canonical outputs from the mounted `./reports` directory.
-

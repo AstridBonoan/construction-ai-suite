@@ -35,6 +35,11 @@ try:
     PHASE23_ALERT_SCHEDULER_AVAILABLE = True
 except ImportError:
     PHASE23_ALERT_SCHEDULER_AVAILABLE = False
+try:
+    from app.oauth.monday_routes import monday_bp
+    MONDAY_INTEGRATION_AVAILABLE = True
+except ImportError:
+    MONDAY_INTEGRATION_AVAILABLE = False
 import json
 import os
 import sys
@@ -154,6 +159,13 @@ if PHASE22_AVAILABLE:
 else:
     logger.warning("Phase 22 (Real-Time IoT & Site Conditions) not available")
 
+# Register Monday.com integration
+if MONDAY_INTEGRATION_AVAILABLE:
+    app.register_blueprint(monday_bp)
+    logger.info("Monday.com Integration (Phase 2.5) enabled")
+else:
+    logger.warning("Monday.com Integration (Phase 2.5) not available")
+
 # Initialize Phase 23 Alert Scheduler
 if PHASE23_ALERT_SCHEDULER_AVAILABLE:
     try:
@@ -257,6 +269,10 @@ if __name__ == "__main__":
         print("  Phase 23: ✓ Real-Time Alert Service Available")
     else:
         print("  Phase 23: ⚠ Real-Time Alert Service Not Available")
+    if MONDAY_INTEGRATION_AVAILABLE:
+        print("  Phase 2.5: ✓ Monday.com Integration Available")
+    else:
+        print("  Phase 2.5: ⚠ Monday.com Integration Not Available")
     print()
     print("  Endpoints:")
     print("    • Health Check: http://localhost:5000/health")

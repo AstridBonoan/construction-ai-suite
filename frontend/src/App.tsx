@@ -4,6 +4,9 @@ import { Phase9Output } from './types/phase9'
 import KPICard from './components/KPICard'
 import ChartCard from './components/ChartCard'
 import RiskTrendChart from './components/RiskTrendChart'
+import ScheduleDelaysChart from './components/ScheduleDelaysChart'
+import CostVsScheduleChart from './components/CostVsScheduleChart'
+import FinancialOverviewPanel from './components/FinancialOverviewPanel'
 import FilterPanel from './components/FilterPanel'
 import AlertFeed from './components/AlertFeed'
 import ExplainabilityPanel from './components/ExplainabilityPanel'
@@ -136,22 +139,21 @@ const App: React.FC = () => {
           <ChartCard title="Risk Trend Over Time" subtitle="Last 30 days">
             <RiskTrendChart />
           </ChartCard>
-          <ChartCard title="Schedule Delays by Phase" subtitle="Task dependencies">
-            <div className={styles.placeholderChart}>
-              <p>Schedule delay visualization placeholder</p>
-              <p>8 tasks delayed | 12 days average</p>
-            </div>
-          </ChartCard>
+          <div style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '20px' }}>
+            <ScheduleDelaysChart />
+          </div>
         </section>
 
         <section className={styles.chartsGrid}>
-          <ChartCard title="Cost vs Schedule Impact">
-            <div className={styles.placeholderChart}>
-              <p>Dual-axis: Cost variance vs. Schedule delays</p>
-              <p>Correlation: {(Math.random() * 0.3 + 0.7).toFixed(2)}</p>
-            </div>
-          </ChartCard>
+          <div style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '20px' }}>
+            <CostVsScheduleChart />
+          </div>
           <AlertFeed />
+        </section>
+
+        {/* Financial Overview Panel */}
+        <section className={styles.fullWidthSection}>
+          <FinancialOverviewPanel />
         </section>
 
         {/* Insights Section */}

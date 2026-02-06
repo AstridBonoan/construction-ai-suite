@@ -108,6 +108,12 @@
   gap: 24px;
 }
 
+.fullWidthSection {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
 .placeholderChart {
   display: flex;
   flex-direction: column;

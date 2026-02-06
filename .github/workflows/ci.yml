@@ -27,8 +27,8 @@ jobs:
       - name: Build frontend image (local)
         uses: docker/build-push-action@v4
         with:
-          context: ./frontend_phase10
-          file: ./frontend_phase10/Dockerfile
+          context: ./frontend
+          file: ./frontend/Dockerfile
           tags: construction-ai-suite-frontend:ci
           push: false
 
@@ -63,7 +63,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: Install frontend deps
         run: |
-          cd frontend_phase10
+          cd frontend
           npm install --legacy-peer-deps
       - name: Build frontend
         run: |
@@ -82,7 +82,7 @@ jobs:
           node-version: 18
       - name: Install deps
         run: |
-          cd frontend_phase10
+          cd frontend
           npm install --legacy-peer-deps
       - name: Build frontend
         run: |
@@ -90,4 +90,4 @@ jobs:
           npm run build
       - name: Verify build output
         run: |
-          if [ -d "frontend_phase10/dist" ]; then echo "✓ Frontend build successful"; else echo "✗ Build failed"; exit 1; fi
+          if [ -d "frontend/dist" ]; then echo "✓ Frontend build successful"; else echo "✗ Build failed"; exit 1; fi

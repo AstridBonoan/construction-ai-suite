@@ -1,0 +1,68 @@
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart {
+  width: 100%;
+  height: auto;
+  max-width: 600px;
+}
+
+.gridLine {
+  stroke: #f3f4f6;
+  stroke-width: 1;
+  stroke-dasharray: 4 4;
+}
+
+.gridLabel {
+  font-size: 12px;
+  fill: #9ca3af;
+  font-weight: 500;
+}
+
+.xLabel {
+  font-size: 12px;
+  fill: #6b7280;
+  font-weight: 500;
+}
+
+.line {
+  filter: drop-shadow(0 2px 4px rgba(239, 68, 68, 0.1));
+}
+
+.point {
+  fill: #ef4444;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.point:hover {
+  filter: drop-shadow(0 2px 4px rgba(239, 68, 68, 0.4));
+}
+
+.tooltip {
+  fill: white;
+  stroke: #ef4444;
+  stroke-width: 1;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tooltipText {
+  font-size: 13px;
+  font-weight: 700;
+  fill: #ef4444;
+}
+
+.tooltipDate {
+  font-size: 11px;
+  fill: #6b7280;
+}
+
+@media (max-width: 768px) {
+  .chart {
+    max-width: 100%;
+  }
+}

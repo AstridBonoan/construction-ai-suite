@@ -3,10 +3,20 @@ from flask_cors import CORS
 from app.routes.project_delay import project_delay_bp
 from app.api import api_bp
 try:
+    # Initialize DB (if available) and register models
+    from app.models.tenant_models import db as models_db  # noqa: E402
+except Exception:
+    models_db = None
+try:
     from app.phase16_api import schedule_bp
     PHASE16_AVAILABLE = True
 except ImportError:
     PHASE16_AVAILABLE = False
+try:
+    from app.phase23_alert_scheduler import initialize_alert_scheduler, shutdown_alert_scheduler
+    PHASE23_ALERT_SCHEDULER_AVAILABLE = True
+except ImportError:
+    PHASE23_ALERT_SCHEDULER_AVAILABLE = False
 import json
 import os
 import sys
@@ -28,6 +38,20 @@ except ImportError:
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Configure SQLAlchemy from DATABASE_URL when present
+database_url = os.environ.get('DATABASE_URL')
+if database_url:
+    app.config['SQLALCHEMY_DATABASE_URI'] = database_url
+    app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+    if models_db:
+        try:
+            models_db.init_app(app)
+            # Expose db on app for convenience in scripts/tests
+            app.db = models_db
+        except Exception:
+            logger = logging.getLogger(__name__)
+            logger.exception('Failed to initialize SQLAlchemy')
 
 # Setup logging
 if PHASE14_AVAILABLE:
@@ -76,11 +100,35 @@ LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
 # Register blueprints
 app.register_blueprint(project_delay_bp)
 app.register_blueprint(api_bp)
+# Register Feature 13 blueprints if available
+try:
+    from app.feature13_monday_oauth import bp as feature13_oauth_bp
+    from app.feature13_admin import bp as feature13_admin_bp
+    app.register_blueprint(feature13_oauth_bp)
+    app.register_blueprint(feature13_admin_bp)
+except Exception:
+    logger.warning('Feature 13 blueprints not available or failed to register')
 if PHASE16_AVAILABLE:
     app.register_blueprint(schedule_bp)
     logger.info("Phase 16 (Schedule Dependencies) enabled")
 else:
     logger.warning("Phase 16 (Schedule Dependencies) not available")
+
+# Initialize Phase 23 Alert Scheduler
+if PHASE23_ALERT_SCHEDULER_AVAILABLE:
+    try:
+        initialize_alert_scheduler()
+        logger.info("Phase 23 Alert Scheduler initialized successfully")
+        
+        # Register shutdown handler
+        def shutdown_alerts():
+            shutdown_alert_scheduler()
+        
+        app.teardown_appcontext(lambda e: shutdown_alerts())
+    except Exception as e:
+        logger.error(f"Failed to initialize Phase 23 Alert Scheduler: {str(e)}")
+else:
+    logger.warning("Phase 23 Alert Scheduler not available")
 
 
 @app.route('/health', methods=['GET'])
@@ -153,6 +201,10 @@ if __name__ == "__main__":
         print("  Phase 14: ✓ Production Hardening Available")
     else:
         print("  Phase 14: ⚠ Production Hardening Not Available (OK for demo)")
+    if PHASE23_ALERT_SCHEDULER_AVAILABLE:
+        print("  Phase 23: ✓ Real-Time Alert Service Available")
+    else:
+        print("  Phase 23: ⚠ Real-Time Alert Service Not Available")
     print()
     print("  Endpoints:")
     print("    • Health Check: http://localhost:5000/health")

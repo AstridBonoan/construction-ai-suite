@@ -20,7 +20,7 @@ def test_admin_endpoints_with_jwt_admin():
     # Create JWT with admin role
     payload = {'sub': 'u-1', 'roles': ['admin'], 'account': 'ws-test'}
     token = make_session_cookie(payload)
-    client.set_cookie('localhost', 'saas_session', token)
+    client.set_cookie('saas_session', token)
 
     # With DB not configured, endpoint should return not_configured 500
     r = client.get('/api/saas/admin/tenants')
@@ -35,7 +35,7 @@ def test_revoke_requires_admin():
     # Non-admin JWT
     payload = {'sub': 'u-2', 'roles': ['viewer'], 'account': 'ws-test'}
     token = make_session_cookie(payload)
-    client.set_cookie('localhost', 'saas_session', token)
+    client.set_cookie('saas_session', token)
 
     r = client.post('/api/saas/admin/revoke/1')
     assert r.status_code == 403

@@ -9,8 +9,12 @@ def app():
     app.register_blueprint(oauth_bp)
     return app
 
-def test_login_redirect(client, app):
+@pytest.fixture
+def client(app):
+    return app.test_client()
+
+def test_login_redirect(client):
     # Ensure the login endpoint redirects to monday auth
-    resp = app.test_client().get('/api/saas/auth/monday/login')
+    resp = client.get('/api/saas/auth/monday/login')
     assert resp.status_code in (302, 301)
     assert 'monday.com' in resp.location

@@ -67,7 +67,7 @@ jobs:
           npm install --legacy-peer-deps
       - name: Build frontend
         run: |
-          cd frontend_phase10
+          cd frontend
           npm run build
 
   frontend-e2e:
@@ -86,7 +86,7 @@ jobs:
           npm install --legacy-peer-deps
       - name: Build frontend
         run: |
-          cd frontend_phase10
+          cd frontend
           npm run build
       - name: Verify build output
         run: |

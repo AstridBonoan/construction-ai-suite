@@ -40,6 +40,8 @@ def update_project_risk(payload: Dict[str, Any]) -> Dict[str, Any]:
         return register_equipment_risk(payload)
     elif "material" in source.lower() or "phase21" in source.lower():
         return register_material_risk(payload)
+    elif "compliance" in source.lower() or "phase22" in source.lower():
+        return register_compliance_risk(payload)
     elif "schedule" in source.lower() or "phase16" in source.lower():
         return register_schedule_risk(payload)
     else:
@@ -133,6 +135,32 @@ def register_material_risk(payload: Dict[str, Any]) -> Dict[str, Any]:
     return {"status": "registered", "feature": "material"}
 
 
+def register_compliance_risk(payload: Dict[str, Any]) -> Dict[str, Any]:
+    """Register compliance & safety intelligence risk (Feature 7 / Phase 22)"""
+    project_id = payload.get("project_id", "unknown")
+    
+    if project_id not in risk_registry:
+        risk_registry[project_id] = {}
+    
+    risk_registry[project_id]["compliance"] = {
+        "source": "phase22_compliance_safety",
+        "compliance_risk_score": payload.get("compliance_risk_score", 0.0),
+        "shutdown_risk_score": payload.get("shutdown_risk_score", 0.0),
+        "active_violations": payload.get("active_violations", 0),
+        "critical_violations": payload.get("critical_violations", 0),
+        "compliance_risk_level": payload.get("compliance_risk_level", "low"),
+        "shutdown_risk_level": payload.get("shutdown_risk_level", "none"),
+        "estimated_fine_exposure": payload.get("estimated_fine_exposure", 0.0),
+        "audit_ready": payload.get("audit_ready", False),
+        "timestamp": datetime.now().isoformat()
+    }
+    
+    logger.info(f"Compliance risk registered for {project_id}: "
+                f"compliance={payload.get('compliance_risk_score', 0.0)}, "
+                f"shutdown={payload.get('shutdown_risk_score', 0.0)}")
+    return {"status": "registered", "feature": "compliance"}
+
+
 def register_schedule_risk(payload: Dict[str, Any]) -> Dict[str, Any]:
     """Register schedule delay propagation risk (Feature 2 / Phase 16)"""
     project_id = payload.get("project_id", "unknown")
@@ -209,6 +237,13 @@ def calculate_project_risk(project_id: str, base_ai_risk: float = 0.5) -> Dict[s
         risk_scores["material"] = features["material"].get("risk_score", 0.0)
         weights["material"] = 0.10
     
+    if "compliance" in features:
+        # Average compliance and shutdown risk scores
+        compliance_score = features["compliance"].get("compliance_risk_score", 0.0)
+        shutdown_score = features["compliance"].get("shutdown_risk_score", 0.0)
+        risk_scores["compliance"] = (compliance_score + shutdown_score) / 2.0
+        weights["compliance"] = 0.10
+    
     if "schedule" in features:
         # Use integration_risk if available, else use placeholder
         schedule_risk = features["schedule"].get("integration_risk", 
@@ -239,6 +274,7 @@ def calculate_project_risk(project_id: str, base_ai_risk: float = 0.5) -> Dict[s
             "subcontractor_risk": risk_scores.get("subcontractor"),
             "equipment_risk": risk_scores.get("equipment"),
             "material_risk": risk_scores.get("material"),
+            "compliance_risk": risk_scores.get("compliance"),
             "schedule_risk": risk_scores.get("schedule")
         },
         "weights": weights,

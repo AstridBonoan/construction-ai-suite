@@ -4,7 +4,13 @@ import { Phase9Output } from './types/phase9'
 import KPICard from './components/KPICard'
 import ChartCard from './components/ChartCard'
 import RiskTrendChart from './components/RiskTrendChart'
+import ScheduleDelaysChart from './components/ScheduleDelaysChart'
+import CostVsScheduleChart from './components/CostVsScheduleChart'
+import FinancialOverviewPanel from './components/FinancialOverviewPanel'
 import FilterPanel from './components/FilterPanel'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import MondayOnboarding from './components/MondayOnboarding'
+import OAuthHandler from './components/OAuthHandler'
 import AlertFeed from './components/AlertFeed'
 import ExplainabilityPanel from './components/ExplainabilityPanel'
 import RiskFactorBreakdown from './components/RiskFactorBreakdown'
@@ -12,7 +18,7 @@ import styles from './App.module.css'
 
 const BACKEND_URL = 'http://localhost:5000/phase9/outputs'
 
-const App: React.FC = () => {
+const MainDashboard: React.FC = () => {
   const [mode, setMode] = React.useState<'mock' | 'live'>('mock')
   const [outputs, setOutputs] = React.useState<Phase9Output[] | null>(null)
   const [loading, setLoading] = React.useState(false)
@@ -63,7 +69,11 @@ const App: React.FC = () => {
         </div>
         <div className={styles.headerControls}>
           <button
-            onClick={() => setMode('mock')}
+            onClick={() => {
+              setMode('mock')
+              window.location.href = '/monday/onboard'
+            }}
+            data-testid="continue-demo"
             className={`${styles.modeButton} ${mode === 'mock' ? styles.active : ''}`}
           >
             📊 Demo Mode
@@ -136,22 +146,21 @@ const App: React.FC = () => {
           <ChartCard title="Risk Trend Over Time" subtitle="Last 30 days">
             <RiskTrendChart />
           </ChartCard>
-          <ChartCard title="Schedule Delays by Phase" subtitle="Task dependencies">
-            <div className={styles.placeholderChart}>
-              <p>Schedule delay visualization placeholder</p>
-              <p>8 tasks delayed | 12 days average</p>
-            </div>
-          </ChartCard>
+          <div style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '20px' }}>
+            <ScheduleDelaysChart />
+          </div>
         </section>
 
         <section className={styles.chartsGrid}>
-          <ChartCard title="Cost vs Schedule Impact">
-            <div className={styles.placeholderChart}>
-              <p>Dual-axis: Cost variance vs. Schedule delays</p>
-              <p>Correlation: {(Math.random() * 0.3 + 0.7).toFixed(2)}</p>
-            </div>
-          </ChartCard>
+          <div style={{ background: 'white', border: '1px solid #e5e7eb', borderRadius: '8px', padding: '20px' }}>
+            <CostVsScheduleChart />
+          </div>
           <AlertFeed />
+        </section>
+
+        {/* Financial Overview Panel */}
+        <section className={styles.fullWidthSection}>
+          <FinancialOverviewPanel />
         </section>
 
         {/* Insights Section */}
@@ -248,6 +257,19 @@ const App: React.FC = () => {
         </section>
       </main>
     </div>
+  )
+}
+
+const App: React.FC = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/monday/onboard" element={<MondayOnboarding />} />
+        <Route path="/monday/oauth/callback" element={<OAuthHandler />} />
+        <Route path="/" element={<MainDashboard />} />
+        <Route path="*" element={<MainDashboard />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 

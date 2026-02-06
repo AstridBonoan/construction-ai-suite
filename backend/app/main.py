@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask, request, redirect
 from flask_cors import CORS
 from app.routes.project_delay import project_delay_bp
 try:
@@ -15,6 +15,21 @@ try:
     PHASE16_AVAILABLE = True
 except ImportError:
     PHASE16_AVAILABLE = False
+try:
+    from app.phase20_workforce_api import workforce_bp
+    PHASE20_AVAILABLE = True
+except ImportError:
+    PHASE20_AVAILABLE = False
+try:
+    from app.phase21_compliance_api import compliance_bp
+    PHASE21_AVAILABLE = True
+except ImportError:
+    PHASE21_AVAILABLE = False
+try:
+    from app.phase22_iot_api import iot_bp
+    PHASE22_AVAILABLE = True
+except ImportError:
+    PHASE22_AVAILABLE = False
 try:
     from app.phase23_alert_scheduler import initialize_alert_scheduler, shutdown_alert_scheduler
     PHASE23_ALERT_SCHEDULER_AVAILABLE = True
@@ -41,6 +56,9 @@ except ImportError:
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+
+# (moved earlier in file)
 
 # Configure SQLAlchemy from DATABASE_URL when present
 database_url = os.environ.get('DATABASE_URL')
@@ -118,6 +136,24 @@ if PHASE16_AVAILABLE:
 else:
     logger.warning("Phase 16 (Schedule Dependencies) not available")
 
+if PHASE20_AVAILABLE:
+    app.register_blueprint(workforce_bp)
+    logger.info("Phase 20 (Workforce Reliability) enabled")
+else:
+    logger.warning("Phase 20 (Workforce Reliability) not available")
+
+if PHASE21_AVAILABLE:
+    app.register_blueprint(compliance_bp)
+    logger.info("Phase 21 (Compliance & Safety) enabled")
+else:
+    logger.warning("Phase 21 (Compliance & Safety) not available")
+
+if PHASE22_AVAILABLE:
+    app.register_blueprint(iot_bp)
+    logger.info("Phase 22 (Real-Time IoT & Site Conditions) enabled")
+else:
+    logger.warning("Phase 22 (Real-Time IoT & Site Conditions) not available")
+
 # Initialize Phase 23 Alert Scheduler
 if PHASE23_ALERT_SCHEDULER_AVAILABLE:
     try:
@@ -143,6 +179,18 @@ def health_check():
         "version": "1.0.0",
         "demo_mode": DEMO_MODE
     }), 200, {'Content-Type': 'application/json'})
+
+
+# Small convenience route: redirect root to health to avoid 404 when browsing
+@app.route('/', methods=['GET'])
+def root_redirect():
+    return redirect('/health')
+
+
+# Serve a minimal empty response for favicon requests to avoid 404 noise
+@app.route('/favicon.ico')
+def favicon():
+    return ('', 204)
 
 
 @app.route('/phase9/outputs', methods=['GET'])

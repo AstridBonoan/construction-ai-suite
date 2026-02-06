@@ -1,7 +1,10 @@
 from flask import Flask, request
 from flask_cors import CORS
 from app.routes.project_delay import project_delay_bp
-from app.api import api_bp
+try:
+    from app.api import api_bp
+except Exception:
+    api_bp = None
 try:
     # Initialize DB (if available) and register models
     from app.models.tenant_models import db as models_db  # noqa: E402
@@ -99,7 +102,8 @@ LOG_LEVEL = os.environ.get('LOG_LEVEL', 'INFO')
 
 # Register blueprints
 app.register_blueprint(project_delay_bp)
-app.register_blueprint(api_bp)
+if api_bp is not None:
+    app.register_blueprint(api_bp)
 # Register Feature 13 blueprints if available
 try:
     from app.feature13_monday_oauth import bp as feature13_oauth_bp

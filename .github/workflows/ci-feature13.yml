@@ -17,8 +17,7 @@ jobs:
           node-version: 18
       - name: Install frontend deps
         working-directory: frontend
-        run: |
-          if [ -f package-lock.json ]; then npm ci --legacy-peer-deps; else npm install --legacy-peer-deps; fi
+        run: npm install --legacy-peer-deps
       - name: Build frontend
         working-directory: frontend
         run: |

@@ -40,6 +40,11 @@ try:
     MONDAY_INTEGRATION_AVAILABLE = True
 except ImportError:
     MONDAY_INTEGRATION_AVAILABLE = False
+try:
+    from app.phase25_external_context import external_context_bp
+    EXTERNAL_CONTEXT_AVAILABLE = True
+except ImportError:
+    EXTERNAL_CONTEXT_AVAILABLE = False
 import json
 import os
 import sys
@@ -61,6 +66,14 @@ except ImportError:
 # Initialize Flask app
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}})
+
+# Load configuration from .env/.env.example into environment and app.config
+try:
+    from app.config import init_config
+    init_config(app)
+except Exception:
+    # Keep running even if config loader is not available
+    pass
 
 
 # (moved earlier in file)
@@ -165,6 +178,11 @@ if MONDAY_INTEGRATION_AVAILABLE:
     logger.info("Monday.com Integration (Phase 2.5) enabled")
 else:
     logger.warning("Monday.com Integration (Phase 2.5) not available")
+if EXTERNAL_CONTEXT_AVAILABLE:
+    app.register_blueprint(external_context_bp)
+    logger.info("External Context API (Phase 2.5) enabled")
+else:
+    logger.warning("External Context API (Phase 2.5) not available")
 
 # Initialize Phase 23 Alert Scheduler
 if PHASE23_ALERT_SCHEDULER_AVAILABLE:

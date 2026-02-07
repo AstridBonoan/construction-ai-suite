@@ -20,6 +20,10 @@ class SyncError(Exception):
     pass
 
 
+from app.ingestion.external_ingest import ingest_tasks
+from app.external_context_store import get_context
+
+
 class MondayDataSyncService:
     """Two-way sync between Monday.com and AI Construction Suite."""
     
@@ -63,6 +67,22 @@ class MondayDataSyncService:
                 "status": "success",
             }
             
+            # Demo-only ingestion bridge: when running in DEMO_MODE and the
+            # external context for the tenant reports `status == 'connected'`,
+            # forward canonical tasks into the demo ingestion hook so the
+            # schedule/risk demo engines can be exercised end-to-end.
+            try:
+                demo_mode = os.getenv("DEMO_MODE", "false").lower() == "true"
+                if demo_mode:
+                    ctx = get_context(tenant_id) or {}
+                    if ctx.get("status") == "connected":
+                        # call ingest_tasks in demo mode; ignore result but log
+                        ingest_tasks(tenant_id=tenant_id, board_id=board_id, tasks=tasks, source="monday")
+                    else:
+                        print(f"[INGEST][SKIP] External context not connected for tenant {tenant_id}")
+            except Exception as e:
+                print(f"[INGEST][ERROR] Ingestion bridge error: {e}")
+
             print(f"✅ Sync: Imported {len(tasks)} items from board {board_id}")
             return {
                 "status": "success",

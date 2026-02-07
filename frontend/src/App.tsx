@@ -16,7 +16,9 @@ import ExplainabilityPanel from './components/ExplainabilityPanel'
 import RiskFactorBreakdown from './components/RiskFactorBreakdown'
 import styles from './App.module.css'
 
-const BACKEND_URL = 'http://localhost:5000/phase9/outputs'
+import { buildApiUrl } from './config/api';
+
+const getPhase9Url = () => buildApiUrl('/phase9/outputs');
 
 const MainDashboard: React.FC = () => {
   const [mode, setMode] = React.useState<'mock' | 'live'>('mock')
@@ -34,7 +36,7 @@ const MainDashboard: React.FC = () => {
 
       setLoading(true)
       try {
-        const url = mode === 'live' ? `${BACKEND_URL}?variant=live` : BACKEND_URL
+        const url = mode === 'live' ? `${getPhase9Url()}?variant=live` : getPhase9Url()
         const res = await fetch(url)
         if (!res.ok) throw new Error('Network response not ok')
         const data = await res.json()

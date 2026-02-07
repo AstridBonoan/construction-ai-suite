@@ -40,7 +40,7 @@ except Exception:
     sys.exit(2)
 
 # Configuration
-FRONTEND_BASE = "http://localhost:5175"
+FRONTEND_BASE = "http://localhost:5176"
 BACKEND_BASE = "http://127.0.0.1:5000"
 TENANT_ID = "demo_tenant"
 TIMEOUT = 15000  # ms for Playwright waits

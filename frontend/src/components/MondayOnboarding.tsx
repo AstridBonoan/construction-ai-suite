@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './MondayOnboarding.module.css';
+import { buildApiUrl } from '../config/api';
 
 /**
  * MondayOnboarding Component
@@ -33,7 +34,7 @@ export default function MondayOnboarding() {
   const handleInitiateAuth = () => {
     setLoading(true);
     // Call backend to get auth URL
-    fetch(`http://localhost:5000/monday/oauth/init?tenant_id=${tenantId}`)
+    fetch(buildApiUrl(`/monday/oauth/init?tenant_id=${tenantId}`))
       .then((res) => res.json())
       .then((data) => {
         localStorage.setItem('monday_tenant_id', tenantId);
@@ -58,7 +59,7 @@ export default function MondayOnboarding() {
     setLoading(true);
     try {
       const response = await fetch(
-        `http://localhost:5000/monday/boards?tenant_id=${tenantId}`
+        buildApiUrl(`/monday/boards?tenant_id=${tenantId}`)
       );
       const data = await response.json();
       setBoards(data.boards || []);
@@ -77,7 +78,7 @@ export default function MondayOnboarding() {
 
     try {
       const response = await fetch(
-        `http://localhost:5000/monday/boards/${boardId}/items?tenant_id=${tenantId}`
+        buildApiUrl(`/monday/boards/${boardId}/items?tenant_id=${tenantId}`)
       );
       const data = await response.json();
       setItems(data.items || []);
@@ -98,7 +99,7 @@ export default function MondayOnboarding() {
     setLoading(true);
     try {
       // Configure sync
-      await fetch('http://localhost:5000/monday/sync/configure', {
+      await fetch(buildApiUrl('/monday/sync/configure'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -109,7 +110,7 @@ export default function MondayOnboarding() {
       });
 
       // Start sync
-      const syncResponse = await fetch('http://localhost:5000/monday/sync/start', {
+      const syncResponse = await fetch(buildApiUrl('/monday/sync/start'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

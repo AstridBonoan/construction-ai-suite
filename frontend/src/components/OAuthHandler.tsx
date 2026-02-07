@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useSearchParams, useNavigate } from 'react-router-dom';
+import { buildApiUrl } from '../config/api';
 import styles from './OAuthHandler.module.css';
 
 /**
@@ -30,7 +31,7 @@ export default function OAuthHandler() {
     // Exchange code for token with backend
     const exchangeToken = async () => {
       try {
-        const response = await fetch('http://localhost:5000/monday/oauth/callback', {
+        const response = await fetch(buildApiUrl('/monday/oauth/callback'), {
           method: 'GET',
           headers: {
             'Content-Type': 'application/json',
